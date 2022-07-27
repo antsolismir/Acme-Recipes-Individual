@@ -18,6 +18,8 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
+
+master.menu.anonymous.alvparbor1 = 44053812A:Paradas,Álvaro
 master.menu.anonymous.pablo = 80101033Z:Giráldez,Pablo
 master.menu.anonymous.ginpasfer = 47427180F:Pastor Fernández, Ginés
 master.menu.anonymous.antonio = 20095661D: Solís Miranda, Antonio Manuel
