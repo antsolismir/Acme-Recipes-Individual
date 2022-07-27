@@ -1,5 +1,4 @@
-package acme.entities;
-
+package acme.entities.peep;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -16,15 +15,17 @@ import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Entity
 @Getter
 @Setter
-public class Peep  extends AbstractEntity{
-	
-	// Serialisation identifier -------------------
+public class Peep extends AbstractEntity {
+
+	// Serialisation identifier -----------------------------------------------
+
 	protected static final long serialVersionUID = 1L;
-	
-	// Attributes --------------------
+
+	// Attributes -------------------------------------------------------------
 
 	@NotNull
 	@Past
