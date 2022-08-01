@@ -17,13 +17,14 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.components.Status;
 import acme.framework.datatypes.Money;
+import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Dish {
+public class Dish extends AbstractEntity{
 protected static final long	serialVersionUID	= 1L;
 	
 	@NotNull
