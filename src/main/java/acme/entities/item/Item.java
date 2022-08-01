@@ -50,6 +50,6 @@ public class Item extends AbstractEntity{
 	
 	
 	@NotNull
-	protected ItemTypes itemTypes;
+	protected ItemType itemTypes;
 
 }

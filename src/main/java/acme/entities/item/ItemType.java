@@ -1,5 +1,5 @@
 package acme.entities.item;
 
-public enum ItemTypes {
+public enum ItemType {
 	KITCHEN_UTENSIL, INGREDIENT
 }
