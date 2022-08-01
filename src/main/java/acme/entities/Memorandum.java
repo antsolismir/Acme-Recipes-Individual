@@ -21,7 +21,7 @@ public class Memorandum extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
 	@NotBlank
-	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}:[0-9]{4}$", message="Formato incorrecto, debe coincidir con por ejemplo AAA-001:0001")
+	@Pattern(regexp = "^([A-Z]{2}:)?[A-Z]{3}-[0-9]{3}:[0-9]{4}$", message="Formato incorrecto, debe coincidir con por ejemplo PW:NAS-175:9358")
 	private String sequenceNumber;
 	
 	@Past
@@ -34,11 +34,6 @@ public class Memorandum extends AbstractEntity {
 	private String report;
 	
 	@URL
-	private String link;
-	
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	protected Dish dish;
+	private String link;	
 
 }
