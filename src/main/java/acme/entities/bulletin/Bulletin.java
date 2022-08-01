@@ -25,17 +25,18 @@ public class Bulletin extends AbstractEntity{
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
+	
 	@Temporal(TemporalType.TIMESTAMP)
-    @Past
-    @NotNull
-    protected Date              instantiationMoment;
+    	@Past
+   	@NotNull
+    	protected Date           		instantiationMoment;
 	
 	@NotBlank
-	@Length(max=101)
+	@Length(max=100)
 	protected String			heading;
 	
 	@NotBlank
-	@Length(max=256)
+	@Length(max=255
 	protected String			text;
 	
 
