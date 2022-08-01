@@ -110,7 +110,7 @@ bg=yellow</panel_attributes>
       <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
-Provider
+Epicure
 --
 + company: String {NotBlank}
 + sector: String {NotBlank}</panel_attributes>
@@ -125,7 +125,7 @@ Provider
       <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
-Consumer
+chef
 --
 + company: String {NotBlank}
 + sector: String {NotBlank}</panel_attributes>

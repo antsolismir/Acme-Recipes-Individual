@@ -1,0 +1,9 @@
+authenticated.chef.chef.form.title.create = Become a chef
+authenticated.chef.chef.form.title.update = Update your chef data
+
+authenticated.chef.chef.form.label.organisation = Organization:
+authenticated.chef.chef.form.label.assertion = Assertion:
+authenticated.chef.chef.form.label.link = Link:
+
+authenticated.chef.chef.form.button.create = Register
+authenticated.chef.chef.form.button.update = Update
