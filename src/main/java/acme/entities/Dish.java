@@ -59,16 +59,4 @@ protected static final long	serialVersionUID	= 1L;
 	@URL
 	protected String link;
 
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	protected Epicure epicure;
-	
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	protected Chef chef;
-	
-	protected boolean published;
-
 }
