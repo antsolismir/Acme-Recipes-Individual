@@ -1,7 +1,7 @@
 authenticated.epicure.form.title.create = Become an Epicure
 authenticated.epicure.form.title.update = Update Epicure data
 
-authenticated.epicure.f.form.label.organisation = Organization:
+authenticated.epicure.form.label.organisation = Organization:
 authenticated.epicure.form.label.assertion = Assertion:
 authenticated.epicure.form.label.link = Link:
 

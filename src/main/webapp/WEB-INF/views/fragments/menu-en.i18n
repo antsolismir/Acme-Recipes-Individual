@@ -41,7 +41,7 @@ master.menu.epicure.link = Favourite link
 
 # master.menu.chef ##########################################################
 
-master.menu.chef = chef
+master.menu.chef = Chef
 master.menu.chef.link = Favourite link
 
 # master.menu.user-account ####################################################
