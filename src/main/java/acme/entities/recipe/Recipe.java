@@ -29,15 +29,15 @@ public class Recipe extends AbstractEntity {
 	protected String			code;
 
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	protected String			heading;
 
 	@NotBlank
-	@Length(max = 256)
+	@Length(max = 255)
 	protected String			description;
 	
 	@NotBlank
-	@Length(max = 256)
+	@Length(max = 255)
 	protected String			preparationNotes;
 
 	@URL
