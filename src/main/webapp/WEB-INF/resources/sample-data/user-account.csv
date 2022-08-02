@@ -1,0 +1,7 @@
+key,enabled,identity,password,username
+user-account-chef-01,true,"UserIdentity{name: 'Chef', surname: 'One', email: 'chef1@acme.com'}",chef1,chef1
+user-account-chef-02,true,"UserIdentity{name: 'Chef', surname: 'Two', email: 'chef2@acme.com'}",chef2,chef2
+user-account-chef-03,true,"UserIdentity{name: 'Chef', surname: 'Three', email: 'chef3@acme.com'}",chef3,chef3
+user-account-epicure-01,true,"UserIdentity{name: 'Epicure', surname: 'One', email: 'epicure1@acme.com'}",epicure1,epicure1
+user-account-epicure-02,true,"UserIdentity{name: 'Epicure', surname: 'Two', email: 'epicure2@acme.com'}",epicure2,epicure2
+user-account-epicure-03,true,"UserIdentity{name: 'Epicure', surname: 'Three', email: 'epicure3@acme.com'}",epicure3,epicure3
