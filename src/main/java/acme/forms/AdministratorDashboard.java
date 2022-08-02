@@ -25,17 +25,17 @@ public class AdministratorDashboard implements Serializable{
 	@Min(0)
 	
 	Integer totalNumberOfKitchenUtensils;
-	Map<String,Double> averageBudgetOfKitchenUtensilsGroupedByCurrency;
-	Map<String,Double> deviationBudgetOfKitchenUtensilsGroupedByCurrency;
-	Map<String,Double> minimunBudgetOfKitchenUtensilsGroupedByCurrency;
-	Map<String,Double> maximunBudgetOfKitchenUtensilsGroupedByCurrency;
+	Map<String,Double> averageRetailPriceOfKitchenUtensilsGroupedByCurrency;
+	Map<String,Double> deviationRetailPriceOfKitchenUtensilsGroupedByCurrency;
+	Map<String,Double> minimunRetailPriceOfKitchenUtensilsGroupedByCurrency;
+	Map<String,Double> maximunRetailPriceOfKitchenUtensilsGroupedByCurrency;
 
 	// FineDishes
 	@Min(0)
 	
-	int	totalNumberOfProposedFineDishes;
-	int	totalNumberOfAcceptedFineDishes;
-	int	totalNumberOfDeniedFineDishes;
+	Integer	totalNumberOfProposedFineDishes;
+	Integer	totalNumberOfAcceptedFineDishes;
+	Integer	totalNumberOfDeniedFineDishes;
 	
 	Double averageBudgetOfFineDishesProposed;
 	Double averageBudgetOfFineDishesAccepted;
