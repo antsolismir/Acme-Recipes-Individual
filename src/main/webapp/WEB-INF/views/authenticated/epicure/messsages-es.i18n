@@ -1,0 +1,9 @@
+authenticated.epicure.form.title.create = Hazte Epicure
+authenticated.epicure.form.title.update = Actualizar datos de Epicure
+
+authenticated.epicure.form.label.organisation = Organización:
+authenticated.epicure.form.label.assertion = Declaración:
+authenticated.epicure.form.label.link = Enlace:
+
+authenticated.Epicure.form.button.create = Registrar
+authenticated.Epicure.form.button.update = Actualizar

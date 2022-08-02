@@ -1,0 +1,9 @@
+authenticated.chef.chef.form.title.create = Hazte chef
+authenticated.chef.chef.form.title.update = Actualiza tus datos de chef
+
+authenticated.chef.chef.form.label.organisation = Organización:
+authenticated.chef.chef.form.label.assertion = Declaración:
+authenticated.chef.chef.form.label.link = Enlace:
+
+authenticated.chef.chef.form.button.create = Registrar
+authenticated.chef.chef.form.button.update = Actualizar

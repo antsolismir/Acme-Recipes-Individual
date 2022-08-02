@@ -1,16 +1,4 @@
-/*
- * AuthenticatedConsumerCreateService.java
- *
- * Copyright (C) 2012-2022 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
-
-package acme.features.authenticated.consumer;
+package acme.features.authenticated.chef;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,60 +13,60 @@ import acme.framework.entities.UserAccount;
 import acme.framework.helpers.PrincipalHelper;
 import acme.framework.roles.Authenticated;
 import acme.framework.services.AbstractCreateService;
-import acme.roles.Consumer;
+import acme.roles.Chef;
 
 @Service
-public class AuthenticatedConsumerCreateService implements AbstractCreateService<Authenticated, Consumer> {
+public class AuthenticatedChefCreateService implements AbstractCreateService<Authenticated, Chef> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedConsumerRepository repository;
+	protected AuthenticatedChefRepository repository;
 
-	// AbstractCreateService<Authenticated, Consumer> ---------------------------
+	// AbstractCreateService<Authenticated, chef> ---------------------------
 
 
 	@Override
-	public boolean authorise(final Request<Consumer> request) {
+	public boolean authorise(final Request<Chef> request) {
 		assert request != null;
 		
 		boolean result;
 		
-		result = !request.getPrincipal().hasRole(Consumer.class); 
+		result = !request.getPrincipal().hasRole(Chef.class); 
 
 		return result;
 	}
 
 	@Override
-	public void validate(final Request<Consumer> request, final Consumer entity, final Errors errors) {
+	public void validate(final Request<Chef> request, final Chef entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 	}
 
 	@Override
-	public void bind(final Request<Consumer> request, final Consumer entity, final Errors errors) {
+	public void bind(final Request<Chef> request, final Chef entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "company", "sector");
+		request.bind(entity, errors, "organisation", "assertion", "link");
 	}
 
 	@Override
-	public void unbind(final Request<Consumer> request, final Consumer entity, final Model model) {
+	public void unbind(final Request<Chef> request, final Chef entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "company", "sector");
+		request.unbind(entity, model, "organisation", "assertion", "link");
 	}
 
 	@Override
-	public Consumer instantiate(final Request<Consumer> request) {
+	public Chef instantiate(final Request<Chef> request) {
 		assert request != null;
 
-		Consumer result;
+		Chef result;
 		Principal principal;
 		int userAccountId;
 		UserAccount userAccount;
@@ -87,14 +75,14 @@ public class AuthenticatedConsumerCreateService implements AbstractCreateService
 		userAccountId = principal.getAccountId();
 		userAccount = this.repository.findOneUserAccountById(userAccountId);
 
-		result = new Consumer();
+		result = new Chef();
 		result.setUserAccount(userAccount);
 
 		return result;
 	}
 
 	@Override
-	public void create(final Request<Consumer> request, final Consumer entity) {
+	public void create(final Request<Chef> request, final Chef entity) {
 		assert request != null;
 		assert entity != null;
 
@@ -102,7 +90,7 @@ public class AuthenticatedConsumerCreateService implements AbstractCreateService
 	}
 
 	@Override
-	public void onSuccess(final Request<Consumer> request, final Response<Consumer> response) {
+	public void onSuccess(final Request<Chef> request, final Response<Chef> response) {
 		assert request != null;
 		assert response != null;
 
