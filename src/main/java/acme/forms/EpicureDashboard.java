@@ -18,9 +18,9 @@ public class EpicureDashboard implements Serializable{
 	Map<String,Double> averageBudgetOfAcceptedFineDishesGroupedByCurrrency;
 	Map<String,Double> averageBudgetOfDeniedFineDishesGroupedByCurrrency;
 	
-	Map<String,Double> desviationBudgetOfProposedFineDishesGroupedByCurrrency;
-	Map<String,Double> desviationBudgetOfAcceptedFineDishesGroupedByCurrrency;
-	Map<String,Double> desviationBudgetOfDeniedFineDishesGroupedByCurrrency;
+	Map<String,Double> deviationBudgetOfProposedFineDishesGroupedByCurrrency;
+	Map<String,Double> deviationBudgetOfAcceptedFineDishesGroupedByCurrrency;
+	Map<String,Double> deviationBudgetOfDeniedFineDishesGroupedByCurrrency;
 
 	Map<String,Double> minimumBudgetOfProposedFineDishesGroupedByCurrrency;
 	Map<String,Double> minimumBudgetOfAcceptedFineDishesGroupedByCurrrency;
