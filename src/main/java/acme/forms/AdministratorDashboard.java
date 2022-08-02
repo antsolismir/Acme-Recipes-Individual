@@ -23,7 +23,6 @@ public class AdministratorDashboard implements Serializable{
 	
 	//KitchenUtensils
 	@Min(0)
-	
 	Integer totalNumberOfKitchenUtensils;
 	Map<String,Double> averageRetailPriceOfKitchenUtensilsGroupedByCurrency;
 	Map<String,Double> deviationRetailPriceOfKitchenUtensilsGroupedByCurrency;
@@ -32,7 +31,6 @@ public class AdministratorDashboard implements Serializable{
 
 	// FineDishes
 	@Min(0)
-	
 	Integer	totalNumberOfProposedFineDishes;
 	Integer	totalNumberOfAcceptedFineDishes;
 	Integer	totalNumberOfDeniedFineDishes;
