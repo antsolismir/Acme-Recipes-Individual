@@ -25,6 +25,8 @@ master.menu.anonymous.ginpasfer = 47427180F:Pastor Fernández, Ginés
 master.menu.anonymous.antonio = 20095661D: Solís Miranda, Antonio Manuel
 master.menu.anonymous.badayco = 78764492A: Rijo Hernández,Badayco
 
+master.menu.anonymous.list-user-accounts = Lista de usuarios
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
