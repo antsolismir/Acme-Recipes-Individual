@@ -1,41 +1,39 @@
 package acme.features.any.userAccount;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.entities.UserAccount;
-import acme.framework.roles.Administrator;
 import acme.framework.roles.Any;
+import acme.framework.roles.UserRole;
 import acme.framework.services.AbstractShowService;
 
 @Service
 public class AnyUserAccountShowService implements AbstractShowService<Any, UserAccount>{
 
 	@Autowired
-	protected AnyUserAccountRepository repository;
+	protected AnyUserAccountRepository userAccountRepository;
 
 
 	@Override
 	public boolean authorise(final Request<UserAccount> request) {
-		assert request != null;
-		boolean result;
-		int id;
-		id = request.getModel().getInteger("id");
-		final UserAccount ua = this.repository.findUserAccountById(id);
-		result = !ua.isAnonymous() && !ua.hasRole(Administrator.class);
-		return result;
+		return true;
 	}
 
 	@Override
 	public UserAccount findOne(final Request<UserAccount> request) {
 		assert request != null;
-		UserAccount result;
+		UserAccount userAcc;
 		int id;
+
 		id = request.getModel().getInteger("id");
-		result = this.repository.findUserAccountById(id);
-		return result;
+		userAcc = this.userAccountRepository.findUserAccountById(id);
+		userAcc.getRoles().forEach(r -> { });
+		return userAcc;
 	}
 
 	@Override
@@ -43,6 +41,19 @@ public class AnyUserAccountShowService implements AbstractShowService<Any, UserA
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "identity.name", "identity.surname", "identity.email");
+
+		StringBuilder buffer;
+		Collection<UserRole> roles;
+
+		request.unbind(entity, model, "username", "identity.name", "identity.surname", "identity.email");
+
+		roles = entity.getRoles();
+		buffer = new StringBuilder();
+		for (final UserRole role : roles) {
+			buffer.append(role.getAuthorityName());
+			buffer.append(" ");
+		}
+
+		model.setAttribute("roleList", buffer.toString());
 	}
 }
