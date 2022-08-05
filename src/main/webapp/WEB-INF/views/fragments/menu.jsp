@@ -33,8 +33,13 @@
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
+		</acme:menu-option>		
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.bulletin" action="/authenticated/bulletin/list"/>
 		</acme:menu-option>
-
+		
+		
 		<acme:menu-option code="master.menu.epicure" access="hasRole('Epicure')">
 			<acme:menu-suboption code="master.menu.epicure.link" action="http://www.example.com/"/>
 		</acme:menu-option>
