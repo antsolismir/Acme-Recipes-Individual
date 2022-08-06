@@ -43,6 +43,7 @@ master.menu.epicure.link = Enlace favorito
 
 master.menu.chef = Chef
 master.menu.chef.link = Enlace favorito
+master.menu.chef.dish-list = Lista de platos
 
 # master.menu.user-account ####################################################
 
