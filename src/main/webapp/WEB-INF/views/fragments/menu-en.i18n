@@ -50,6 +50,7 @@ master.menu.epicure.link = Favourite link
 master.menu.chef = Chef
 master.menu.user-account.chef.item.list.ingredient = List my ingredients
 master.menu.user-account.chef.item.list.kitchenUtensils = List my kitchen utensils
+master.menu.chef.memorandum-list = List my memorandums
 
 # master.menu.user-account ####################################################
 
