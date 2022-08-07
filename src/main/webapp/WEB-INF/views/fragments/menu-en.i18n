@@ -25,6 +25,12 @@ master.menu.anonymous.ginpasfer = 47427180F:Pastor Fernández, Ginés
 master.menu.anonymous.antonio = 20095661D: Solís Miranda, Antonio Manuel
 master.menu.anonymous.badayco = 78764492A: Rijo Hernández,Badayco
 
+# master.menu.all.principals ##########################################################
+master.menu.all.principals = All principals
+master.menu.any.item.ingredient = List ingredients
+master.menu.any.item.kitchen_utensils = List kitchen utensils
+
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -42,8 +48,11 @@ master.menu.epicure.link = Favourite link
 # master.menu.chef ##########################################################
 
 master.menu.chef = Chef
+
 master.menu.chef.link = Favourite link
 master.menu.chef.dish-list = List of Dishes
+master.menu.user-account.chef.item.list.ingredient = List my ingredients
+master.menu.user-account.chef.item.list.kitchenUtensils = List my kitchen utensils
 
 # master.menu.user-account ####################################################
 
