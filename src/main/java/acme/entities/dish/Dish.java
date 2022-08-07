@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -18,6 +19,8 @@ import org.hibernate.validator.constraints.URL;
 import acme.components.Status;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
+import acme.roles.Chef;
+import acme.roles.Epicure;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -58,5 +61,17 @@ protected static final long	serialVersionUID	= 1L;
 	
 	@URL
 	protected String link;
+	
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Epicure epicure;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Chef chef;
+	
+	protected boolean published;
 
 }
