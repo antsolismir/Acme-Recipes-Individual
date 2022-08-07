@@ -45,7 +45,8 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
-			<acme:menu-suboption code="master.menu.chef.link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.user-account.chef.item.list.ingredient" action="/chef/item/list-ingredients"/>
+			<acme:menu-suboption code="master.menu.user-account.chef.item.list.kitchenUtensils" action="/chef/item/list-kitchen_utensils"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
