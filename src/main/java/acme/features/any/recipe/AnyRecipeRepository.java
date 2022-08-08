@@ -12,16 +12,16 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnyRecipeRepository extends AbstractRepository {
 	
-	@Query("select t from Recipe t where t.draftMode = false")
+	@Query("select t from Recipe t where t.published = true")
 	Collection<Recipe> findAllRecipes();
 	
-	@Query("select t from Recipe t where t.id = :id and t.draftMode = false")
+	@Query("select t from Recipe t where t.id = :id and t.published = true")
 	Recipe findOneRecipeById(int id);
 	
 	@Query("select a from ItemQuantity a where a.recipe.id=:id")
-	Collection<ItemQuantity> findItemQuantityByToolKit(int id);
+	Collection<ItemQuantity> findItemQuantityByRecipe(int id);
 	
-	@Query("select c.defaultCurrency  from Configuration c")
+	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String getDefaultCurrency();
 	
 	

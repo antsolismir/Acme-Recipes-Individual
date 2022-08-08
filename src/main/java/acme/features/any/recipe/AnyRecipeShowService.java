@@ -52,7 +52,7 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
 		final String systemCurrency= this.repository.getDefaultCurrency();
 		double price=0.;
 		Money moneyInternational;
-		final Collection<ItemQuantity> itemQuantitys = this.repository.findItemQuantityByToolKit(entity.getId());
+		final Collection<ItemQuantity> itemQuantitys = this.repository.findItemQuantityByRecipe(entity.getId());
 		
 		for(final ItemQuantity a :itemQuantitys) {
 		final Money itemPrice=a.getItem().getRetailPrice();
@@ -64,7 +64,7 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
 		moneyInternational.setCurrency(systemCurrency);
 		
 		model.setAttribute("money", moneyInternational);
-		request.unbind(entity, model,"code", "title", "description", "assemblyNotes", "info","id");
+		request.unbind(entity, model,"code", "heading", "description", "preparationNotes", "info","id");
 		
 	}
 

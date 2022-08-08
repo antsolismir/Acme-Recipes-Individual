@@ -8,17 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-####List
-any.recipe.list.label.heading = Heading
-any.recipe.list.label.code = Code
-any.recipe.list.label.totalPrice = Total Price
-
-
-####Form
-any.recipe.form.label.heading = Heading:
-any.recipe.form.label.code = Code:
-any.recipe.form.label.description= Description:
-any.recipe.form.label.preparationNotes= Preparation Notes:
-any.recipe.form.label.info = Info:
-any.recipe.form.button.items= Items
-any.recipe.form.label.price = Total Price
+any.itemQuantity.form.label.item.name = Item's Name
+any.itemQuantity.form.label.item.type = Item's Type
+any.itemQuantity.form.label.item.code = Item's Code
+any.itemQuantity.form.label.amount = Amount
+any.itemQuantity.list.label.amount = Amount
+any.itemQuantity.list.label.item.name = Item's Name

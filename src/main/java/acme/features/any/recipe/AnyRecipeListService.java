@@ -54,11 +54,11 @@ public class AnyRecipeListService implements AbstractListService<Any, Recipe>{
 		final String systemCurrency= this.repository.getDefaultCurrency();
 		double price=0.;
 		Money moneyInternational;
-		final Collection<ItemQuantity> itemQuantitys = this.repository.findItemQuantityByToolKit(entity.getId());
+		final Collection<ItemQuantity> itemQuantitys = this.repository.findItemQuantityByRecipe(entity.getId());
 		
 		for(final ItemQuantity a :itemQuantitys) {
 		final Money itemPrice=a.getItem().getRetailPrice();
-			price += a.getAmount()*itemPrice.getAmount();
+			price = price + a.getAmount()*itemPrice.getAmount();
 		}
 		
 		moneyInternational=new Money();
@@ -67,7 +67,7 @@ public class AnyRecipeListService implements AbstractListService<Any, Recipe>{
 		
 		model.setAttribute("money", moneyInternational);
 		
-		request.unbind(entity, model,"code", "title");
+		request.unbind(entity, model,"code", "heading");
 	}
 	
 

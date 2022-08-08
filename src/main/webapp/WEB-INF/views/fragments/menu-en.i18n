@@ -29,7 +29,7 @@ master.menu.anonymous.badayco = 78764492A: Rijo Hernández,Badayco
 master.menu.all.principals = All principals
 master.menu.any.item.ingredient = List ingredients
 master.menu.any.item.kitchen_utensils = List kitchen utensils
-
+master.menu.any.recipe = List recipes
 
 # master.menu.administrator ###################################################
 

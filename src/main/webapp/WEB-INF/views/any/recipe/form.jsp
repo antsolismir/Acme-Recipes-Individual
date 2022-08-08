@@ -22,5 +22,5 @@
 	<acme:input-textbox code="any.recipe.form.label.preparationNotes" path="preparationNotes" readonly="true"/>
 	<acme:input-textbox code="any.recipe.form.label.info" path="info" readonly="true"/>
 	<acme:input-textbox code="any.recipe.form.label.price" path="money" readonly="true"/>
-	<acme:button code="any.recipe.form.button.items" action="/any/artefact-toolkit/list?masterId=${id}"/>
+	<acme:button code="any.recipe.form.button.items" action="/any/item-quantity/list?masterId=${id}"/>
 </acme:form>

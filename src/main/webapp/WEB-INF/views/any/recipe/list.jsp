@@ -18,7 +18,7 @@
 
 <acme:list>
 
-	<acme:list-column code="any.recipe.list.label.title" path="title" width="45%"/>
+	<acme:list-column code="any.recipe.list.label.heading" path="heading" width="45%"/>
 	<acme:list-column code="any.recipe.list.label.code" path="code" width="40%"/>
 	<acme:list-column code="any.recipe.list.label.totalPrice" path="money" width="15%"/>	
 

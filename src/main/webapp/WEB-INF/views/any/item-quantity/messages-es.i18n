@@ -8,16 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-####List
-any.recipe.list.label.heading = Encabezado
-any.recipe.list.label.code = Código
-any.recipe.list.label.totalPrice = Precio Total
 
-####Form
-any.recipe.form.label.heading = Título:
-any.recipe.form.label.code = Código:
-any.recipe.form.label.description= Descripción:
-any.recipe.form.label.preparationNotes= Notas:
-any.recipe.form.label.info = Información:
-any.recipe.form.button.items= Objetos
-any.recipe.form.label.price = Precio Total
+any.itemQuantity.form.label.item.name = Nombre del objeto
+any.itemQuantity.form.label.item.type = Tipo de objeto
+any.itemQuantity.form.label.item.code = Código del objeto
+any.itemQuantity.form.label.amount = Cantidad
+any.itemQuantity.list.label.amount = Cantidad
+any.itemQuantity.list.label.item.name = Nombre del objeto
