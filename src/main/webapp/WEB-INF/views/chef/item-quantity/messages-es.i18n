@@ -1,0 +1,6 @@
+chef.itemQuantity.form.label.item.name = Nombre del objeto
+chef.itemQuantity.form.label.item.type = Tipo de objeto
+chef.itemQuantity.form.label.item.code = Código del objeto
+chef.itemQuantity.form.label.amount = Cantidad
+chef.itemQuantity.list.label.amount = Cantidad
+chef.itemQuantity.list.label.item.name = Nombre del objeto
