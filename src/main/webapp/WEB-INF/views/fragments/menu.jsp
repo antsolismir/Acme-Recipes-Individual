@@ -25,6 +25,10 @@
 			<acme:menu-suboption code="master.menu.anonymous.antonio" action="https://github.com/antsolismir"/>
 			<acme:menu-suboption code="master.menu.anonymous.badayco" action="https://github.com/badrijher"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.systemConfiguration.show" action="/authenticated/systemConfiguration/show"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.all.principals" access="isAnonymous()">	
 			<acme:menu-suboption code="master.menu.any.item.ingredient" action="/any/item/list-ingredients"/>
