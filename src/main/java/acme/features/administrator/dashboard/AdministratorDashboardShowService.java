@@ -35,8 +35,6 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert request != null;
 
 		AdministratorDashboard result;
-
-		final Integer prueba = 100;
 		Integer totalNumberOfUtensil;
 		totalNumberOfUtensil = this.repository.totalNumberOfUtensil();
 
