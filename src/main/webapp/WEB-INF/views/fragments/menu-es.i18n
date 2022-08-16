@@ -38,11 +38,14 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.dashboard = Panel del Administrador
 
 # master.menu.epicure ########################################################
 
 master.menu.epicure = Epicure
 master.menu.epicure.link = Enlace favorito
+master.menu.epicure.dish.list = Listar mis platos
+master.menu.epicure.memorandum.list = Listar mis memorandums
 
 # master.menu.chef ##########################################################
 

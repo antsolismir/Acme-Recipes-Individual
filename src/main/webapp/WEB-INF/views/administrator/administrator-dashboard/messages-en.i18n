@@ -1,0 +1,33 @@
+administrator.dashboard.form.label.title = ADMINISTRATOR DASHBOARD
+
+administrator.dashboard.form.label.totalNumberOfKitchenUtensils = Total number of kitchen utensils
+administrator.dashboard.form.label.averageRetailPriceOfKitchenUtensilsGroupedByCurrency = Average retail price of kitchen utensils
+administrator.dashboard.form.label.deviationRetailPriceOfKitchenUtensilsGroupedByCurrency = Deviation retail price of kitchen utensils
+administrator.dashboard.form.label.minimunRetailPriceOfKitchenUtensilsGroupedByCurrency = Minimun retail price of kitchen utensils
+administrator.dashboard.form.label.maximunRetailPriceOfKitchenUtensilsGroupedByCurrency = Maximun retail price of kitchen utensils
+
+administrator.dashboard.form.label.totalNumberOfIngredients = Total number of ingredients
+administrator.dashboard.form.label.averageRetailPriceOfIngredientsGroupedByCurrency = Average retail price of ingredients
+administrator.dashboard.form.label.deviationRetailPriceOfIngredientsGroupedByCurrency = Deviation retail price of ingredients
+administrator.dashboard.form.label.minimunRetailPriceOfIngredientsGroupedByCurrency = Minimun retail price of ingredients
+administrator.dashboard.form.label.maximunRetailPriceOfIngredientsGroupedByCurrency = Maximun retail price of ingredients
+
+administrator.dashboard.form.title.about-proposed-dish = Proposed Dishes
+administrator.dashboard.form.label.averageBudgetOfFineDishesProposed = Average budget of fine dishes proposed
+administrator.dashboard.form.label.deviationBudgetOfFineDishesProposed = Deviation budget of fine dishes proposed
+administrator.dashboard.form.label.minimunBudgetOfFineDishesProposed = Minimun budget of fine dishes proposed
+administrator.dashboard.form.label.maximunBudgetOfFineDishesProposed = Maximun budget of fine dishes proposed
+
+administrator.dashboard.form.title.about-accepted-dish = Accepted Dishes
+administrator.dashboard.form.label.averageBudgetOfFineDishesAccepted = Average budget of accepted dishes
+administrator.dashboard.form.label.deviationBudgetOfFineDishesAccepted = Deviation budget of accepted dishes
+administrator.dashboard.form.label.minimunBudgetOfFineDishesAccepted = Minimun budget of accepted dishes
+administrator.dashboard.form.label.maximunBudgetOfFineDishesAccepted = Maximun budget of accepted dishes
+
+administrator.dashboard.form.title.about-denied-dish = Denied Dishes
+administrator.dashboard.form.label.averageBudgetOfFineDishesDenied = Average budget of denied dishes
+administrator.dashboard.form.label.deviationBudgetOfFineDishesDenied = Deviation budget of denied dishes
+administrator.dashboard.form.label.minimunBudgetOfFineDishesDenied = Minimun budget of denied dishes
+administrator.dashboard.form.label.maximunBudgetOfFineDishesDenied = Maximun budget of denied dishes
+
+administrator.dashboard.form.title.dish-by-status = Dishes by status
