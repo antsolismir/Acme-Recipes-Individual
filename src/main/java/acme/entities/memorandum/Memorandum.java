@@ -2,6 +2,8 @@ package acme.entities.memorandum;
 
 import java.util.Date;
 
+
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -16,7 +18,12 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.entities.dish.Dish;
 import acme.framework.entities.AbstractEntity;
+import lombok.Getter;
+import lombok.Setter;
 
+@Entity
+@Getter
+@Setter
 public class Memorandum extends AbstractEntity {
 	
 	private static final long serialVersionUID = 1L;
@@ -41,4 +48,5 @@ public class Memorandum extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Dish dish;
+
 }
