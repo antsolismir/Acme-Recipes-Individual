@@ -72,3 +72,9 @@ master.menu.user-account.epicure = Datos de Epicure
 master.menu.user-account.become-epicure = Hazte Epicure
 master.menu.user-account.chef = Datos de Chef
 master.menu.user-account.become-chef = Hazte Chef
+
+# master.menu.authenticated ####################################################
+
+master.menu.authenticated = Autenticado
+
+master.menu.authenticated.systemConfiguration.show = Moneda por defecto

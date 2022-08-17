@@ -30,6 +30,10 @@
 			<acme:menu-suboption code="master.menu.anonymous.list-user-accounts" action="/any/user-account/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-peeps" action="/any/peep/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.systemConfiguration.show" action="/authenticated/systemConfiguration/show"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.all.principals" access="isAnonymous()">	
 			<acme:menu-suboption code="master.menu.any.item.ingredient" action="/any/item/list-ingredients"/>
