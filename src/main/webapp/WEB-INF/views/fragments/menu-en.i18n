@@ -85,4 +85,7 @@ master.menu.user-account.become-chef = Become a Chef
 
 master.menu.authenticated = Authenticated
 
+master.menu.authenticated.bulletin = List Bulletins
+
 master.menu.authenticated.systemConfiguration.show = Default Currency
+
