@@ -12,16 +12,17 @@
 
 package acme.testing;
 
-import acme.framework.helpers.StringHelper;
+import org.hibernate.internal.util.StringHelper;
 import acme.framework.testing.AbstractTest;
 
 public abstract class TestHarness extends AbstractTest {
-
+	
 	// Business methods -------------------------------------------------------
-
+	
 	protected void signIn(final String username, final String password) {
 		assert !StringHelper.isBlank(username);
 		assert !StringHelper.isBlank(password);
+		
 
 		super.navigateHome();
 		super.clickOnMenu("Sign in");
@@ -46,16 +47,18 @@ public abstract class TestHarness extends AbstractTest {
 		assert !StringHelper.isBlank(name);
 		assert !StringHelper.isBlank(surname);
 		assert !StringHelper.isBlank(email);
-		
 
 		super.navigateHome();
 		super.clickOnMenu("Sign up");
+
 		super.fillInputBoxIn("username", username);
 		super.fillInputBoxIn("password", password);
 		super.fillInputBoxIn("confirmation", password);
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
-		super.fillInputBoxIn("identity.email", email);
+
+		super.fillInputBoxIn("identity.email", email);		
+
 		super.fillInputBoxIn("accept", "true");
 		super.clickOnSubmit("Sign up");
 		super.checkCurrentPath("/master/welcome");
