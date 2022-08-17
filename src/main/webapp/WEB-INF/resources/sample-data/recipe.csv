@@ -1,0 +1,11 @@
+key,code,heading,description,preparation-notes,info,key:chef,published
+recipe-01,FF:DNJ-804,recipe01,description01,Just follow the recipe,http://ev.us.es,chef-01,false
+recipe-02,JR:DPH-021,recipe02,description02,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-03,JR:DPH-022,recipe03,description03,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-04,JR:DPH-023,recipe04,description04,Just follow the recipe,http://ev.us.es,chef-01,false
+recipe-05,JR:DPH-024,recipe05,description05,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-06,XIM-147,recipe06,description06,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-07,XIM-148,recipe07,description07,Just follow the recipe,http://ev.us.es,chef-01,false
+recipe-08,XIM-149,recipe08,description08,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-09,XIM-144,recipe09,description09,Just follow the recipe,http://ev.us.es,chef-01,false
+recipe-10,XIM-142,recipe10,description10,Just follow the recipe,http://ev.us.es,chef-01,true

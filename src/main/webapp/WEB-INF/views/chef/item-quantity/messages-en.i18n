@@ -1,0 +1,6 @@
+chef.itemQuantity.form.label.item.name = Item's Name
+chef.itemQuantity.form.label.item.type = Item's Type
+chef.itemQuantity.form.label.item.code = Item's Code
+chef.itemQuantity.form.label.amount = Amount
+chef.itemQuantity.list.label.amount = Amount
+chef.itemQuantity.list.label.item.name = Item's Name
