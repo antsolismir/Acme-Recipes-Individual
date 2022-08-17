@@ -26,8 +26,8 @@ public class AuthenticatedSystemConfigurationShowService implements AbstractShow
 	@Override
 	public SystemConfiguration findOne(final Request<SystemConfiguration> request) {
 		assert request != null;
-		final SystemConfiguration sc = this.repository.findInitialConfiguration();
-		return sc;
+		return this.repository.findInitialConfiguration();
+		
 	}
 
 	@Override
