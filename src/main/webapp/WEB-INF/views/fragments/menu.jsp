@@ -24,6 +24,10 @@
 			<acme:menu-suboption code="master.menu.anonymous.ginpasfer" action="https://github.com/Ginpasfer"/>
 			<acme:menu-suboption code="master.menu.anonymous.antonio" action="https://github.com/antsolismir"/>
 			<acme:menu-suboption code="master.menu.anonymous.badayco" action="https://github.com/badrijher"/>
+			
+			<acme:menu-separator/>
+
+			<acme:menu-suboption code="master.menu.anonymous.list-peeps" action="/any/peep/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.all.principals" access="isAnonymous()">	
