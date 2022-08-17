@@ -1,0 +1,2 @@
+key,status,code,request,budget,creationDate,initialPeriodDate,finalPeriodDate,link,key:epicure,key:chef
+dish-01,PROPOSED,AAA-001,legalStuffExample,"EUR 200.00","2022/01/01 10:11","2023/01/02 00:56","2023/01/03 00:56",https://google.com,epicure-01,chef-01
