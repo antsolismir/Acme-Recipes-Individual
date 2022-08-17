@@ -73,5 +73,4 @@ protected static final long	serialVersionUID	= 1L;
 	protected Chef chef;
 	
 	protected boolean published;
-
 }
