@@ -29,7 +29,11 @@ master.menu.anonymous.badayco = 78764492A: Rijo Hernández,Badayco
 master.menu.all.principals = Principales
 master.menu.any.item.ingredient = Lista de ingredientes
 master.menu.any.item.kitchen_utensils = Lista de utensilios
+
 master.menu.any.recipe = Lista de recetas
+
+master.menu.anonymous.list-peeps = Lista de peeps
+master.menu.anonymous.list-user-accounts = Lista de usuarios
 
 
 # master.menu.administrator ###################################################
@@ -45,12 +49,18 @@ master.menu.administrator.shut-down = Parar el sistema
 
 master.menu.epicure = Epicure
 master.menu.epicure.link = Enlace favorito
+master.menu.epicure.dish.list = Listar mis platos
+master.menu.epicure.memorandum.list = Listar mis memorandums
 
 # master.menu.chef ##########################################################
 
 master.menu.chef = Chef
+
+master.menu.chef.link = Enlace favorito
+master.menu.chef.dish-list = Lista de platos
 master.menu.user-account.chef.item.list.ingredient = Lista de mis ingredientes
 master.menu.user-account.chef.item.list.kitchenUtensils = Lista de mis utensilios
+master.menu.chef.memorandum-list = Lista de mis memorandums
 
 # master.menu.user-account ####################################################
 
