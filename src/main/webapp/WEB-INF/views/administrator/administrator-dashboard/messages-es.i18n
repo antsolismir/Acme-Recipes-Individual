@@ -1,0 +1,33 @@
+administrator.dashboard.form.label.title = PANEL DE ADMINISTRADOR
+
+administrator.dashboard.form.label.totalNumberOfKitchenUtensils = Número total de utensilios de cocina
+administrator.dashboard.form.label.averageRetailPriceOfKitchenUtensilsGroupedByCurrency = Precio medio de venta al público de los utensilios de cocina
+administrator.dashboard.form.label.deviationRetailPriceOfKitchenUtensilsGroupedByCurrency = Desviación del precio de venta al público de los utensilios de cocina
+administrator.dashboard.form.label.minimunRetailPriceOfKitchenUtensilsGroupedByCurrency = Precio mínimo de venta al público de los utensilios de cocina
+administrator.dashboard.form.label.maximunRetailPriceOfKitchenUtensilsGroupedByCurrency = Precio máximo de venta al público de los utensilios de cocina
+
+administrator.dashboard.form.label.totalNumberOfIngredients = Número total de ingredientes
+administrator.dashboard.form.label.averageRetailPriceOfIngredientsGroupedByCurrency = Precio medio de venta al público de los ingredientes
+administrator.dashboard.form.label.deviationRetailPriceOfIngredientsGroupedByCurrency = Desviación precio de venta al público de los ingredientes
+administrator.dashboard.form.label.minimunRetailPriceOfIngredientsGroupedByCurrency = Precio mínimo de venta de los ingredientes
+administrator.dashboard.form.label.maximunRetailPriceOfIngredientsGroupedByCurrency = Precio máximo de venta de los ingredientes
+
+administrator.dashboard.form.title.about-proposed-dish = Platos propuestos
+administrator.dashboard.form.label.averageBudgetOfFineDishesProposed = Presupuesto medio de los platos finos propuestos
+administrator.dashboard.form.label.deviationBudgetOfFineDishesProposed = Presupuesto de desviación de platos finos propuesto
+administrator.dashboard.form.label.minimunBudgetOfFineDishesProposed = Presupuesto mínimo de platos finos propuesto
+administrator.dashboard.form.label.maximunBudgetOfFineDishesProposed = Presupuesto máximo de platos finos propuesto
+
+administrator.dashboard.form.title.about-accepted-dish = Platos aceptados
+administrator.dashboard.form.label.averageBudgetOfFineDishesAccepted = Presupuesto medio de los platos aceptados
+administrator.dashboard.form.label.deviationBudgetOfFineDishesAccepted = Presupuesto de desviación de los platos aceptados
+administrator.dashboard.form.label.minimunBudgetOfFineDishesAccepted = Presupuesto mínimo de los platos aceptados
+administrator.dashboard.form.label.maximunBudgetOfFineDishesAccepted = Presupuesto máximo de platos aceptados
+
+administrator.dashboard.form.title.about-denied-dish = Platos rechazados
+administrator.dashboard.form.label.averageBudgetOfFineDishesDenied = Presupuesto medio de los platos negados
+administrator.dashboard.form.label.deviationBudgetOfFineDishesDenied = Presupuesto de desviación de platos denegados
+administrator.dashboard.form.label.minimunBudgetOfFineDishesDenied = Presupuesto mínimo de platos rechazados
+administrator.dashboard.form.label.maximunBudgetOfFineDishesDenied = Presupuesto máximo de platos denegados
+
+administrator.dashboard.form.title.dish-by-status = Platos por estado
