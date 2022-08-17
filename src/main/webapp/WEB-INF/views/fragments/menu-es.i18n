@@ -49,6 +49,7 @@ master.menu.administrator.configuration.show = Ver configuración del sistema
 # master.menu.epicure ########################################################
 
 master.menu.epicure = Epicure
+master.menu.epicure.dashboard = Tablero
 master.menu.epicure.link = Enlace favorito
 master.menu.epicure.dish.list = Listar mis platos
 master.menu.epicure.memorandum.list = Listar mis memorandums
