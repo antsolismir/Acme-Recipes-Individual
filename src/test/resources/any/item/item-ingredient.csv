@@ -1,0 +1,21 @@
+record-index,key,item-type,name,code,description,retail-price,link,key:chef
+0,item-01,INGREDIENT,ingrediente01,AA:AAA-001,d,EUR 10.00,https://google.com,chef-01
+1,item-02,INGREDIENT,ingrediente02,AA:AAA-002,Ac.,EUR 15.99,https://google.com,chef-02
+2,item-03,INGREDIENT,ingrediente03,AA:AAA-003,"Etiam dolor ligula, interdum a consectetur viverra, maximus quis lorem. Sed eros justo turpis duis.",EUR 0.99,https://google.com,chef-03
+3,item-05,INGREDIENT,ingrediente05,AA:AAA-005,Morbi sit amet fermentum nam.,EUR 100.99,https://google.com,chef-02
+4,item-06,INGREDIENT,ingrediente06,AA:AAA-006,Suspendisse nam.,EUR 10.99,https://google.com,chef-01
+5,item-08,INGREDIENT,ingrediente08,AA:AAA-008,"Aliquam fermentum nec risus eget pretium. Praesent sit amet pulvinar ante, sed pellentesque est. Pellentesque vitae justo ut velit efficitur varius eget ac est. Pellentesque ligula justo sodales sed.",EUR 3.99,https://google.com,chef-03
+6,item-09,INGREDIENT,ingrediente09,AA:AAA-009,"In pretium nulla erat, in vehicula tellus mattis vitae viverra fusce.",EUR 60.50,https://google.com,chef-03
+7,item-10,INGREDIENT,ingrediente10,AA:AAA-010,d,EUR 7.00,https://google.com,chef-01
+8,item-12,INGREDIENT,ingrediente12,AA:AAA-012,"consectetur viverra, maximus quis lorem. Sed eros justo turpis duis.",EUR 0.99,https://google.com,chef-03
+9,item-13,INGREDIENT,ingrediente13,AA:AAA-013,Curabitur viverra dolor ac vestibulum. Fusce interdum purus quis lacus varius finibus at at ligula. Fusce eget purus vel quam posuere viverra ac non ante nec.,EUR 10.99,https://google.com,chef-01
+10,item-14,INGREDIENT,ingrediente14,AA:AAA-014,Morbi nam.,EUR 120.99,https://google.com,chef-02
+11,item-15,INGREDIENT,ingrediente15,AA:AAA-015,Vietnam.,EUR 10.99,https://google.com,chef-03
+12,item-16,INGREDIENT,ingrediente16,AA:AAA-016,"Lobortis pellentesque massa nec, fringilla placerat enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec bibendum nisl sit amet magna lobortis dictum tortor.",EUR 7.99,https://google.com,chef-01
+13,item-17,INGREDIENT,ingrediente17,AA:AAA-017,"Aliquam fermentum sit amet pulvinar ante, sed est. Pellentesque vitae justo ut velit efficitur varius eget ac est. Pellentesque ligula justo sodales sed.",EUR 3.99,https://google.com,chef-02
+14,item-18,INGREDIENT,ingrediente18,AA:AAA-018,In vitae viverra fusce.,EUR 60.50,https://google.com,chef-03
+15,item-27,INGREDIENT,ingrediente21,AA:AAA-027,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit",EUR 7.99,https://google.com,chef-03
+16,item-28,INGREDIENT,ingrediente22,AA:AAA-028,"Lorem ipsum dolor sit amet, consectetuer adipiscing eli",EUR 5.90,https://google.com,chef-01
+17,item-29,INGREDIENT,ingrediente23,AA:AAA-029,"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volupta",EUR 42.99,https://google.com,chef-02
+18,item-37,INGREDIENT,ingrediente24,AA:AAA-037,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit",EUR 10.99,https://google.com,chef-01
+19,item-39,INGREDIENT,ingrediente25,AA:AAA-039,"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volupta",EUR 42.99,https://google.com,chef-03

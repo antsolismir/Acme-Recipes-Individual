@@ -1,5 +1,5 @@
 /*
- * SignUpTest.java
+ * FavouriteLinkTest.java
  *
  * Copyright (C) 2012-2022 Rafael Corchuelo.
  *
@@ -13,26 +13,22 @@
 package acme.testing;
 
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.api.Test;
 
-public class SignUpTest extends TestHarness {
-
+public class FavouriteLinkTest extends TestHarness {
+	
 	// Lifecycle management ---------------------------------------------------
 
 	// Test cases -------------------------------------------------------------
 
-	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(10)
-
-	public void positiveSignUp(final String username, final String password, final String name, final String surname, final String email, final String phone) {
-		super.signUp(username, password, name, surname, email);
-		super.signIn(username, password);
-		super.signOut();
-		super.checkLinkExists("Sign in");
+	public void favouriteLink() {
+		super.navigateHome();
+		super.clickOnMenu("Our Team", "47427180F: Pastor Fernández, Ginés");		
+		super.checkCurrentUrl("https://github.com/Ginpasfer");
 	}
-
-	// Ancillary methods ------------------------------------------------------
+	
+	// Ancillary methods ------------------------------------------------------ 
 	
 }

@@ -13,6 +13,7 @@
 package acme.testing;
 
 import org.hibernate.internal.util.StringHelper;
+
 import acme.framework.testing.AbstractTest;
 
 public abstract class TestHarness extends AbstractTest {
@@ -49,7 +50,8 @@ public abstract class TestHarness extends AbstractTest {
 		assert !StringHelper.isBlank(email);
 
 		super.navigateHome();
-		super.clickOnMenu("Sign up");
+
+		super.clickOnMenu("Sign up");	
 
 		super.fillInputBoxIn("username", username);
 		super.fillInputBoxIn("password", password);
