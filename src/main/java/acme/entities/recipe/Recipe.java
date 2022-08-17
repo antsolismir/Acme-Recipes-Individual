@@ -57,6 +57,6 @@ public class Recipe extends AbstractEntity {
 	@NotNull
 	@ManyToOne(optional = false)
 	protected Chef chef;
-	
+
 }
 

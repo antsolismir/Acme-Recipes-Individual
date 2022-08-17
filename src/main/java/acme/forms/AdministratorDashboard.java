@@ -5,6 +5,12 @@ import java.util.Map;
 
 import javax.validation.constraints.Min;
 
+import lombok.Getter;
+import lombok.Setter;
+
+
+@Getter
+@Setter
 public class AdministratorDashboard implements Serializable{
 
 	// Serialisation identifier --------------------------------

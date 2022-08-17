@@ -3,6 +3,14 @@ package acme.forms;
 import java.io.Serializable;
 import java.util.Map;
 
+import org.springframework.data.util.Pair;
+
+import acme.components.Status;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class EpicureDashboard implements Serializable{
 
 	// Serialisation identifier --------------------------------
@@ -10,23 +18,13 @@ public class EpicureDashboard implements Serializable{
 	private static final long		serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-	Integer totalNumberOfProposedFineDishes;
-	Integer totalNumberOfAcceptedFineDishes;
-	Integer totalNumberOfDeniedFineDishes;
-	
-	Map<String,Double> averageBudgetOfProposedFineDishesGroupedByCurrrency;
-	Map<String,Double> averageBudgetOfAcceptedFineDishesGroupedByCurrrency;
-	Map<String,Double> averageBudgetOfDeniedFineDishesGroupedByCurrrency;
-	
-	Map<String,Double> deviationBudgetOfProposedFineDishesGroupedByCurrrency;
-	Map<String,Double> deviationBudgetOfAcceptedFineDishesGroupedByCurrrency;
-	Map<String,Double> deviationBudgetOfDeniedFineDishesGroupedByCurrrency;
+	Map<Status, Integer> numberOfFineDishesByStatus;
 
-	Map<String,Double> minimumBudgetOfProposedFineDishesGroupedByCurrrency;
-	Map<String,Double> minimumBudgetOfAcceptedFineDishesGroupedByCurrrency;
-	Map<String,Double> minimumBudgetOfDeniedFineDishesGroupedByCurrrency;
-	
-	Map<String,Double> maximumBudgetOfProposedFineDishesGroupedByCurrrency;
-	Map<String,Double> maximumBudgetOfAcceptedFineDishesGroupedByCurrrency;
-	Map<String,Double> maximumBudgetOfDeniedFineDishesGroupedByCurrrency;
+	Map<Pair<Status, String>, Double>	averageNumberOfBudgetsByCurrencyAndStatus;
+
+	Map<Pair<Status, String>, Double>	deviationOfBudgetsByCurrencyAndStatus;
+
+	Map<Pair<Status, String>, Double>		maxBudgetByCurrencyAndStatus;
+
+	Map<Pair<Status, String>, Double>		minBudgetByCurrencyAndStatus;
 }
