@@ -4,16 +4,18 @@ package acme.entities.item;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
+import acme.roles.Chef;
 import lombok.Getter;
 import lombok.Setter;
 @Entity
@@ -41,7 +43,8 @@ public class Item extends AbstractEntity{
 	protected String description;
 	
 	
-	@Positive
+	@NotNull
+	@Valid
 	protected Money retailPrice;
 	
 
@@ -50,6 +53,14 @@ public class Item extends AbstractEntity{
 	
 	
 	@NotNull
-	protected ItemType itemTypes;
+	protected ItemType itemType;
+
+	@NotNull
+	protected Boolean published;
+	
+	@NotNull
+	@Valid
+	@ManyToOne(optional=false)
+	protected Chef chef;
 
 }

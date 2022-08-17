@@ -30,6 +30,11 @@
 			<acme:menu-suboption code="master.menu.anonymous.list-peeps" action="/any/peep/list"/>
 		</acme:menu-option>
 
+		<acme:menu-option code="master.menu.all.principals" access="isAnonymous()">	
+			<acme:menu-suboption code="master.menu.any.item.ingredient" action="/any/item/list-ingredients"/>
+			<acme:menu-suboption code="master.menu.any.item.kitchen_utensils" action="/any/item/list-kitchenUtensils"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
@@ -44,7 +49,8 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
-			<acme:menu-suboption code="master.menu.chef.link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.user-account.chef.item.list.ingredient" action="/chef/item/list-ingredients"/>
+			<acme:menu-suboption code="master.menu.user-account.chef.item.list.kitchenUtensils" action="/chef/item/list-kitchen_utensils"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
