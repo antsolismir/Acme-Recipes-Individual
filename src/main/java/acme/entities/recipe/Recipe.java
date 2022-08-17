@@ -48,12 +48,11 @@ public class Recipe extends AbstractEntity {
 	protected String			info;
 	
 	protected boolean 			published;
-
 	
 	// Derived attributes -----------------------------------------------------
 	
 	// Relationships ----------------------------------------------------------
-	
+
 	@Valid
 	@NotNull
 	@ManyToOne(optional = false)

@@ -66,7 +66,11 @@ master.menu.chef.link = Enlace favorito
 master.menu.chef.dish-list = Lista de platos
 master.menu.user-account.chef.item.list.ingredient = Lista de mis ingredientes
 master.menu.user-account.chef.item.list.kitchenUtensils = Lista de mis utensilios
+
+master.menu.user-account.chef.item.list.recipe = Lista de mis recetas
+
 master.menu.chef.memorandum-list = Lista de mis memorandums
+
 
 # master.menu.user-account ####################################################
 
