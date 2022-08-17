@@ -49,13 +49,17 @@ public abstract class TestHarness extends AbstractTest {
 		assert !StringHelper.isBlank(email);
 
 		super.navigateHome();
+
 		super.clickOnMenu("Sign up");	
+
 		super.fillInputBoxIn("username", username);
 		super.fillInputBoxIn("password", password);
 		super.fillInputBoxIn("confirmation", password);
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
+
 		super.fillInputBoxIn("identity.email", email);		
+
 		super.fillInputBoxIn("accept", "true");
 		super.clickOnSubmit("Sign up");
 		super.checkCurrentPath("/master/welcome");
