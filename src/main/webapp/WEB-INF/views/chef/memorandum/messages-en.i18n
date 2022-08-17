@@ -1,0 +1,8 @@
+chef.memorandum.form.label.sequenceNumber = Sequence number
+chef.memorandum.form.label.instantiationMoment = Instantiation moment
+chef.memorandum.form.label.report = Report
+chef.memorandum.form.label.link = Link
+chef.memorandum.form.label.dish.code = Dish code
+
+chef.memorandum.list.label.sequenceNumber = Sequence number
+chef.memorandum.list.label.instantiationMoment = Instantiation moment
