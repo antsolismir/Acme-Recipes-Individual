@@ -1,0 +1,17 @@
+chef.dish.form.label.status = Status
+chef.dish.form.label.code = Code
+chef.dish.form.label.request = Request
+chef.dish.form.label.budget = Budget
+chef.dish.form.label.convert = Convert Currency
+chef.dish.form.label.creationDate = Creation Date
+chef.dish.form.label.initialPeriodDate = Initial Period Date
+chef.dish.form.label.finalPeriodDate = Final Period Date
+chef.dish.form.label.link = Link
+chef.dish.form.label.epicure.organisation = Organisation
+chef.dish.form.label.epicure.assertion = Assertion
+chef.dish.form.label.epicure.username = Username
+chef.dish.form.button.report = Report
+
+chef.dish.list.label.status = Status
+chef.dish.list.label.code = Code
+chef.dish.list.label.creationDate = Creation Date
