@@ -24,7 +24,6 @@ public abstract class TestHarness extends AbstractTest {
 		assert !StringHelper.isBlank(username);
 		assert !StringHelper.isBlank(password);
 		
-
 		super.navigateHome();
 		super.clickOnMenu("Sign in");
 		super.fillInputBoxIn("username", username);
