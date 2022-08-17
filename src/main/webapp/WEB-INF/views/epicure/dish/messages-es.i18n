@@ -1,0 +1,17 @@
+epicure.dish.form.label.status = Estado
+epicure.dish.form.label.code = Código
+epicure.dish.form.label.request = Petición
+epicure.dish.form.label.budget = Presupuesto
+epicure.dish.form.label.convert = Presupuesto convertido
+epicure.dish.form.label.creationDate = Fecha de creación
+epicure.dish.form.label.initialPeriodDate = Periodo inicial
+epicure.dish.form.label.finalPeriodDate = Periodo final
+epicure.dish.form.label.link = Link
+epicure.dish.form.label.epicure.organisation = Organización
+epicure.dish.form.label.epicure.assertion = Afirmación
+epicure.dish.form.label.epicure.username = Nombre de usuario
+epicure.dish.form.button.report = Reporte
+
+epicure.dish.list.label.status = Estado
+epicure.dish.list.label.code = Código
+epicure.dish.list.label.creationDate = Fecha de creación
