@@ -26,7 +26,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.badayco" action="https://github.com/badrijher"/>
 			
 			<acme:menu-separator/>
-
+      
+			<acme:menu-suboption code="master.menu.anonymous.list-user-accounts" action="/any/user-account/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-peeps" action="/any/peep/list"/>
 		</acme:menu-option>
 
