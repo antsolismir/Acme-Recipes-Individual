@@ -24,11 +24,17 @@
 			<acme:menu-suboption code="master.menu.anonymous.ginpasfer" action="https://github.com/Ginpasfer"/>
 			<acme:menu-suboption code="master.menu.anonymous.antonio" action="https://github.com/antsolismir"/>
 			<acme:menu-suboption code="master.menu.anonymous.badayco" action="https://github.com/badrijher"/>
+			
+			<acme:menu-separator/>
+      
+			<acme:menu-suboption code="master.menu.anonymous.list-user-accounts" action="/any/user-account/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-peeps" action="/any/peep/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.all.principals" access="isAnonymous()">	
 			<acme:menu-suboption code="master.menu.any.item.ingredient" action="/any/item/list-ingredients"/>
 			<acme:menu-suboption code="master.menu.any.item.kitchen_utensils" action="/any/item/list-kitchenUtensils"/>
+			<acme:menu-suboption code="master.menu.any.recipe" action="/any/recipe/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -47,8 +53,13 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
+
+			<acme:menu-suboption code="master.menu.chef.dish-list" action="/chef/dish/list"/>
 			<acme:menu-suboption code="master.menu.user-account.chef.item.list.ingredient" action="/chef/item/list-ingredients"/>
 			<acme:menu-suboption code="master.menu.user-account.chef.item.list.kitchenUtensils" action="/chef/item/list-kitchen_utensils"/>
+
+			<acme:menu-suboption code="master.menu.chef.memorandum-list" action="/chef/memorandum/list"/> 
+
 		</acme:menu-option>
 	</acme:menu-left>
 
