@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.administrator.configuration;
+package acme.features.authenticated.systemConfiguration;
 
 
 import javax.annotation.PostConstruct;
@@ -24,7 +24,7 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.roles.Administrator;
 
 @Controller
-@RequestMapping("/administrator/systemconfiguration/")
+@RequestMapping("/administrator/system-configuration/")
 public class AdministratorSystemConfigurationController extends AbstractController<Administrator, SystemConfiguration>{
 
 	@Autowired

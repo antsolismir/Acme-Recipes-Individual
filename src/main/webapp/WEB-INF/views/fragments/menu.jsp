@@ -32,7 +32,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.systemConfiguration.show" action="/authenticated/systemConfiguration/show"/>
+			<acme:menu-suboption code="master.menu.authenticated.systemConfiguration.show" action="/authenticated/system-configuration/show"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.all.principals" access="isAnonymous()">	
