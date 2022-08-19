@@ -63,7 +63,7 @@ master.menu.epicure.memorandum.list = List my memorandums
 master.menu.chef = Chef
 
 master.menu.chef.link = Favourite link
-master.menu.chef.dish-list = List of Dishes
+master.menu.chef.dish-list = List my dishes
 master.menu.user-account.chef.item.list.ingredient = List my ingredients
 master.menu.user-account.chef.item.list.kitchenUtensils = List my kitchen utensils
 
