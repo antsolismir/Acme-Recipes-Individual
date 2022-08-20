@@ -1,7 +1,9 @@
 
 package acme.features.any.recipe;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,8 +43,21 @@ public class AnyRecipeListService implements AbstractListService<Any, Recipe>{
 		Collection<Recipe> result;
 		
 		result = this.repository.findAllRecipes();
+		final Collection<Recipe> finalResult = new ArrayList<Recipe>();
+		finalResult.addAll(result);
+		final Iterator<Recipe> resultIter = result.iterator();
 		
-		return result;
+		while(resultIter.hasNext()) {
+			
+			final Recipe recipe = resultIter.next();
+			final Collection<ItemQuantity> hola = this.repository.findItemQuantityByRecipe(recipe.getId());
+
+			if(hola.isEmpty()) {
+				finalResult.remove(recipe);
+			}
+		}
+		
+		return finalResult;
 	}
 
 	@Override

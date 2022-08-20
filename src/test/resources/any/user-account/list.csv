@@ -2,6 +2,10 @@ recordIndex,name,surname,email,username,roles
 0,Chef,One,chef1@acme.com,chef1,Chef
 1,Chef,Two,chef2@acme.com,chef2,Chef
 2,Chef,Three,chef3@acme.com,chef3,Chef
-3,Epicure,One,epicure1@acme.com,epicure1,Epicure
-4,Epicure,Two,epicure2@acme.com,epicure2,Epicure
-5,Epicure,Three,epicure3@acme.com,epicure3,Epicure
+3,Chef,Four,chef4@acme.com,chef4,Chef
+4,Chef,Five,chef5@acme.com,chef5,Chef
+5,Epicure,One,epicure1@acme.com,epicure1,Epicure
+6,Epicure,Two,epicure2@acme.com,epicure2,Epicure
+7,Epicure,Three,epicure3@acme.com,epicure3,Epicure
+8,Epicure,Four,epicure4@acme.com,epicure4,Epicure
+9,Epicure,Five,epicure5@acme.com,epicure5,Epicure
