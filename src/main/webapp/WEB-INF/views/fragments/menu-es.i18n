@@ -17,7 +17,8 @@ master.menu.sign-out = Salir
 
 # master.menu.anonymous #######################################################
 
-master.menu.anonymous = Nuestro equipo
+master.menu.anonymous = Menú
+master.menu.anonymous.team = Nuestro equipo
 
 master.menu.anonymous.alvparbor1 = 44053812A: Paradas Borrego, Álvaro
 master.menu.anonymous.pablo = 80101033Z: Giráldez Álvarez,Pablo

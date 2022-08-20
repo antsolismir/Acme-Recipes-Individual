@@ -1,6 +1,6 @@
 record-index,key,item-type,name,code,description,retail-price,link,key:chef
 0,item-01,INGREDIENT,ingrediente01,AA:AAA-001,d,EUR 10.00,https://google.com,chef-01
-1,item-02,INGREDIENT,ingrediente02,AA:AAA-002,Ac.,EUR 15.99,https://google.com,chef-02
+1,item-02,INGREDIENT,ingrediente02,AA:AAA-002,Ac.,GBP 15.99,https://google.com,chef-02
 2,item-03,INGREDIENT,ingrediente03,AA:AAA-003,"Etiam dolor ligula, interdum a consectetur viverra, maximus quis lorem. Sed eros justo turpis duis.",EUR 0.99,https://google.com,chef-03
 3,item-05,INGREDIENT,ingrediente05,AA:AAA-005,Morbi sit amet fermentum nam.,EUR 100.99,https://google.com,chef-02
 4,item-06,INGREDIENT,ingrediente06,AA:AAA-006,Suspendisse nam.,EUR 10.99,https://google.com,chef-01

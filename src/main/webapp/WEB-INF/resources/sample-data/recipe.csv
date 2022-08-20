@@ -1,12 +1,12 @@
 key,code,heading,description,preparation-notes,info,key:chef,published
-recipe-01,FF:DNJ-804,recipe01,description01,Just follow the recipe,http://ev.us.es,chef-01,false
-recipe-02,JR:DPH-021,recipe02,description02,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-03,JR:DPH-022,recipe03,description03,Just follow the recipe,http://ev.us.es,chef-02,true
-recipe-04,JR:DPH-023,recipe04,description04,Just follow the recipe,http://ev.us.es,chef-02,false
-recipe-05,JR:DPH-024,recipe05,description05,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-06,XIM-147,recipe06,description06,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-07,XIM-148,recipe07,description07,Just follow the recipe,http://ev.us.es,chef-02,false
-recipe-08,XIM-149,recipe08,description08,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-09,XIM-144,recipe09,description09,Just follow the recipe,http://ev.us.es,chef-01,false
-recipe-10,XIM-142,recipe10,description10,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-11,XDD-145,recipe11,description11,Just follow the recipe,http://ev.us.es,chef-03,true
+recipe-01,FF:DNJ-804,Macarrones con tomate,Macarrones con tomate y salchichas con una capa de queso en polvo.,"Lorem ipsum dolor sit amet,consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",https://zyro.com/,chef-01,false
+recipe-02,JR:DPH-021,Espinacas con garbanzos,Espinacas con garbanzos sazonados con pimentón de la Vera.,"Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis,ultricies nec,pellentesque eu,pretium quis,sem. Nulla consequat massa quis enim.",http://ev.us.es,chef-01,true
+recipe-03,JR:DPH-022,Lentejas,Auténticas lentejas casera.,"Donec pede justo,fringilla vel,aliquet nec,vulputate eget,arcu. In enim justo,rhoncus ut,imperdiet a,venenatis vitae,justo.",https://www.loremipzum.com/es/,chef-02,true
+recipe-04,JR:DPH-023,Arroz con pollo,Arroz con pollo con su salsa.,Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.,https://smodin.io/es/escritor,chef-02,false
+recipe-05,JR:DPH-024,Hamburguesa,Hamburguesa de ternera con queso y bacon.,"Aenean leo ligula,porttitor eu,consequat vitae,eleifend ac,enim. Aliquam lorem ante,dapibus in,viverra quis,feugiat a,tellus.",https://www.xataka.com/inteligencia-artificial/puedes-escribir-que-quieras-esta-version-limitada-polemico-generador-textos-openai,chef-02,true
+recipe-06,XIM-147,Espaguetis carbonara,Recete italiana para espaguetis carbonara.,Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.,https://www.artikelschreiber.com/es/,chef-02,true
+recipe-07,XIM-148,Cocido,Cocido extremeño con chorizo.,"Nam eget dui. Etiam rhoncus. Maecenas tempus,tellus eget condimentum rhoncus,sem quam semper libero,sit amet adipiscing sem neque sed ipsum. Nam quam nunc,blandit vel,luctus pulvinar,hendrerit id,lorem.",https://www.blindtextgenerator.com/es,chef-03,false
+recipe-08,XIM-149,Pasta con atún,Pasta con atún fresco.,Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.,https://neuroflash.com/es/generador-de-textos-inteligencia-artificial/,chef-03,true
+recipe-09,XIM-144,Atún con tomate,Atún desalado y desmigado con tomate.,"Maecenas tempus,tellus eget condimentum rhoncus,sem quam semper libero,sit amet adipiscing sem neque sed ipsum.",https://anytexteditor.com/es/text-generator,chef-01,false
+recipe-10,XIM-142,Puchero andaluz,Receta familiar de puchero.,"Nam quam nunc,blandit vel,luctus pulvinar,hendrerit id,lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.",https://vilmanunez.com/herramienta-crear-textos-unicode/,chef-02,true
+recipe-11,XIM-150,Filete con patatas y huevo frito,Tradicional plato combinado español.,Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.,https://www.tekcrispy.com/2021/09/28/generador-textos-automatico/,chef-03,true
