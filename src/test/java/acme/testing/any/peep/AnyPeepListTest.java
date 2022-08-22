@@ -16,7 +16,7 @@ public class AnyPeepListTest extends TestHarness{
 
 		// Los datos mostrados en el test dependen de una fecha reciente (1 mes según lo especificado)
 		
-		super.clickOnMenu("Anonymous","Peeps list");
+		super.clickOnMenu("Menu","Peeps list");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		

@@ -1,0 +1,18 @@
+any.peep.list.label.moment = Instantiation Moment
+any.peep.list.label.heading = Heading
+any.peep.list.label.writer = Writer
+any.peep.list.label.text = Text
+any.peep.list.label.email = Email
+
+any.peep.list.button.create = Create
+
+any.peep.form.label.-moment = Instantiation moment
+any.peep.form.label.heading = Heading
+any.peep.form.label.writer = Writer
+any.peep.form.label.text = Text
+any.peep.form.label.email = Email (optional)
+any.peep.form.button.create = Create
+any.peep.form.label.confirmation = Confirmation
+any.peep.form.error.heading-spam = The heading introduced is considered spam
+any.peep.form.error.writer-spam = The writer introduced is considered spam
+any.peep.form.error.text-spam = The text introduced is considered spam
