@@ -15,7 +15,7 @@ public class AnyItemListAlKitchenUtensilsTest extends TestHarness {
 	public void positiveAnyItemListAllKitchenUtensilsTest(final int recordIndex, final String key, final String itemType, final String name, final String code, final String description, final String retailPrice,final String link) {
 
 
-		super.clickOnMenu("All principals", "List kitchen utensils");
+		super.clickOnMenu("Menu", "List kitchen utensils");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		
