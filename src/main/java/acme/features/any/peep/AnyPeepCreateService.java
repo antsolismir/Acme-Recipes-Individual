@@ -61,8 +61,8 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep>{
 			assert entity != null;
 			assert errors != null;
 
-			boolean confirmation;
-
+			final boolean confirmation;
+/*
 			if(!errors.hasErrors("heading")) {
 				final boolean isHeadingSpam = SpamDetector.isSpam(entity.getHeading(), this.repository.getSystemConfiguration());
 				errors.state(request, !isHeadingSpam, "heading", "any.peep.form.error.heading-spam");
@@ -77,8 +77,10 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep>{
 				final boolean isTextSpam = SpamDetector.isSpam(entity.getText(), this.repository.getSystemConfiguration());
 				errors.state(request, !isTextSpam, "text", "any.peep.form.error.text-spam");
 			}
+			*/
 			confirmation = request.getModel().getBoolean("confirmation");
 			errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+	
 		}
 
 		@Override

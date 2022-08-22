@@ -26,7 +26,7 @@ public class AnyPeepCreateTest extends TestHarness{
 		super.clickOnMenu("Menu","Peeps list");
 		super.checkListingExists();
 
-		super.sortListing(0, "asc");
+		super.sortListing(1, "asc");
 		super.checkColumnHasValue(recordIndex, 1, heading);
 		super.checkColumnHasValue(recordIndex, 2, writer);
 		super.checkColumnHasValue(recordIndex, 3, text);
