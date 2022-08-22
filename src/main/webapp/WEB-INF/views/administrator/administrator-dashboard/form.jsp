@@ -32,9 +32,7 @@
 				</jstl:forEach>
 			</jstl:if>
 		</tr>
-	</jstl:forEach>
-	<jstl:forEach items="${ currency }" var="currency">
-
+		
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
@@ -51,9 +49,7 @@
 				</jstl:forEach>
 			</jstl:if>
 		</tr>
-	</jstl:forEach>
-	<jstl:forEach items="${ currency }" var="currency">
-
+		
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
@@ -70,9 +66,7 @@
 				</jstl:forEach>
 			</jstl:if>
 		</tr>
-	</jstl:forEach>
-	<jstl:forEach items="${ currency }" var="currency">
-
+		
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
@@ -89,17 +83,9 @@
 				</jstl:forEach>
 			</jstl:if>
 		</tr>
+		<tr><th></th><th></th></tr>
 	</jstl:forEach>
 </table>
-
-
-
-
-
-
-
-
-
 
 <h2>
 	<acme:message
@@ -126,9 +112,7 @@
 				</jstl:forEach>
 			</jstl:if>
 		</tr>
-	</jstl:forEach>
-	<jstl:forEach items="${ currency }" var="currency">
-
+		
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
@@ -145,9 +129,7 @@
 				</jstl:forEach>
 			</jstl:if>
 		</tr>
-	</jstl:forEach>
-	<jstl:forEach items="${ currency }" var="currency">
-
+		
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
@@ -164,9 +146,7 @@
 				</jstl:forEach>
 			</jstl:if>
 		</tr>
-	</jstl:forEach>
-	<jstl:forEach items="${ currency }" var="currency">
-
+		
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
@@ -183,14 +163,9 @@
 				</jstl:forEach>
 			</jstl:if>
 		</tr>
+		<tr><th></th><th></th></tr>
 	</jstl:forEach>
 </table>
-
-
-
-
-
-
 
 
 <h2>

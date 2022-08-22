@@ -15,7 +15,7 @@ public class AnyItemListAllIngredientsTest extends TestHarness {
 	public void positiveAnyItemListAllIngredientsTest(final int recordIndex, final String key, final String itemType, final String name, final String code, final String description, final String retailPrice,final String link) {
 
 
-		super.clickOnMenu("All principals", "List ingredients");
+		super.clickOnMenu("Menu", "List ingredients");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		

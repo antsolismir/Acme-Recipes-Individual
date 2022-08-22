@@ -1,11 +1,12 @@
 key,code,heading,description,preparation-notes,info,key:chef,published
-recipe-01,FF:DNJ-804,recipe01,description01,Just follow the recipe,http://ev.us.es,chef-01,false
-recipe-02,JR:DPH-021,recipe02,description02,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-03,JR:DPH-022,recipe03,description03,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-04,JR:DPH-023,recipe04,description04,Just follow the recipe,http://ev.us.es,chef-01,false
-recipe-05,JR:DPH-024,recipe05,description05,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-06,XIM-147,recipe06,description06,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-07,XIM-148,recipe07,description07,Just follow the recipe,http://ev.us.es,chef-01,false
-recipe-08,XIM-149,recipe08,description08,Just follow the recipe,http://ev.us.es,chef-01,true
-recipe-09,XIM-144,recipe09,description09,Just follow the recipe,http://ev.us.es,chef-01,false
-recipe-10,XIM-142,recipe10,description10,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-01,FF:DNJ-804,Pollo con arroz,Echamos el pollo y despues el arroz,Just follow the recipe,http://ev.us.es,chef-01,false
+recipe-02,JR:DPH-021,Tortilla de patatas,Pochamos la cebolla a continuacion las patatas y despues lo mezclamos con huevo y la echamos en la sarten,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-03,JR:DPH-022,Lentejas,Echamos las lentejas en agua despues las ponemos junto a sus avios en la olla a presion,Just follow the recipe,http://ev.us.es,chef-02,true
+recipe-04,JR:DPH-023,Queso,Fermentamos la leche,Just follow the recipe,http://ev.us.es,chef-02,false
+recipe-05,JR:DPH-024,Agua,La recogemos del rio o del grifo,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-06,XIM-147,Fresas,Las recolectamos y le echamos leche condensada para que esten mas ricas,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-07,XIM-148,Fajitas,Hacemos la verdura para despues hacer las tortitas y echarle las verduras y carne,Just follow the recipe,http://ev.us.es,chef-02,false
+recipe-08,XIM-149,Tacos,Pues parecido a las fajitas,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-09,XIM-144,Hamburguesa,Compramos la carne y la hacemos a la parrilla,Just follow the recipe,http://ev.us.es,chef-01,false
+recipe-10,XIM-142,Pizza,Hacemos la masa y le echamos por encima el queso tomate y el resto de ingredientes,Just follow the recipe,http://ev.us.es,chef-01,true
+recipe-11,XDD-145,Pasta,Echamos la pasta al agua hirviendo por 10 minutos,Just follow the recipe,http://ev.us.es,chef-03,true

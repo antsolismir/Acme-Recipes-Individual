@@ -17,7 +17,8 @@ master.menu.sign-out = Salir
 
 # master.menu.anonymous #######################################################
 
-master.menu.anonymous = Nuestro equipo
+master.menu.anonymous = Menú
+master.menu.anonymous.team = Nuestro equipo
 
 master.menu.anonymous.alvparbor1 = 44053812A: Paradas Borrego, Álvaro
 master.menu.anonymous.pablo = 80101033Z: Giráldez Álvarez,Pablo
@@ -63,7 +64,7 @@ master.menu.epicure.memorandum.list = Listar mis memorandums
 master.menu.chef = Chef
 
 master.menu.chef.link = Enlace favorito
-master.menu.chef.dish-list = Lista de platos
+master.menu.chef.dish-list = Lista de mis platos
 master.menu.user-account.chef.item.list.ingredient = Lista de mis ingredientes
 master.menu.user-account.chef.item.list.kitchenUtensils = Lista de mis utensilios
 
