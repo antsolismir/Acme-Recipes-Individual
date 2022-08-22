@@ -1,0 +1,12 @@
+recordIndex,heading,writer,text,email,confirmation
+0,,,,,true
+1,,Jose,,jose@gmail.com,true
+2,This is other,,CC this is new,antonio@gmail.com,false
+3,Test of Heading,,DD This is a piece of text,manuel@gmail.com,true
+4,,Juan,,,true
+5,Other heading,,,jose@gmail.com,true
+6,,Antonio,GG this is a short description,antonio@gmail.com,true
+7,,Manuel,HH This is a piece of text,manuel@gmail.com,false
+8,,Juan,II Testing,,false
+9,My new heading,Manuel,,manuel@gmail.com,true
+10,New title,Juan,,,false
