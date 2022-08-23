@@ -1,0 +1,25 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+####Form
+administrator.bulletin.form.label.heading = Título:
+administrator.bulletin.form.label.text = Texto:
+administrator.bulletin.form.label.critical = Crítico:
+administrator.bulletin.form.label.info = Información:
+administrator.bulletin.list.button.create = Crear un boletín
+
+administrator.bulletin.form.label.confirmation = Confirmación
+administrator.bulletin.form.label.notCritical = No crítico
+administrator.bulletin.form.label.isCritical = Crítico
+
+administrator.bulletin.form.button.create = Crear
+
+administrator.bulletin.form.error.spam = El texto contiene Spam
