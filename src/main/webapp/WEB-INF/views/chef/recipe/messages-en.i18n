@@ -1,0 +1,15 @@
+#chefList
+chef.recipe.list.label.heading = Heading
+chef.recipe.list.label.code = Code
+chef.recipe.list.label.totalPrice = Total Price
+chef.recipe.list.label.published = Published
+
+####Form
+chef.recipe.form.label.heading = Heading:
+chef.recipe.form.label.code = Code:
+chef.recipe.form.label.description= Description:
+chef.recipe.form.label.preparationNotes= Preparation Notes:
+chef.recipe.form.label.info = Info:
+chef.recipe.form.button.items= Items
+chef.recipe.form.label.price = Total Price
+chef.recipe.form.label.published = Published

@@ -1,0 +1,41 @@
+key,item-type,published,name,code,description,retail-price,link,key:chef
+item-01,INGREDIENT,true,ingrediente01,AA:AAA-001,d,EUR 10.00,https://google.com,chef-01
+item-02,INGREDIENT,true,ingrediente02,AA:AAA-002,Ac.,GBP 15.99,https://google.com,chef-02
+item-03,INGREDIENT,true,ingrediente03,AA:AAA-003,"Etiam dolor ligula, interdum a consectetur viverra, maximus quis lorem. Sed eros justo turpis duis.",EUR 0.99,https://google.com,chef-03
+item-04,INGREDIENT,false,ingrediente04,AA:AAA-004,"Curabitur viverra dolor ac vestibulum sagittis. Aliquam varius porttitor nunc, in molestie tortor maximus in. Fusce interdum purus quis lacus varius finibus at at ligula. Fusce eget purus vel quam posuere viverra ac non ante nec.",EUR 10.99,https://google.com,chef-01
+item-05,INGREDIENT,true,ingrediente05,AA:AAA-005,Morbi sit amet fermentum nam.,EUR 100.99,https://google.com,chef-02
+item-06,INGREDIENT,true,ingrediente06,AA:AAA-006,Suspendisse nam.,EUR 10.99,https://google.com,chef-01
+item-07,INGREDIENT,false,ingrediente07,AA:AAA-007,"Duis quis egestas massa. Etiam lectus eros, lobortis pellentesque massa nec, fringilla placerat enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec bibendum nisl sit amet magna lobortis dictum tortor.",EUR 7.99,https://google.com,chef-02
+item-08,INGREDIENT,true,ingrediente08,AA:AAA-008,"Aliquam fermentum nec risus eget pretium. Praesent sit amet pulvinar ante, sed pellentesque est. Pellentesque vitae justo ut velit efficitur varius eget ac est. Pellentesque ligula justo sodales sed.",EUR 3.99,https://google.com,chef-03
+item-09,INGREDIENT,true,ingrediente09,AA:AAA-009,"In pretium nulla erat, in vehicula tellus mattis vitae viverra fusce.",EUR 60.50,https://google.com,chef-03
+item-10,INGREDIENT,true,ingrediente10,AA:AAA-010,d,EUR 07.00,https://google.com,chef-01
+item-11,INGREDIENT,false,ingrediente11,AA:AAA-011,Ac.,EUR 150.99,https://google.com,chef-02
+item-12,INGREDIENT,true,ingrediente12,AA:AAA-012,"consectetur viverra, maximus quis lorem. Sed eros justo turpis duis.",EUR 0.99,https://google.com,chef-03
+item-13,INGREDIENT,true,ingrediente13,AA:AAA-013,Curabitur viverra dolor ac vestibulum. Fusce interdum purus quis lacus varius finibus at at ligula. Fusce eget purus vel quam posuere viverra ac non ante nec.,EUR 10.99,https://google.com,chef-01
+item-14,INGREDIENT,true,ingrediente14,AA:AAA-014,Morbi nam.,EUR 120.99,https://google.com,chef-02
+item-15,INGREDIENT,true,ingrediente15,AA:AAA-015,Vietnam.,EUR 10.99,https://google.com,chef-03
+item-16,INGREDIENT,true,ingrediente16,AA:AAA-016,"Lobortis pellentesque massa nec, fringilla placerat enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec bibendum nisl sit amet magna lobortis dictum tortor.",EUR 7.99,https://google.com,chef-01
+item-17,INGREDIENT,true,ingrediente17,AA:AAA-017,"Aliquam fermentum sit amet pulvinar ante, sed est. Pellentesque vitae justo ut velit efficitur varius eget ac est. Pellentesque ligula justo sodales sed.",EUR 3.99,https://google.com,chef-02
+item-18,INGREDIENT,true,ingrediente18,AA:AAA-018,In vitae viverra fusce.,EUR 60.50,https://google.com,chef-03
+item-19,INGREDIENT,false,ingrediente19,AA:AAA-019,"Velit dictum, at pharetra nulla.",EUR 200.00,https://google.com,chef-01
+item-20,INGREDIENT,false,ingrediente20,AA:AAA-020,"Donec viverra sagittis et velit dictum, at pharetra nulla.",EUR 200.00,https://google.com,chef-02
+item-21,KITCHEN_UTENSIL,true,utensilio01,AA:AAA-021,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 10.99,https://google.com,chef-03
+item-22,KITCHEN_UTENSIL,true,utensilio02,AA:AAA-022,Tortor.,EUR 6.99,https://google.com,chef-01
+item-23,KITCHEN_UTENSIL,true,utensilio03,AA:AAA-023,"Vestibulum at nunc sit amet tellus porttitor sodales sed vel lorem. Cras ullamcorper tortor libero, eget ornare ex laoreet fermentum. Morbi cursus varius enim, at porttitor lorem. In leo ipsum, egestas nunc.",EUR 16.99,https://google.com,chef-02
+item-24,KITCHEN_UTENSIL,true,utensilio04,AA:AAA-024,"Vivamus convallis laoreet vehicula. Sed a sem et ipsum rhoncus congue. Vestibulum ipsum erat, egestas at suscipit id, ullamcorper id urna. In venenatis eros.",EUR 40.99,https://google.com,chef-03
+item-25,KITCHEN_UTENSIL,true,utensilio05,AA:AAA-025,Pellentesque euismod scelerisque magna tincidunt.,EUR 0.99,https://google.com,chef-01
+item-26,KITCHEN_UTENSIL,true,utensilio06,AA:AAA-026,Lorem ipsum dolor sit amet egestas.,EUR 100.00,https://google.com,chef-02
+item-27,INGREDIENT,true,ingrediente21,AA:AAA-027,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit",EUR 7.99,https://google.com,chef-03
+item-28,INGREDIENT,true,ingrediente22,AA:AAA-028,"Lorem ipsum dolor sit amet, consectetuer adipiscing eli",EUR 5.90,https://google.com,chef-01
+item-29,INGREDIENT,true,ingrediente23,AA:AAA-029,"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volupta",EUR 42.99,https://google.com,chef-02
+item-30,KITCHEN_UTENSIL,false,utensilio07,AA:AAA-030,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque, neque nec convallis finibus, dui augue tempus ante, eu aliquet felis velit id felis. Mauris porta commodo est at hendrerit. Aliquam eros nibh, sollicitudin venenatis congue",EUR 59.99,https://google.com,chef-03
+item-31,KITCHEN_UTENSIL,false,utensilio08,AA:AAA-031,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 10.99,https://google.com,chef-01
+item-32,KITCHEN_UTENSIL,true,utensilio09,AA:AAA-032,Tortor.,EUR 1.99,https://google.com,chef-02
+item-33,KITCHEN_UTENSIL,true,utensilio10,AA:AAA-033,"Vestibulum at nunc sit amet tellus porttitor sodales sed vel lorem. Cras ullamcorper tortor libero, eget ornare ex laoreet fermentum. Morbi cursus varius enim, at porttitor lorem. In leo ipsum, egestas nunc.",EUR 17.99,https://google.com,chef-03
+item-34,KITCHEN_UTENSIL,true,utensilio11,AA:AAA-034,"Vivamus convallis laoreet vehicula. Sed a sem et ipsum rhoncus congue. Vestibulum ipsum erat, egestas at suscipit id, ullamcorper id urna. In venenatis eros.",EUR 20.99,https://google.com,chef-01
+item-35,KITCHEN_UTENSIL,true,utensilio12,AA:AAA-035,Pellentesque euismod scelerisque magna tincidunt.,EUR 2.99,https://google.com,chef-02
+item-36,KITCHEN_UTENSIL,true,utensilio13,AA:AAA-036,Lorem ipsum dolor sit amet egestas.,EUR 10.00,https://google.com,chef-03
+item-37,INGREDIENT,true,ingrediente24,AA:AAA-037,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit",EUR 10.99,https://google.com,chef-01
+item-38,KITCHEN_UTENSIL,false,utensilio14,AA:AAA-038,"Lorem ipsum dolor sit amet, consectetuer adipiscing eli",EUR 2.90,https://google.com,chef-02
+item-39,INGREDIENT,true,ingrediente25,AA:AAA-039,"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volupta",EUR 42.99,https://google.com,chef-03
+item-40,KITCHEN_UTENSIL,false,utensilio15,AA:AAA-040,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque, neque nec convallis finibus, dui augue tempus ante, eu aliquet felis velit id felis. Mauris porta commodo est at hendrerit. Aliquam eros nibh, sollicitudin venenatis congue",EUR 59.99,https://google.com,chef-01
