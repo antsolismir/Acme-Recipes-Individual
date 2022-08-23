@@ -1,0 +1,11 @@
+username,password,name,surname,email
+chef1,chef1,Pedro,Martín,pmartin@acme.com
+chef2,chef2,Juan,Alonso,jalonso@acme.com
+chef3,chef3,Manuel,Hernández,mhdez@acme.com
+chef4,chef4,Kevin,Alonso,kalonso@acme.com
+chef5,chef5,Fernando,Hernández,fhdez@acme.com
+epicure1,epicure1,Pedro,Martín,pmartin@acme.com
+epicure2,epicure2,Juan,Alonso,jalonso@acme.com
+epicure3,epicure3,Manuel,Hernández,mhdez@acme.com
+epicure4,epicure4,Kevin,Alonso,kalonso@acme.com
+epicure5,epicure5,Fernando,Hernández,fhdez@acme.com
