@@ -13,3 +13,6 @@ chef.recipe.form.label.info = Información:
 chef.recipe.form.button.items= Objetos
 chef.recipe.form.label.price = Precio Total
 chef.recipe.form.label.published = Pública
+chef.recipe.form.button.update = Actualizar
+chef.recipe.form.button.delete = Eliminar
+chef.recipe.form.button.publish = Publicar
