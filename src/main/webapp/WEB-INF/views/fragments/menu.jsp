@@ -59,7 +59,8 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.chef" access="hasRole('Chef')">
-
+			<acme:menu-suboption code="master.menu.chef.item.create" action="/chef/item/create"/>	
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.chef.dish-list" action="/chef/dish/list"/>
 			<acme:menu-suboption code="master.menu.user-account.chef.item.list.ingredient" action="/chef/item/list-ingredients"/>
 			<acme:menu-suboption code="master.menu.user-account.chef.item.list.kitchenUtensils" action="/chef/item/list-kitchen_utensils"/>
