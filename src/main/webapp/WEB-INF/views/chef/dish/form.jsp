@@ -51,7 +51,7 @@
 				path="epicure.userAccount.username" />
 		
 			<jstl:choose>
-				<jstl:when test="${status == 'ACCEPTED'}">
+				<jstl:when test="${status == 'PROPOSED'}">
 					<acme:submit code="chef.dish.form.label.patron.accept"
 						action="/chef/dish/accept" />
 					<acme:submit code="chef.dish.form.label.patron.denie"
