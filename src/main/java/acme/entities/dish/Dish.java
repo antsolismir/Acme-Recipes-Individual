@@ -72,4 +72,5 @@ protected static final long	serialVersionUID	= 1L;
 	@ManyToOne(optional = false)
 	protected Chef chef;
 	
+	protected Boolean published;
 }
