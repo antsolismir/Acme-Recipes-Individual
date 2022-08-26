@@ -18,7 +18,6 @@ public class SpamDetector {
 	private SpamDetector() {}
 	
 	public static Boolean isSpam(final String textToCheck, final SystemConfiguration systemConfiguration) {
-		
 		boolean result = false;
 		
 		final List<String> wordsChecking = SpamDetector.getWords(textToCheck);		
@@ -28,10 +27,12 @@ public class SpamDetector {
 		spamTerms.putAll(esSpamTerms);
 		spamTerms.putAll(enSpamTerms);
 		
+		
+		
 		final Double spamThreshold = systemConfiguration.getSpamThreshold();
 		
 		final Double spamRatio = SpamDetector.calculateSpamRatio(wordsChecking, spamTerms);
-		
+				
 		if(spamRatio >= spamThreshold) {
 			result = true;
 		}
@@ -50,9 +51,7 @@ public class SpamDetector {
 	}
 	
 	private static Map<String,Double> getSpamWords(final String spamTermsArray){
-		
 		final Map<String,Double> spamWords = new HashMap<String,Double>();
-		
 		for(final String keyValue : spamTermsArray.split(",")) {
 			final String[] pair = keyValue.replace("("," ")
 				.replace(")"," ")
@@ -66,15 +65,19 @@ public class SpamDetector {
 	}
 	
 	private static Double calculateSpamRatio(final List<String> wordsChecking, final Map<String,Double> spamTerms) {
-		
 		Double totalSpamWeight = 0.;
-		
+		Integer contadorPalabrasDobles=0;
+		String palabraAnterior="";
 		for(final String word: wordsChecking) {
 			if(spamTerms.keySet().contains(word.toLowerCase())) {
 				totalSpamWeight+=spamTerms.get(word.toLowerCase());
 			}
+			if(spamTerms.keySet().contains(palabraAnterior.toLowerCase() + " " + word.toLowerCase())) {
+				totalSpamWeight+=spamTerms.get(palabraAnterior.toLowerCase()+" "+word.toLowerCase());
+				contadorPalabrasDobles++;
+			}
+			palabraAnterior=word;
 		}
-		
-		return totalSpamWeight/wordsChecking.size();
+		return (totalSpamWeight/(wordsChecking.size()-1*contadorPalabrasDobles))*10;
 	}	
 }
