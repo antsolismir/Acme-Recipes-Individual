@@ -50,6 +50,20 @@
 				code="chef.dish.form.label.epicure.username"
 				path="epicure.userAccount.username" />
 			
+			
+			
+			
+			
+			
+			
+			
+			
+			<jstl:choose>
+				<jstl:when test="${command == 'show'}">
+					<acme:button code="chef.dish.form.button.memorandum"
+						action="/chef/memorandum/list-group?masterId=${id}" />
+				</jstl:when>
+			</jstl:choose>
 		</acme:form>
 	</jstl:when>
 </jstl:choose>

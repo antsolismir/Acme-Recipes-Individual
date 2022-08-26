@@ -15,3 +15,5 @@ chef.dish.form.button.report = Report
 chef.dish.list.label.status = Status
 chef.dish.list.label.code = Code
 chef.dish.list.label.creationDate = Creation Date
+
+chef.dish.form.button.memorandum = Memorandums

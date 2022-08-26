@@ -8,3 +8,6 @@
 	<acme:list-column code="chef.memorandum.list.label.sequenceNumber" path="sequenceNumber" width="20%"/>
 	<acme:list-column code="chef.memorandum.list.label.instantiationMoment" path="instantiationMoment" width="10%"/>
 </acme:list>
+<c:if test="${masterId != null}">
+	<acme:button test="${showCreate}" code="chef.memorandum.list.button.create" action="/chef/memorandum/create?masterId=${masterId}"/>
+</c:if>

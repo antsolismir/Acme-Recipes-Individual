@@ -22,9 +22,9 @@ public interface ChefMemorandumRepository extends AbstractRepository {
 	Collection<Memorandum> findOneMemorandumByDish(int masterId);
 
 	@Query("select r from Memorandum r where r.dish.id = :id order by r.sequenceNumber")
-	List<Memorandum> findMemorandumByPatronageId(int id);
+	List<Memorandum> findMemorandumByDishId(int id);
 
 	@Query("SELECT pr from Memorandum pr where pr.dish.id = :dishId")
-    Collection<Memorandum> findMemorandumsByPatronageId(int dishId);
+    Collection<Memorandum> findMemorandumsByDishId(int dishId);
 
 }
