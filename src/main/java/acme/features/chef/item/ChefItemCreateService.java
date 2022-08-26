@@ -7,6 +7,7 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.item.Item;
 import acme.features.authenticated.systemConfiguration.AdministratorSystemConfigurationRepository;
 import acme.framework.components.models.Model;
@@ -99,28 +100,17 @@ public class ChefItemCreateService implements AbstractCreateService<Chef, Item> 
 			errors.state(request, amount > 0., "retailPrice", "chef.item.form.error.retail-price-amount-negative-or-zero");
 			errors.state(request, validCurrency, "retailPrice", "chef.item.form.error.retail-price-currency-invalid");
 		}
-//		final Boolean resName = SpamDetector.checkText(entity.getName(),
-//			this.confgRepository.getConfiguration().getStrongSpamTerms(),
-//			this.confgRepository.getConfiguration().getStrongSpamThreshold(),
-//			this.confgRepository.getConfiguration().getWeakSpamTerms(),
-//			this.confgRepository.getConfiguration().getWeakSpamThreshold());
-//			errors.state(request, resName, "name", "inventor.item.form.error.spam");
-//			
-//		final Boolean resTechnology = SpamDetector.checkText(entity.getTechnology(),
-//			this.confgRepository.getConfiguration().getStrongSpamTerms(),
-//			this.confgRepository.getConfiguration().getStrongSpamThreshold(),
-//			this.confgRepository.getConfiguration().getWeakSpamTerms(),
-//			this.confgRepository.getConfiguration().getWeakSpamThreshold());
-//			errors.state(request, resTechnology, "technology", "inventor.item.form.error.spam");
-//		
-//		final Boolean resDescription = SpamDetector.checkText(entity.getDescription(),
-//			this.confgRepository.getConfiguration().getStrongSpamTerms(),
-//			this.confgRepository.getConfiguration().getStrongSpamThreshold(),
-//			this.confgRepository.getConfiguration().getWeakSpamTerms(),
-//			this.confgRepository.getConfiguration().getWeakSpamThreshold());
-//			errors.state(request, resDescription, "description", "inventor.item.form.error.spam");
-//		
-
+		
+		if(!errors.hasErrors("name")) {
+			final boolean isNameSpam = SpamDetector.isSpam(entity.getName(), this.repository.getSystemConfiguration());
+			errors.state(request, !isNameSpam, "name", "Name contains spam");
+		}
+		
+		if(!errors.hasErrors("description")) {
+			final boolean isDescriptionSpam = SpamDetector.isSpam(entity.getDescription(), this.repository.getSystemConfiguration());
+			errors.state(request, !isDescriptionSpam, "description", "Description contains spam");
+		}
+		
 	}
 
 	@Override

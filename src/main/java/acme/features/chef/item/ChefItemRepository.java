@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.item.Item;
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Chef;
 
@@ -30,6 +31,10 @@ public interface ChefItemRepository extends AbstractRepository {
 
 	@Query("SELECT sc.acceptedCurrencies from SystemConfiguration sc")
 	String findAcceptedCurrencies();
+	
+	@Query("SELECT c FROM SystemConfiguration c")
+	SystemConfiguration getSystemConfiguration();
+
 	
 	
 }
