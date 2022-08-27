@@ -6,10 +6,10 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class AuthenticatedUserAccountUpdateTest extends TestHarness{
+public class AuthenticatedUserAccountUpdateGeneralDataTest extends TestHarness{
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/authenticated/user-account/updateUserAccount.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/authenticated/user-account/updateUserAccountGeneralData.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
 	public void updatePositive(final String username, final String password, final String name, final String surname, final String email) {	
 
@@ -36,7 +36,7 @@ public class AuthenticatedUserAccountUpdateTest extends TestHarness{
 	}
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/authenticated/user-account/updateUserAccountNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/authenticated/user-account/updateUserAccountGeneralDataNegative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
 	public void updateNegative(final String username,final String password, final String name, final String surname, final String email) {		
 

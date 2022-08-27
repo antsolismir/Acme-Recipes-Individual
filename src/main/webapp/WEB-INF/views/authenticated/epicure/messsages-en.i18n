@@ -7,3 +7,6 @@ authenticated.epicure.form.label.link = Link:
 
 authenticated.epicure.form.button.create = Register
 authenticated.epicure.form.button.update = Update
+
+authenticated.epicure.form.error.assertion-spam = Assertion's name introduced is considered spam
+authenticated.epicure.form.error.organisation-spam = Organization's name introduced is considered spam
