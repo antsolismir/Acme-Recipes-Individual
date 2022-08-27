@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.memorandum.Memorandum;
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -27,4 +28,6 @@ public interface ChefMemorandumRepository extends AbstractRepository {
 	@Query("SELECT pr from Memorandum pr where pr.dish.id = :dishId")
     Collection<Memorandum> findMemorandumsByDishId(int dishId);
 
+	@Query("SELECT c FROM SystemConfiguration c")
+	SystemConfiguration getSystemConfiguration();
 }

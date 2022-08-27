@@ -18,6 +18,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.dish.Dish;
 import acme.entities.memorandum.Memorandum;
 import acme.features.chef.dish.ChefDishRepository;
@@ -128,6 +129,11 @@ public class ChefMemorandumCreateService implements AbstractCreateService<Chef, 
 
 		confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+		
+		if(!errors.hasErrors("report")) {
+			final boolean isReportSpam = SpamDetector.isSpam(entity.getReport(), this.memorandumRepository.getSystemConfiguration());
+			errors.state(request, !isReportSpam, "report", "Report contains spam");
+		}
 		
 	}
 
