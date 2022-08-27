@@ -5,6 +5,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.peep.Peep;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -62,7 +63,7 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep>{
 			assert errors != null;
 
 			final boolean confirmation;
-/*
+
 			if(!errors.hasErrors("heading")) {
 				final boolean isHeadingSpam = SpamDetector.isSpam(entity.getHeading(), this.repository.getSystemConfiguration());
 				errors.state(request, !isHeadingSpam, "heading", "any.peep.form.error.heading-spam");
@@ -77,7 +78,7 @@ public class AnyPeepCreateService implements AbstractCreateService<Any, Peep>{
 				final boolean isTextSpam = SpamDetector.isSpam(entity.getText(), this.repository.getSystemConfiguration());
 				errors.state(request, !isTextSpam, "text", "any.peep.form.error.text-spam");
 			}
-			*/
+			
 			confirmation = request.getModel().getBoolean("confirmation");
 			errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
 	
