@@ -16,3 +16,14 @@ chef.recipe.form.label.published = Pública
 chef.recipe.form.button.update = Actualizar
 chef.recipe.form.button.delete = Eliminar
 chef.recipe.form.button.publish = Publicar
+chef.recipe.list.button.create = Crear
+chef.recipe.form.button.create = Crear
+
+chef.recipe.form.label.info = Información:
+chef.recipe.form.button.items = Objetos
+chef.recipe.form.label.price = Precio total
+
+chef.recipe.form.error.duplicated = El código ya existe
+chef.recipe.form.error.withoutItems = Esta receta no puede ser publicada pues no tiene objetos asignados
+chef.recipe.form.error.spam = Este texto contiene spam
+chef.recipe.form.error.noItem = No se puede publicar una receta sin objetos

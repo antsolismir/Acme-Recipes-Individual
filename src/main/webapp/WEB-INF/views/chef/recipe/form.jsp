@@ -22,7 +22,7 @@
 			<acme:button code="chef.recipe.form.button.items" action="/chef/item-quantity/list?masterId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish') && published == false}">
-			<acme:button code="chef.recipe.form.button.items" action="/chef/item-quantity/list?masterId=${id}&?draftMode=${draftMode}"/>
+			<acme:button code="chef.recipe.form.button.items" action="/chef/item-quantity/list?masterId=${id}&?published=${published}"/>
 			<acme:submit code="chef.recipe.form.button.update" action="/chef/recipe/update"/>
 			<acme:submit code="chef.recipe.form.button.delete" action="/chef/recipe/delete"/>
 			<acme:submit code="chef.recipe.form.button.publish" action="/chef/recipe/publish"/>

@@ -6,15 +6,15 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class InventorIngredientsListTest extends TestHarness {
+public class ChefKitchenUtensilsListTest extends TestHarness {
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/chef/item/item-ingredient.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/chef/item/item-kitchen-utensil.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveInventorIngredientsListTest(final int recordIndex, final String key, final String itemType, final String published, final String name, final String code, final String description, final String retailPrice,final String link) {
+	public void positiveChefKitchenUtensilsListTest(final int recordIndex, final String key, final String itemType, final String published, final String name, final String code, final String description, final String retailPrice,final String link) {
 		super.signIn("chef1", "chef1");
 
-		super.clickOnMenu("Chef", "List my ingredients");
+		super.clickOnMenu("Chef", "List my kitchen utensils");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		
