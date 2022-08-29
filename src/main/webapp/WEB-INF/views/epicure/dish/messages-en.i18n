@@ -15,3 +15,8 @@ epicure.dish.form.button.report = Report
 epicure.dish.list.label.status = Status
 epicure.dish.list.label.code = Code
 epicure.dish.list.label.creationDate = Creation Date
+
+epicure.dish.form.button.create = Create
+epicure.dish.form.button.update = Update
+epicure.dish.form.button.delete = Delete
+epicure.dish.form.button.publish = Publish

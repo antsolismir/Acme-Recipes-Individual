@@ -47,15 +47,15 @@ protected static final long	serialVersionUID	= 1L;
 	protected Money budget;
 	
 	@Past
-	@NotNull
+	@NotNull(message = "message.error.null.date")
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date creationDate;
 	
-	@NotNull
+	@NotNull(message = "message.error.null.date")
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date initialPeriodDate;
 	
-	@NotNull
+	@NotNull(message = "message.error.null.date")
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date finalPeriodDate;
 	
