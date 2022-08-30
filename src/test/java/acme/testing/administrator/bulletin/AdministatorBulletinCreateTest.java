@@ -38,7 +38,7 @@ public class AdministatorBulletinCreateTest extends TestHarness{
 		
 		super.clickOnMenu("Authenticated", "List Bulletins");
 		super.checkListingExists();
-		super.sortListing(1, "desc");
+		super.sortListing(0, "asc");
 		
 		super.checkColumnHasValue(recordIndex, 0, heading);
 		super.checkColumnHasValue(recordIndex, 2, critical);
