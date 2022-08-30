@@ -27,3 +27,4 @@ chef.recipe.form.error.duplicated = The code already exists
 chef.recipe.form.error.withoutItems = A recipe without items cannot be published
 chef.recipe.form.error.spam = Text contains spam
 chef.recipe.form.error.noItem = Cannot publish a recipe with no items
+chef.recipe.form.error.info = Wrong link format

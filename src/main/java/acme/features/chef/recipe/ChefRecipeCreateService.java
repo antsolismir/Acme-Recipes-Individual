@@ -3,6 +3,7 @@ package acme.features.chef.recipe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.entities.recipe.Recipe;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -67,43 +68,37 @@ public class ChefRecipeCreateService implements AbstractCreateService<Chef, Reci
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-//		SpamDetector spamDetector;
-//		final String strongSpamTerms;
-//		final String weakSpamTerms;
-//		final double strongSpamThreshold;
-//		final double weakSpamThreshold;
 
-//		spamDetector = new SpamDetector();
-//		final SystemConfiguration configuration = this.repo.findConfig();
-//		strongSpamTerms = configuration.getStrongSpamTerm();
-//		weakSpamTerms = configuration.getWeakSpamTerm();
-//		strongSpamThreshold = configuration.getStrongSpamThreshold();
-//		weakSpamThreshold = configuration.getWeakSpamThreshold();
-
-//		if(!errors.hasErrors("title")) {
-//			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTitle())
-//				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTitle()),
-//				"title", "chef.recipe.form.error.spam");
-//		}
-//
-//		if(!errors.hasErrors("description")) {
-//			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getDescription())
-//				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getDescription()),
-//				"description", "chef.recipe.form.error.spam");
-//		}
-//
-//		if(!errors.hasErrors("assemblyNotes")) {
-//			errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getAssemblyNotes())
-//				&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getAssemblyNotes()),
-//				"assemblyNotes", "chef.recipe.form.error.spam");
-//		}
-		
 		if(!errors.hasErrors("code")) {
 			Recipe existing;
 			
 			existing = this.repo.findRecipeByCode(entity.getCode());
-			errors.state(request, existing == null, "code", "chef.recipe.form.error.duplicated");
+			errors.state(request, existing == null|| existing.getId() == entity.getId(), "code", "chef.recipe.form.error.duplicated");
 		}
+		
+		if(!errors.hasErrors("info")) {
+			final boolean isInfo;
+			if(!entity.getInfo().isEmpty()) {
+				isInfo = (entity.getInfo().startsWith("http") || entity.getInfo().startsWith("www")) && entity.getInfo().contains(".");
+				errors.state(request, isInfo, "info", "chef.recipe.form.error.info");
+			}
+		}
+
+		if(!errors.hasErrors("description")) {
+			final boolean isDescriptionSpam = SpamDetector.isSpam(entity.getDescription(), this.repo.getSystemConfiguration());
+			errors.state(request, !isDescriptionSpam, "description", "Description contains spam");
+		}
+
+		if(!errors.hasErrors("preparationNotes")) {
+			final boolean ispreparationNotesSpam = SpamDetector.isSpam(entity.getPreparationNotes(), this.repo.getSystemConfiguration());
+			errors.state(request, !ispreparationNotesSpam, "preparationNotes", "Preparation notes contains spam");
+		}
+		
+		if(!errors.hasErrors("heading")) {
+			final boolean isheadingSpam = SpamDetector.isSpam(entity.getHeading(), this.repo.getSystemConfiguration());
+			errors.state(request, !isheadingSpam, "heading", "Heading contains spam");
+		}
+
 	}
 
 	@Override

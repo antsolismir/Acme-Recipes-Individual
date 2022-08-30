@@ -27,3 +27,4 @@ chef.recipe.form.error.duplicated = El código ya existe
 chef.recipe.form.error.withoutItems = Esta receta no puede ser publicada pues no tiene objetos asignados
 chef.recipe.form.error.spam = Este texto contiene spam
 chef.recipe.form.error.noItem = No se puede publicar una receta sin objetos
+chef.recipe.form.error.info = La URL es incorrecta
