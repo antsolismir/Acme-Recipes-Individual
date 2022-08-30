@@ -6,4 +6,5 @@
 <acme:list>
 	<acme:list-column code="chef.item.list.label.name" path="name"/>
 	<acme:list-column code="chef.item.list.label.retailprice" path="retailPrice"/>
+	<acme:list-column code="chef.item.list.label.money" path="money"/>
 </acme:list>

@@ -18,4 +18,5 @@
 <acme:list>
 	<acme:list-column code="all.item.list.label.name" path="name"/>	
 	<acme:list-column code="all.item.list.label.retailPrice" path="retailPrice"/>
+	<acme:list-column code="all.item.list.label.money" path="money"/>	
 </acme:list>

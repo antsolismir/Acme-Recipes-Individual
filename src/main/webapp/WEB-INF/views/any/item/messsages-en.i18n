@@ -12,6 +12,7 @@ all.item.form.label.name = Name
 all.item.form.label.code = Code
 all.item.form.label.description = Description
 all.item.form.label.retailprice = Price
+all.item.form.label.money = Price on system currency
 all.item.form.label.type = Type
 all.item.form.label.link = Link
 inventor.item.list.label.published = Published
@@ -19,6 +20,5 @@ inventor.item.list.label.published = Published
 all.item.list.label.name = Name
 all.item.list.label.retailPrice = Price
 all.item.list.label.artifactType = Type
-
-
+all.item.list.label.money = Price on system currency
 all.item.list.label.item.name = Item

@@ -8,6 +8,7 @@
 	<acme:input-textbox code="chef.item.list.label.code" path="code"/>
 	<acme:input-textarea code="chef.item.list.label.description" path="description"/>
 	<acme:input-money code="chef.item.list.label.retailprice" path="retailPrice"/>
+	<acme:input-money code="chef.item.list.label.money" path="money"/>
 	<acme:input-select code="chef.item.list.label.type" path="itemType">
 		<acme:input-option code="chef.item.form.label.ingredient" value="INGREDIENT" selected="${ itemType == 'INGREDIENT' }"/>
 		<acme:input-option code="chef.item.form.label.kitchen_utensil" value="KITCHEN_UTENSIL" selected="${ itemType == 'KITCHEN_UTENSIL' }"/>

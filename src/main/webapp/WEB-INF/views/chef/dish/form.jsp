@@ -14,21 +14,8 @@
 				code="chef.dish.form.label.request" path="request" />
 			<acme:input-money readonly="true"
 				code="chef.dish.form.label.budget" path="budget" />
-			
-			
-			
-			
-			
-			<jstl:if test="${convert!=null}">
-				<acme:input-textbox readonly="true"
-					code="chef.dish.form.label.convert"
-					path="convert" />
-			</jstl:if>
-			
-			
-			
-			
-			
+			<acme:input-money readonly="true"
+				code="chef.dish.form.label.money" path="money"/>
 			<acme:input-moment readonly="true"
 				code="chef.dish.form.label.creationDate"
 				path="creationDate" />

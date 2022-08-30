@@ -7,4 +7,6 @@
 	<acme:list-column code="epicure.dish.list.label.status" path="status" width="20%"/>
 	<acme:list-column code="epicure.dish.list.label.code" path="code" width="20%"/>
 	<acme:list-column code="epicure.dish.list.label.creationDate" path="creationDate" width="20%"/>
+	<acme:list-column code="epicure.dish.list.label.budget" path="budget" width="20%"/>
+	<acme:list-column code="epicure.dish.list.label.money" path="money" width="20%"/>
 </acme:list>

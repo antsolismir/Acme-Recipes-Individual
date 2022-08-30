@@ -21,6 +21,9 @@ public class ChefRecipeListService implements AbstractListService<Chef,Recipe> {
 	@Autowired
 	protected ChefRecipeRepository repo;
 	
+	@Autowired
+	protected ChefRecipeMoneyExchange chefRecipeMoneyExchange;
+	
 	@Override
 	public boolean authorise(final Request<Recipe> request) {
 		assert request != null;
@@ -46,8 +49,10 @@ public class ChefRecipeListService implements AbstractListService<Chef,Recipe> {
 		final Collection<ItemQuantity> itemQuantitys = this.repo.findManyItemQuantityByRecipeId(entity.getId());
 		
 		for(final ItemQuantity a :itemQuantitys) {
-		final Money itemPrice=a.getItem().getRetailPrice();
-			price = price + a.getAmount()*itemPrice.getAmount();
+			final Money itemPrice=a.getItem().getRetailPrice();
+			
+			final Money priceExchanged=this.chefRecipeMoneyExchange.computeMoneyExchange(itemPrice, systemCurrency).getTarget();
+			price += a.getAmount()*priceExchanged.getAmount();
 		}
 		
 		moneyInternational=new Money();

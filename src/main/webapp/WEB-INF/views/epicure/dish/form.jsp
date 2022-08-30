@@ -14,7 +14,8 @@
 				code="epicure.dish.form.label.request" path="request" />
 			<acme:input-money readonly="true"
 				code="epicure.dish.form.label.budget" path="budget" />
-			
+			<acme:input-money readonly="true"
+				code="epicure.dish.form.label.money" path="money" />			
 			
 			
 			
