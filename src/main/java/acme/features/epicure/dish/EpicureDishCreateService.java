@@ -77,20 +77,20 @@ public class EpicureDishCreateService implements AbstractCreateService<Epicure, 
 				Dish existing;
 
 				existing = this.repository.findDishByCode(entity.getCode());
-				errors.state(request, existing == null, "code", "patron.patronage.form.error.duplicated");
+				errors.state(request, existing == null, "code", "epicure.dish.form.error.duplicated");
 			}
 			
 			
 			if(!errors.hasErrors("initialPeriodDate")) {
 				final Date minInitialDate=DateUtils.addMonths(entity.getCreationDate(), 1);
 
-				errors.state(request,entity.getInitialPeriodDate().after(minInitialDate), "initialPeriodDate", "patron.patronage.form.error.too-close-start-date");
+				errors.state(request,entity.getInitialPeriodDate().after(minInitialDate), "initialPeriodDate", "epicure.dish.form.error.too-close-start-date");
 				
 			}
 			if(!errors.hasErrors("finalPeriodDate") && !errors.hasErrors("initialPeriodDate")) {
 				final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
 				
-				errors.state(request,entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "patron.patronage.form.error.one-month");
+				errors.state(request,entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "epicure.dish.form.error.one-month");
 				
 			}
 			
@@ -99,13 +99,13 @@ public class EpicureDishCreateService implements AbstractCreateService<Epicure, 
 				final Boolean acceptedCurrency= this.repository.findSystemConfiguration().getAcceptedCurrencies()
 					.matches("(.*)"+entity.getBudget().getCurrency()+"(.*)");
 				
-				errors.state(request, entity.getBudget().getAmount() > 0, "budget", "patron.patronage.form.error.negative-budget");
-				errors.state(request, acceptedCurrency, "budget", "patron.patronage.form.error.non-accepted-currency");
+				errors.state(request, entity.getBudget().getAmount() > 0, "budget", "epicure.dish.form.error.negative-budget");
+				errors.state(request, acceptedCurrency, "budget", "epicure.dish.form.error.non-accepted-currency");
 			}
 			
 			if(!errors.hasErrors("request")) {
 				final boolean isRequestSpam = SpamDetector.isSpam(entity.getRequest(), this.repository.findSystemConfiguration());
-				errors.state(request, !isRequestSpam, "request", "Request contains spam");
+				errors.state(request, !isRequestSpam, "request", "epicure.dish.form.error.spam");
 			}
 			
 

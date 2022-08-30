@@ -1,15 +1,12 @@
 package acme.features.epicure.dish;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.components.SpamDetector;
-import acme.components.Status;
 import acme.entities.dish.Dish;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -60,7 +57,7 @@ public class EpicureDishUpdateService implements AbstractUpdateService<Epicure, 
 		
 		entity.setChef(this.repository.findChefById(Integer.valueOf(request.getModel().getAttribute("chefId").toString())).orElse(null));
 		
-		request.bind(entity, errors, "status", "code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link","published");
+		request.bind(entity, errors, "code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link");
 	}
 
 	@Override
@@ -78,31 +75,29 @@ public class EpicureDishUpdateService implements AbstractUpdateService<Epicure, 
 			}
 		}
 		
-		if(!errors.hasErrors("initialPeriodDate")) {
-			final Date minStartDate=DateUtils.addMonths(entity.getCreationDate(), 1);
-
-			
-			errors.state(request, entity.getInitialPeriodDate().after(minStartDate), "initialPeriodDate", "patron.patronage.form.error.too-close-start-date");
-			
-		}
-		if(!errors.hasErrors("finalPeriodDate") && !errors.hasErrors("initialPeriodDate")) {
-			final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
-
-			errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "patron.patronage.form.error.one-month");
-			
-		}
+		if(entity.getInitialPeriodDate()==null || entity.getFinalPeriodDate() == null) {
+			errors.state(request, entity.getInitialPeriodDate()!=null, "initialPeriodDate", "message.error.null.date");
+			errors.state(request, entity.getFinalPeriodDate()!=null, "finalPeriodDate", "message.error.null.date");
+		} else {
 		
-		if(!errors.hasErrors("finalPeriodDate")) {
-			final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
-
-			errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "patron.patronage.form.error.one-month");
+			if(!errors.hasErrors("initialPeriodDate")) {
+				final Date minStartDate=DateUtils.addMonths(entity.getCreationDate(), 1);
+				errors.state(request, entity.getInitialPeriodDate().after(minStartDate), "initialPeriodDate", "epicure.dish.form.error.too-close-start-date");
+			}
+			if(!errors.hasErrors("finalPeriodDate") && !errors.hasErrors("initialPeriodDate")) {
+				final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
+				errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "epicure.dish.form.error.complete");
+			}
+			if(!errors.hasErrors("finalPeriodDate")) {
+				final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
+				errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "epicure.dish.form.error.one-month");
+			}
 			
 		}
 		
 		
 		if (!errors.hasErrors("budget")) {
-			final Boolean acceptedCurrency=this.repository.findSystemConfiguration().getAcceptedCurrencies()
-				.matches("(.*)"+entity.getBudget().getCurrency()+"(.*)");
+			final Boolean acceptedCurrency=this.repository.findSystemConfiguration().getAcceptedCurrencies().matches("(.*)"+entity.getBudget().getCurrency()+"(.*)");
 			
 			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "epicure.dish.form.error.negative-budget");
 			errors.state(request, acceptedCurrency, "budget", "epicure.dish.form.error.non-accepted-currency");
@@ -110,17 +105,8 @@ public class EpicureDishUpdateService implements AbstractUpdateService<Epicure, 
 		
 		if(!errors.hasErrors("request")) {
 			final boolean isRequestSpam = SpamDetector.isSpam(entity.getRequest(), this.repository.findSystemConfiguration());
-			errors.state(request, !isRequestSpam, "request", "Request contains spam");
+			errors.state(request, !isRequestSpam, "request", "epicure.dish.form.error.spam");
 		}
-		
-		if(errors.hasErrors("status")) {
-			final List<Status> lista = new ArrayList<Status>();
-			lista.add(Status.ACCEPTED);
-			lista.add(Status.DENIED);
-			lista.add(Status.PROPOSED);
-			errors.state(request, lista.contains(entity.getStatus()), "status", "You must type ACCEPTED, DENIED or PROPOSED");
-		}
-		
 
 	}
 
@@ -130,9 +116,11 @@ public class EpicureDishUpdateService implements AbstractUpdateService<Epicure, 
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "status", "code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link","published");
+		request.unbind(entity, model, "code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link");
 		model.setAttribute("chefs", this.repository.findAllChefs());
 		model.setAttribute("chefId", entity.getChef().getId());
+		model.setAttribute("status", entity.getStatus().toString());
+		model.setAttribute("published", entity.getPublished());
 		
 	}
 

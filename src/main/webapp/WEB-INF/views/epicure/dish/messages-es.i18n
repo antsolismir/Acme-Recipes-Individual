@@ -10,13 +10,32 @@ epicure.dish.form.label.link = Link
 epicure.dish.form.label.epicure.organisation = Organización
 epicure.dish.form.label.epicure.assertion = Afirmación
 epicure.dish.form.label.epicure.username = Nombre de usuario
+epicure.dish.form.label.epicure.published = Publicado
 epicure.dish.form.button.report = Reporte
 
 epicure.dish.list.label.status = Estado
+epicure.dish.list.label.published = Publicado
 epicure.dish.list.label.code = Código
 epicure.dish.list.label.creationDate = Fecha de creación
+
+epicure.dish.form.label.chef = Chef
+
+epicure.dish.list.button.create = Crear
 
 epicure.dish.form.button.create = Crear
 epicure.dish.form.button.update = Actualizar
 epicure.dish.form.button.delete = Borrar
 epicure.dish.form.button.publish = Publicar
+
+epicure.dish.form.error.duplicated = Código duplicado
+epicure.dish.form.error.too-close-start-date = Tiene que comenzar al menos un mes después de que se cree el plato
+epicure.dish.form.error.one-month = Tiene que durar al menos un mes
+epicure.dish.form.error.complete = Introduce correctamente las fechas
+epicure.dish.form.error.negative-budget = Tiene que ser positivo
+epicure.dish.form.error.non-accepted-currency = Moneda no acpetada, consulte la configuración del sistema
+epicure.dish.form.error.spam = El texto contiene spam, pruebe de nuevo sin el
+message.error.null.date = La fecha no puede ser nula
+
+PROPOSED = Propuesto
+DENIED = Denegado
+ACCEPTED = Aceptado

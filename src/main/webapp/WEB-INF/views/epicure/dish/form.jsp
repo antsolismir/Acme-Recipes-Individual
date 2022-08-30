@@ -5,9 +5,8 @@
 
 		<acme:form>
 			<jstl:choose>
-				<jstl:when test="${acme:anyOf(command,'show, update, delete, publish')}">
-					<acme:input-textbox code="Status" path="status"/>
-					<h4><acme:message code="epicure.status.instruction"/></h4>
+				<jstl:when test="${command =='show'}">
+					<acme:input-textbox code="epicure.dish.form.label.status" readonly="true" path="status"/>
 				</jstl:when>
 			</jstl:choose>
 			
@@ -29,7 +28,6 @@
 			
 			<acme:input-moment code="epicure.dish.form.label.initialPeriodDate" path="initialPeriodDate" />
 			<acme:input-moment code="epicure.dish.form.label.finalPeriodDate" path="finalPeriodDate" />
-			<acme:input-checkbox code="epicure.dish.form.label.published" path="published"/>
 			
 			<hr>
     		

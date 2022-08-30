@@ -54,8 +54,10 @@ public class EpicureDishShowService implements AbstractShowService<Epicure,Dish>
 		model.setAttribute("chefOrganisation", entity.getChef().getOrganisation());
 		model.setAttribute("chefAssertion", entity.getChef().getAssertion());
 		model.setAttribute("chefUserAccount",entity.getChef().getUserAccount().getUsername());
+		model.setAttribute("status", entity.getStatus().toString());
+		model.setAttribute("published", entity.getPublished());
 		
-		request.unbind(entity, model, "status", "code", "request", "budget", "creationDate", "initialPeriodDate","finalPeriodDate","link","published");
+		request.unbind(entity, model, "code", "request", "budget", "creationDate", "initialPeriodDate","finalPeriodDate","link");
 		
 		
 		
