@@ -1,0 +1,8 @@
+record-index,key,item-type,name,code,description,retail-price,link,key:chef
+0,item-42,INGREDIENT,ingrediente001,AFH-388,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 0.99,https://google.com,chef-01
+1,item-43,INGREDIENT,ingrediente002,AFH-389,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",USD 10.99,https://google.com,chef-01
+2,item-44,INGREDIENT,ingrediente003,AFH-390,U,EUR 10.99,https://www.google.com,chef-01
+3,item-45,INGREDIENT,ingrediente004,AFH-391,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 33.50,https://google.com,chef-01
+4,item-47,INGREDIENT,ingrediente005,AFH-392,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 100.99,https://google.com,chef-01
+5,item-48,INGREDIENT,ingrediente006,AFH-393,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",GBP 50.99,http://hello.com,chef-01
+6,item-49,INGREDIENT,ingrediente007,AFH-394,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 75.00,https://google.com,chef-01

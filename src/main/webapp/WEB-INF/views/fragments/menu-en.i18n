@@ -71,7 +71,7 @@ master.menu.user-account.chef.item.list.kitchenUtensils = List my kitchen utensi
 master.menu.user-account.chef.item.list.recipe = List my recipes
 
 master.menu.chef.memorandum-list = List my memorandums
-master.menu.chef.item.create = Crear Item
+master.menu.chef.item.create = Create an item
 
 # master.menu.user-account ####################################################
 
