@@ -1,6 +1,7 @@
 package acme.testing.chef.item;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -61,5 +62,39 @@ public class ChefItemListAndShowTest extends TestHarness {
 
 		super.signOut();
 	}
+	
+	@Test
+	@Order(30)
+	public void hackingTestIngredientsList() {
+		super.navigate("/chef/item/list-ingredients");
+		super.checkPanicExists();
 
+		super.signIn("administrator", "administrator");
+		super.navigate("/chef/item/list-ingredients");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("epicure1", "epicure1");
+		super.navigate("/chef/item/list-ingredients");
+		super.checkPanicExists();
+		super.signOut();
+	}
+	
+	@Test
+	@Order(30)
+	public void hackingTestKitchenUtensilsList() {
+		super.navigate("/chef/item/list-kitchen_utensils");
+		super.checkPanicExists();
+
+		super.signIn("administrator", "administrator");
+		super.navigate("/chef/item/list-kitchen_utensils");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("epicure1", "epicure1");
+		super.navigate("/chef/item/list-kitchen_utensils");
+		super.checkPanicExists();
+		super.signOut();
+	}
+	
 }

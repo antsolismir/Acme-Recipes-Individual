@@ -1,6 +1,7 @@
 package acme.testing.chef.item;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -67,5 +68,22 @@ public class ChefItemCreateAndPublishTest extends TestHarness {
 		super.signOut();
 	}
 
+	@Test
+	@Order(30)
+	public void hackingTest() {
+		super.navigate("/chef/item/create");
+		super.checkPanicExists();
 
+		super.signIn("administrator", "administrator");
+		super.navigate("/chef/item/create");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("epicure1", "epicure1");
+		super.navigate("/chef/item/create");
+		super.checkPanicExists();
+		super.signOut();
+	
+	}
+	
 }
