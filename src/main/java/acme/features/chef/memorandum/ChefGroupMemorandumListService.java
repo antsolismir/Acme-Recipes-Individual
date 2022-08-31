@@ -48,6 +48,10 @@ public class ChefGroupMemorandumListService implements AbstractListService<Chef,
 		masterId = request.getModel().getInteger("masterId");
 		dish = this.dishRepository.findDishById(masterId);
 		result = dish != null;
+		
+		if(result) {
+			result = request.getPrincipal().getActiveRoleId() == dish.getChef().getId();
+		}
 
 		return result;
 	}
