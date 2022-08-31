@@ -49,6 +49,15 @@
 			<acme:input-textbox readonly="true"
 				code="chef.dish.form.label.epicure.username"
 				path="epicure.userAccount.username" />
+		
+			<jstl:choose>
+				<jstl:when test="${status == 'PROPOSED'}">
+					<acme:submit code="chef.dish.form.label.patron.accept"
+						action="/chef/dish/accept" />
+					<acme:submit code="chef.dish.form.label.patron.denie"
+						action="/chef/dish/denie" />
+				</jstl:when>
+			</jstl:choose>
 			
 			
 			
