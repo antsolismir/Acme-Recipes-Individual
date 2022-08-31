@@ -1,0 +1,6 @@
+record-index,heading,text,critical,info
+0,,"This is the text of a normal bulletin that can be so long,up to 255 letters. Este es el texto de un boletín normal y corriente que puede contener hasta 255 caracteres.",true,https://www.ev.us.es/
+1,Esto son 101 caracteres. Esto son 101 caracteres. Esto son 101 caracteres. Esto son 101 caracteres. E,"This is the text of a normal bulletin that can be so long,up to 255 letters. Este es el texto de un boletín normal y corriente que puede contener hasta 255 caracteres.",true,https://www.ev.us.es/
+2,This is a normal bulletin,Esto son 256 caracteres. Esto son 256 caracteres. Esto son 256 caracteres. Esto son 256 caracteres. Esto son 256 caracteres. Esto son 256 caracteres. Esto son 256 caracteres. Esto son 256 caracteres. Esto son 256 caracteres. Esto son 256 caracteres. Esto s,true,https://www.ev.us.es/
+3,This is a normal bulletin,,true,https://www.ev.us.es/
+4,This is a normal bulletin,Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto,true,Esto no es una URL
