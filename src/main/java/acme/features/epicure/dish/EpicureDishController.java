@@ -18,6 +18,18 @@ public class EpicureDishController extends AbstractController<Epicure, Dish> {
 
 	@Autowired
 	protected EpicureDishShowService	showService;
+	
+	@Autowired
+	protected EpicureDishCreateService	createService;
+	
+	@Autowired
+	protected EpicureDishUpdateService	updateService;
+	
+	@Autowired
+	protected EpicureDishDeleteService	deleteService;
+	
+	@Autowired
+	protected EpicureDishPublishService	pusblishService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -25,6 +37,11 @@ public class EpicureDishController extends AbstractController<Epicure, Dish> {
 	protected void initialise() {
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
+		
+		super.addCommand("create", this.createService);
+		super.addCommand("update", this.updateService);
+		super.addCommand("delete", this.deleteService);
+		super.addCommand("publish", "update", this.pusblishService);
 	}
 
 }

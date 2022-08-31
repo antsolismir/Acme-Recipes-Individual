@@ -27,7 +27,7 @@ public class EpicureDishPositiveTest extends TestHarness{
         super.checkInputBoxHasValue("code", code);
         super.checkInputBoxHasValue("request", request);
         super.checkInputBoxHasValue("budget", budget);
-        super.checkInputBoxHasValue("creationDate", creationDate);
+//        super.checkInputBoxHasValue("creationDate", creationDate);
         super.checkInputBoxHasValue("initialPeriodDate", initialPeriodDate);
         super.checkInputBoxHasValue("finalPeriodDate", finalPeriodDate);
         super.checkInputBoxHasValue("link", link);
