@@ -19,6 +19,12 @@ public class ChefDishController extends AbstractController<Chef, Dish> {
 
 	@Autowired
 	protected ChefDishShowService	showService;
+	
+	@Autowired
+	protected ChefDishAcceptService	acceptService;
+	
+	@Autowired
+	protected ChefDishDenieService	denieService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -26,6 +32,9 @@ public class ChefDishController extends AbstractController<Chef, Dish> {
 	protected void initialise() {
 		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
+		
+		super.addCommand("accept", "update", this.acceptService);
+		super.addCommand("denie", "update", this.denieService);
 	}
 
 }
