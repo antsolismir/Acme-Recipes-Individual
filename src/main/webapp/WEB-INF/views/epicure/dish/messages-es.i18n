@@ -18,6 +18,7 @@ epicure.dish.list.label.published = Publicado
 epicure.dish.list.label.code = Código
 epicure.dish.list.label.creationDate = Fecha de creación
 
+
 epicure.dish.form.label.chef = Chef
 
 epicure.dish.list.button.create = Crear
@@ -39,3 +40,6 @@ message.error.null.date = La fecha no puede ser nula
 PROPOSED = Propuesto
 DENIED = Denegado
 ACCEPTED = Aceptado
+
+epicure.dish.form.button.memorandum = Memorandums
+

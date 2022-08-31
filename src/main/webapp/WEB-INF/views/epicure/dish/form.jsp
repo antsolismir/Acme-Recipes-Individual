@@ -53,6 +53,7 @@
 			
 			<jstl:choose>
 			
+
 				<jstl:when test="${acme:anyOf(command,'show, update, delete, publish') && published == false}">
 					<acme:submit code="epicure.dish.form.button.update" action="/epicure/dish/update"/>
 					<acme:submit code="epicure.dish.form.button.delete" action="/epicure/dish/delete"/>
@@ -64,3 +65,4 @@
 				
 			</jstl:choose>
 		</acme:form>
+

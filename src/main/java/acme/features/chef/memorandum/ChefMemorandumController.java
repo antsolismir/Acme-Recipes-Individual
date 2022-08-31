@@ -16,11 +16,20 @@ public class ChefMemorandumController extends AbstractController<Chef, Memorandu
 	protected ChefMemorandumListService	listService;
 	
 	@Autowired
+	protected ChefGroupMemorandumListService	listGroupService;
+	
+	@Autowired
 	protected ChefMemorandumShowService	showService;
+	
+	@Autowired
+	protected ChefMemorandumCreateService createService;
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", this.listService);
+		super.addCommand("list-all", "list", this.listService);
+		super.addCommand("list-group","list", this.listGroupService);
+		
 		super.addCommand("show", this.showService);
+		super.addCommand("create", this.createService);
 	}
 }
