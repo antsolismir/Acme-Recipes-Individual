@@ -61,48 +61,6 @@ public class EpicureDishPublishService implements AbstractUpdateService<Epicure,
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-//		if (!errors.hasErrors("code")) {
-//			Dish existing;
-//
-//			existing = this.repository.findDishByCode(entity.getCode());
-//			if(existing!=null) {
-//			errors.state(request, existing.getId()==entity.getId() , "code", "epicure.dish.form.error.duplicated");
-//			}
-//		}
-//		
-//		if(!errors.hasErrors("initialPeriodDate")) {
-//			final Date minInitialDate=DateUtils.addMonths(entity.getCreationDate(), 1);
-//
-//			
-//			errors.state(request, entity.getInitialPeriodDate().after(minInitialDate), "initialPeriodDate", "epicure.dish.form.error.too-close-start-date");
-//			
-//		}
-//		if(!errors.hasErrors("finalPeriodDate") && !errors.hasErrors("initialPeriodDate")) {
-//			final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
-//
-//			errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "epicure.dish.form.error.one-month");
-//			
-//		}
-//		
-//		
-//		if (!errors.hasErrors("budget")) {
-//			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
-//            Boolean acceptedCurrency=false;
-//            for(int i=0;i<currencies.length;i++) {
-//                if(entity.getBudget().getCurrency().equals(currencies[i].trim())) {
-//                    acceptedCurrency=true;
-//                }
-//            }
-//			
-//			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "epicure.dish.form.error.negative-budget");
-//			errors.state(request, acceptedCurrency, "budget", "epicure.dish.form.error.non-accepted-currency");
-//		}
-//		
-//		if(!errors.hasErrors("request")) {
-//			final boolean isRequestSpam = SpamDetector.isSpam(entity.getRequest(), this.repository.findSystemConfiguration());
-//			errors.state(request, !isRequestSpam, "request", "Request contains spam");
-//		}
 
 	}
 
