@@ -1,4 +1,4 @@
-package acme.features.systemConfiguration;
+package acme.features.authenticated.systemConfiguration;
 
 import javax.annotation.PostConstruct;
 
