@@ -1,12 +1,8 @@
 package acme.features.epicure.dish;
 
-import java.util.Date;
-
-import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.components.SpamDetector;
 import acme.entities.dish.Dish;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -57,7 +53,7 @@ public class EpicureDishPublishService implements AbstractUpdateService<Epicure,
 		entity.setChef(this.repository.findChefById(Integer.valueOf(request.getModel().getAttribute("chefId").toString())).orElse(null));
 
 
-		request.bind(entity, errors, "code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link");
+		request.bind(entity, errors, "published");//"code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link");
 	}
 
 	@Override
@@ -66,47 +62,47 @@ public class EpicureDishPublishService implements AbstractUpdateService<Epicure,
 		assert entity != null;
 		assert errors != null;
 		
-		if (!errors.hasErrors("code")) {
-			Dish existing;
-
-			existing = this.repository.findDishByCode(entity.getCode());
-			if(existing!=null) {
-			errors.state(request, existing.getId()==entity.getId() , "code", "epicure.dish.form.error.duplicated");
-			}
-		}
-		
-		if(!errors.hasErrors("initialPeriodDate")) {
-			final Date minInitialDate=DateUtils.addMonths(entity.getCreationDate(), 1);
-
-			
-			errors.state(request, entity.getInitialPeriodDate().after(minInitialDate), "initialPeriodDate", "epicure.dish.form.error.too-close-start-date");
-			
-		}
-		if(!errors.hasErrors("finalPeriodDate") && !errors.hasErrors("initialPeriodDate")) {
-			final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
-
-			errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "epicure.dish.form.error.one-month");
-			
-		}
-		
-		
-		if (!errors.hasErrors("budget")) {
-			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
-            Boolean acceptedCurrency=false;
-            for(int i=0;i<currencies.length;i++) {
-                if(entity.getBudget().getCurrency().equals(currencies[i].trim())) {
-                    acceptedCurrency=true;
-                }
-            }
-			
-			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "epicure.dish.form.error.negative-budget");
-			errors.state(request, acceptedCurrency, "budget", "epicure.dish.form.error.non-accepted-currency");
-		}
-		
-		if(!errors.hasErrors("request")) {
-			final boolean isRequestSpam = SpamDetector.isSpam(entity.getRequest(), this.repository.findSystemConfiguration());
-			errors.state(request, !isRequestSpam, "request", "Request contains spam");
-		}
+//		if (!errors.hasErrors("code")) {
+//			Dish existing;
+//
+//			existing = this.repository.findDishByCode(entity.getCode());
+//			if(existing!=null) {
+//			errors.state(request, existing.getId()==entity.getId() , "code", "epicure.dish.form.error.duplicated");
+//			}
+//		}
+//		
+//		if(!errors.hasErrors("initialPeriodDate")) {
+//			final Date minInitialDate=DateUtils.addMonths(entity.getCreationDate(), 1);
+//
+//			
+//			errors.state(request, entity.getInitialPeriodDate().after(minInitialDate), "initialPeriodDate", "epicure.dish.form.error.too-close-start-date");
+//			
+//		}
+//		if(!errors.hasErrors("finalPeriodDate") && !errors.hasErrors("initialPeriodDate")) {
+//			final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
+//
+//			errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "epicure.dish.form.error.one-month");
+//			
+//		}
+//		
+//		
+//		if (!errors.hasErrors("budget")) {
+//			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
+//            Boolean acceptedCurrency=false;
+//            for(int i=0;i<currencies.length;i++) {
+//                if(entity.getBudget().getCurrency().equals(currencies[i].trim())) {
+//                    acceptedCurrency=true;
+//                }
+//            }
+//			
+//			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "epicure.dish.form.error.negative-budget");
+//			errors.state(request, acceptedCurrency, "budget", "epicure.dish.form.error.non-accepted-currency");
+//		}
+//		
+//		if(!errors.hasErrors("request")) {
+//			final boolean isRequestSpam = SpamDetector.isSpam(entity.getRequest(), this.repository.findSystemConfiguration());
+//			errors.state(request, !isRequestSpam, "request", "Request contains spam");
+//		}
 
 	}
 
@@ -116,11 +112,11 @@ public class EpicureDishPublishService implements AbstractUpdateService<Epicure,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link");
+		request.unbind(entity, model, "published");//"code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link");
 		model.setAttribute("chefs", this.repository.findAllChefs());
 		model.setAttribute("chefId", entity.getChef().getId());
 		model.setAttribute("status", entity.getStatus().toString());
-		model.setAttribute("published", entity.getPublished());
+		//model.setAttribute("published", entity.getPublished());
 	}
 
 	@Override

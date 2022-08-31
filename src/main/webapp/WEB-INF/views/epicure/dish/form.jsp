@@ -49,6 +49,7 @@
 				</jstl:when>
 			</jstl:choose>
 			
+			<acme:hidden-data path="published"/>
 			
 			<jstl:choose>
 			
