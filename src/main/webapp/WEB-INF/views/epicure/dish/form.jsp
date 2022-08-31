@@ -49,6 +49,13 @@
 			<acme:input-textbox readonly="true"
 				code="epicure.dish.form.label.epicure.username"
 				path="chef.userAccount.username" />
+				
+			<jstl:choose>
+				<jstl:when test="${command == 'show'}">
+					<acme:button code="epicure.dish.form.button.memorandum"
+						action="/epicure/memorandum/list-group?masterId=${id}" />
+				</jstl:when>
+			</jstl:choose>
 			
 		</acme:form>
 	</jstl:when>

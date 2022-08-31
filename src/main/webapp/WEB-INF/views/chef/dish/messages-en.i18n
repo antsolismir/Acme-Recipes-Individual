@@ -16,5 +16,9 @@ chef.dish.list.label.status = Status
 chef.dish.list.label.code = Code
 chef.dish.list.label.creationDate = Creation Date
 
+
+chef.dish.form.button.memorandum = Memorandums
+
 chef.dish.form.label.patron.accept = Accept
 chef.dish.form.label.patron.denie = Denie
+
