@@ -3,6 +3,7 @@ package acme.features.authenticated.epicure;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.SpamDetector;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.HttpMethod;
@@ -71,6 +72,16 @@ public class AuthenticatedEpicureUpdateService implements AbstractUpdateService<
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if(!errors.hasErrors("assertion")) {
+			final boolean isAssertionSpam = SpamDetector.isSpam(entity.getAssertion(), this.repository.getSystemConfiguration());
+			errors.state(request, !isAssertionSpam, "assertion", "authenticated.epicure.form.error.assertion-spam");
+		}
+
+		if(!errors.hasErrors("organisation")) {
+			final boolean isOrganisationSpam = SpamDetector.isSpam(entity.getOrganisation(), this.repository.getSystemConfiguration());
+			errors.state(request, !isOrganisationSpam, "organisation", "authenticated.epicure.form.error.organisation-spam");
+		}
 	}
 
 	@Override
