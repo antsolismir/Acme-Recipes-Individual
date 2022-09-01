@@ -4,6 +4,18 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 		<acme:form>
+
+			<acme:input-textbox readonly="true"
+				code="epicure.dish.form.label.status" path="status" />
+			<acme:input-textbox readonly="true"
+				code="epicure.dish.form.label.code" path="code" />
+			<acme:input-textarea readonly="true"
+				code="epicure.dish.form.label.request" path="request" />
+			<acme:input-money readonly="true"
+				code="epicure.dish.form.label.budget" path="budget" />
+			<acme:input-money readonly="true"
+				code="epicure.dish.form.label.money" path="money" />			
+
 			<jstl:choose>
 				<jstl:when test="${command =='show'}">
 					<acme:input-textbox code="epicure.dish.form.label.status" readonly="true" path="status"/>

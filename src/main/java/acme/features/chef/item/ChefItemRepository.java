@@ -35,7 +35,8 @@ public interface ChefItemRepository extends AbstractRepository {
 	@Query("SELECT c FROM SystemConfiguration c")
 	SystemConfiguration getSystemConfiguration();
 
-	
+	@Query("select c.defaultCurrency  from SystemConfiguration c")
+	String getDefaultCurrency();	
 	
 }
 

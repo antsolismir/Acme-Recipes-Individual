@@ -22,6 +22,10 @@ public interface EpicureDishRepository extends AbstractRepository{
 	@Query("select dish from Dish dish where dish.id = :id")
 	Dish findDishById(int id);
 	
+
+	@Query("select c.defaultCurrency from SystemConfiguration c")
+	String getDefaultCurrency();
+
 	@Query("SELECT epicure from Epicure epicure WHERE epicure.id=:id")
 	Optional<Epicure> findEpicureById(int id);
 	
@@ -39,5 +43,6 @@ public interface EpicureDishRepository extends AbstractRepository{
 	
 	@Query("SELECT pr from Memorandum pr where pr.dish.id = :dishId")
     Collection<Memorandum> findMemorandumsByDishId(int dishId);
+
 
 }

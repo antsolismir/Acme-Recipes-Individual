@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.item.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractListService;
 import acme.roles.Chef;
 
@@ -28,6 +29,8 @@ public class ChefItemIgredientListService implements AbstractListService<Chef, I
 	
 	@Autowired
 	protected ChefItemRepository repository;
+	@Autowired
+	protected ChefItemMoneyExchange chefItemMoneyExchange;
 
 
 	@Override
@@ -53,6 +56,10 @@ public class ChefItemIgredientListService implements AbstractListService<Chef, I
 		assert entity != null;
 		assert model != null;
 
+        final String systemCurrency= this.repository.getDefaultCurrency();
+		final Money priceExchanged=this.chefItemMoneyExchange.computeMoneyExchange(entity.getRetailPrice(), systemCurrency).getTarget();
+		model.setAttribute("money", priceExchanged);
+		
 		request.unbind(entity, model, "name", "retailPrice");
 
 	}

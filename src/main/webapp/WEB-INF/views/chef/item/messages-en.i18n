@@ -5,6 +5,7 @@ chef.item.list.label.retailprice = Price
 chef.item.list.label.type = Type
 chef.item.list.label.link = Link
 chef.item.list.label.published = Published
+chef.item.list.label.money = Price on system currency
 chef.item.form.label.ingredient = Ingredient
 chef.item.form.label.kitchen_utensil = Kitchen utensil
 chef.item.form.button.update = Update
@@ -16,6 +17,3 @@ chef.item.form.error.retail-price-currency-invalid = This currency is not allowe
 chef.item.form.error.retail-price-amount-negative-or-zero = The amount can not be negative or zero
 chef.item.form.error.duplicated = This code already exist
 chef.item.form.error.link = The link format is invalid
-
-
-

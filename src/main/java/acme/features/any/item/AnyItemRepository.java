@@ -25,4 +25,6 @@ public interface AnyItemRepository extends AbstractRepository {
 	@Query("select i from Item i where i.itemType=1 and i.published = true")
 	Collection<Item> findAllIngredientsByAny();
 	
+	@Query("select c.defaultCurrency  from SystemConfiguration c")
+	String getDefaultCurrency();
 }

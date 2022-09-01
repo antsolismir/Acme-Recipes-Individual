@@ -13,11 +13,12 @@ all.item.form.label.code = Código
 all.item.form.label.technology = Tecnología
 all.item.form.label.description = Descripción
 all.item.form.label.retailprice = Precio
+all.item.form.label.money = Precio en la moneda del sistema
 all.item.form.label.type = Tipo
 all.item.form.label.link = Enlace
 inventor.item.list.label.published = Publicada
 
 all.item.list.label.name = Nombre
 all.item.list.label.retailPrice = Precio
-
+all.item.list.label.money = Precio en la moneda del sistema
 all.item.list.label.item.name = Artículo
