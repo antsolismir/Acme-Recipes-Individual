@@ -16,12 +16,20 @@ public class EpicureMemorandumController extends AbstractController<Epicure, Mem
 	protected EpicureMemorandumListService	listService;
 	
 	@Autowired
+	protected EpicureGroupMemorandumListService	listGroupService;
+	
+	@Autowired
 	protected EpicureMemorandumShowService	showService;
+	
+	@Autowired
+	protected EpicureMemorandumCreateService createService;
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", this.listService);
+		super.addCommand("list-all", "list", this.listService);
+		super.addCommand("list-group", "list", this.listGroupService);
+		
 		super.addCommand("show", this.showService);
+		super.addCommand("create", this.createService);
 	}
 }
-

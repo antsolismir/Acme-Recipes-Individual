@@ -9,6 +9,7 @@ import acme.entities.recipe.ItemQuantity;
 import acme.entities.recipe.Recipe;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.helpers.CollectionHelper;
 import acme.framework.services.AbstractListService;
 import acme.roles.Chef;
 
@@ -43,6 +44,23 @@ public class ChefItemQuantityListService implements AbstractListService<Chef,Ite
 		return this.repo.findManyItemQuantityByRecipeId(masterId);
     }
 
+	@Override
+	public void unbind(final Request<ItemQuantity> request, final Collection<ItemQuantity> entities, final Model model) {
+		assert request != null;
+		assert !CollectionHelper.someNull(entities);
+		assert model != null;
+
+		int masterId;
+		final Recipe recipe;
+		boolean showCreate;
+
+		masterId = request.getModel().getInteger("masterId");
+		recipe = this.repo.findRecipeById(masterId);
+		showCreate = (!recipe.isPublished() && request.isPrincipal(recipe.getChef()));
+
+		model.setAttribute("masterId", masterId);
+		model.setAttribute("showCreate", showCreate);
+	}
 	
     @Override
     public void unbind(final Request<ItemQuantity> request, final ItemQuantity entity, final Model model) {

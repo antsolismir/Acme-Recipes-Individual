@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.systemConfiguration;
+package acme.features.administrator.systemConfiguration;
 
 
 import javax.annotation.PostConstruct;
@@ -29,11 +29,15 @@ public class AdministratorSystemConfigurationController extends AbstractControll
 
 	@Autowired
 	protected AdministratorSystemConfigurationShowService showService;
+	
+	@Autowired
+	protected AdministratorSystemConfigurationUpdateService updateService;
 
 
 	@PostConstruct
 	protected void initialize() {
 		super.addCommand("show", this.showService);
+		super.addCommand("update", this.updateService);
 	
 	}
 

@@ -1,4 +1,4 @@
-package acme.features.systemConfiguration;
+package acme.features.authenticated.systemConfiguration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

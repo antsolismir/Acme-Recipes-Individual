@@ -1,0 +1,6 @@
+record-index,heading,text,critical,info,critical-form
+0,0 This is a normal bulletin,"This is the text of a normal bulletin that can be so long,up to 255 letters. Este es el texto de un boletín normal y corriente que puede contener hasta 255 caracteres.",true,https://www.ev.us.es/,CRITICAL
+1,1,"This is the text of a normal bulletin that can be so long,up to 255 letters. Este es el texto de un boletín normal y corriente que puede contener hasta 255 caracteres.",true,https://www.ev.us.es/,CRITICAL
+2,2 Esto son 100 caracteres. Esto son 100 caracteres. Esto son 100 caracteres. Esto son 100 caractere,"This is the text of a normal bulletin that can be so long,up to 255 letters. Este es el texto de un boletín normal y corriente que puede contener hasta 255 caracteres.",true,https://www.ev.us.es/,CRITICAL
+3,3 This is a normal bulletin,1,false,https://www.ev.us.es/,NOT CRITICAL
+4,4 This is a normal bulletin,Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto son 255 caracteres. Esto,true,https://www.ev.us.es/,CRITICAL

@@ -29,7 +29,7 @@ public class EpicureDishShowService implements AbstractShowService<Epicure,Dish>
 
 		dishId = request.getModel().getInteger("id");
 		dish = this.repository.findDishById(dishId);
-		result = request.getPrincipal().getActiveRoleId() == dish.getEpicure().getId();
+		result = (dish.getEpicure().getId() == request.getPrincipal().getActiveRoleId() || dish.getChef().getId() == request.getPrincipal().getActiveRoleId());
 
 		return result;
 	}
@@ -53,13 +53,24 @@ public class EpicureDishShowService implements AbstractShowService<Epicure,Dish>
 		assert entity != null;
 		assert model != null;
 
-		 final String systemCurrency= this.repository.getDefaultCurrency();
-			final Money priceExchanged=this.epicureDishMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency).getTarget();
-			model.setAttribute("money", priceExchanged);
+
+		final String systemCurrency= this.repository.getDefaultCurrency();
+		final Money priceExchanged=this.epicureDishMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency).getTarget();
+		model.setAttribute("money", priceExchanged);
+
 		
-		request.unbind(entity, model, "status", "code", "request", "budget", "creationDate", "initialPeriodDate","finalPeriodDate","link");
+		model.setAttribute("chefs", this.repository.findAllChefs());
+		model.setAttribute("chefId", entity.getChef().getId());
+		model.setAttribute("chefOrganisation", entity.getChef().getOrganisation());
+		model.setAttribute("chefAssertion", entity.getChef().getAssertion());
+		model.setAttribute("chefUserAccount",entity.getChef().getUserAccount().getUsername());
+		model.setAttribute("status", entity.getStatus().toString());
+		model.setAttribute("published", entity.getPublished());
+		
+		request.unbind(entity, model, "code", "request", "budget", "creationDate", "initialPeriodDate","finalPeriodDate","link");
 		request.unbind(entity, model, "chef.organisation", "chef.assertion");
 		request.unbind(entity, model, "chef.userAccount.username");
 
+	
 	}
 }
