@@ -10,7 +10,15 @@
 				</jstl:when>
 			</jstl:choose>
 			
-			<acme:input-textbox code="epicure.dish.form.label.code" path="code" />
+			<jstl:choose>
+				<jstl:when test="${command == 'create'}">	
+    				<acme:input-textbox code="epicure.dish.form.label.code" path="code" />
+    			</jstl:when>
+				<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+					<acme:input-textbox readonly="true" code="epicure.dish.form.label.code" path="code" />
+				</jstl:when>
+			</jstl:choose>
+			
 			<acme:input-textarea code="epicure.dish.form.label.request" path="request" />
 			<acme:input-money code="epicure.dish.form.label.budget" path="budget" />
 			

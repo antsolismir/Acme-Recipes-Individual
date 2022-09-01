@@ -52,7 +52,7 @@ public class ChefRecipePublishService  implements AbstractUpdateService<Chef, Re
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "published");
+		request.unbind(entity, model, "code", "heading", "description", "preparationNotes", "info", "published");
 		
 	}
 

@@ -5,7 +5,14 @@
 
 <acme:form readonly="false"> 
 	<acme:input-textbox code="chef.item.list.label.name" path="name"/>
-	<acme:input-textbox code="chef.item.list.label.code" path="code"/>
+	<jstl:choose>
+		<jstl:when test="${command == 'create'}">	
+    		<acme:input-textbox code="chef.item.list.label.code" path="code"/>
+    	</jstl:when>
+		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+			<acme:input-textbox readonly="true" code="chef.item.list.label.code" path="code"/>
+		</jstl:when>
+	</jstl:choose>
 	<acme:input-textarea code="chef.item.list.label.description" path="description"/>
 	<acme:input-money code="chef.item.list.label.retailprice" path="retailPrice"/>
 
