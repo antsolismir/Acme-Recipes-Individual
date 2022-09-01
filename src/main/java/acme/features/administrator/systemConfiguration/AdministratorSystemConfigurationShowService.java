@@ -47,6 +47,12 @@ public class AdministratorSystemConfigurationShowService implements AbstractShow
 		assert entity != null;
 		assert model != null;
 
+		final String information = "We have used the services provided from exchangerate.host to perform all the money exchanges in our system."
+			+ "To do so, we are making use of the api they offered. This is the call we are currently using: \"https://api.exchangerate.host/latest?base={0}&symbols={1}\", being {0}"
+			+ " the source currency and {1} the target currency, so the default currency is always the target currency. ";
+		
+		model.setAttribute("moneyExchangeInformation", information);
+		
 		request.unbind(entity, model, "defaultCurrency", "acceptedCurrencies","spamTermsEn",
 			"spamTermsEs","spamThreshold");
 	}
