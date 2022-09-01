@@ -9,7 +9,11 @@
 	<acme:input-textarea code="chef.item.list.label.description" path="description"/>
 	<acme:input-money code="chef.item.list.label.retailprice" path="retailPrice"/>
 
-	<acme:input-money code="chef.item.list.label.money" path="money"/>
+	<jstl:choose>
+		<jstl:when test="${command =='show'}">
+			<acme:input-money readonly="true" code="epicure.dish.form.label.money" path="money" />
+		</jstl:when>
+	</jstl:choose>
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">	
 			<acme:input-select readonly="true" code="chef.item.list.label.type" path="itemType">
