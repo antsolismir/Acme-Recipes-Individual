@@ -6,3 +6,7 @@ chef.memorandum.form.label.dish.code = Dish code
 
 chef.memorandum.list.label.sequenceNumber = Sequence number
 chef.memorandum.list.label.instantiationMoment = Instantiation moment
+
+chef.memorandum.list.button.create = Create memorandum
+chef.memorandum.form.button.create = Create memorandum
+chef.memorandum.form.label.confirmation = If you confirm you will not be able to update or delete, do you want to confirm?

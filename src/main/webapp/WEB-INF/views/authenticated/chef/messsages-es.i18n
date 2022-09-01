@@ -7,3 +7,6 @@ authenticated.chef.chef.form.label.link = Enlace:
 
 authenticated.chef.chef.form.button.create = Registrar
 authenticated.chef.chef.form.button.update = Actualizar
+
+authenticated.chef.form.error.assertion-spam = El nombre del Assertion introducido es considerado como spam
+authenticated.chef.form.error.organisation-spam = El nombre de la Organización introducida es considerado como spam
