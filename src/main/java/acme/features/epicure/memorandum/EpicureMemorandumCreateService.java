@@ -41,7 +41,7 @@ public class EpicureMemorandumCreateService implements AbstractCreateService<Epi
 		dish = this.repository.findDishById(id);
 		
 		userId = request.getPrincipal().getAccountId();
-		result = userId == dish.getEpicure().getUserAccount().getId(); 
+		result = (userId == dish.getEpicure().getUserAccount().getId()) && dish.getPublished(); 
 
 		return result;
 	}

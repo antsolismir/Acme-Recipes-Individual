@@ -52,7 +52,7 @@ public class ChefMemorandumCreateService implements AbstractCreateService<Chef, 
 		dish = this.repository.findDishById(id);
 		
 		userId = request.getPrincipal().getAccountId();
-		result = userId == dish.getChef().getUserAccount().getId(); 
+		result = (userId == dish.getChef().getUserAccount().getId()) && dish.getPublished(); 
 
 		return result;
 	}

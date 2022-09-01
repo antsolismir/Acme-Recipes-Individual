@@ -69,7 +69,7 @@
 			</jstl:choose>
 			
 			<jstl:choose>
-				<jstl:when test="${command == 'show'}">
+				<jstl:when test="${command == 'show' && published == true}">
 					<acme:button code="chef.dish.form.button.memorandum"
 						action="/epicure/memorandum/list-group?masterId=${id}" />
 				</jstl:when>
