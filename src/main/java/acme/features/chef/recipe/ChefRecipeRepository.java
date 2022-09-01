@@ -34,8 +34,8 @@ public interface ChefRecipeRepository extends AbstractRepository{
 	@Query("SELECT at.item FROM ItemQuantity at WHERE at.recipe.id=:id")
 	Collection<Item> findManyItemByRecipeId(int id);
 	
-	@Query("select c from SystemConfiguration c")
-	SystemConfiguration findConfig();
+	@Query("SELECT c FROM SystemConfiguration c")
+	SystemConfiguration getSystemConfiguration();
 
 	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String getDefaultCurrency();
