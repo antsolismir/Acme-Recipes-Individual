@@ -22,4 +22,5 @@ public interface AdministratorBulletinRepository extends AbstractRepository{
 	
 	@Query("select c from SystemConfiguration c")
 	SystemConfiguration getSystemConfiguration();
+
 }

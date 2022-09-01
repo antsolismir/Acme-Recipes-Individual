@@ -74,6 +74,8 @@ master.menu.user-account.chef.item.list.recipe = Lista de mis recetas
 
 master.menu.chef.memorandum-list = Lista de mis memorandums
 
+master.menu.chef.item.create = Crear artículo
+
 
 # master.menu.user-account ####################################################
 

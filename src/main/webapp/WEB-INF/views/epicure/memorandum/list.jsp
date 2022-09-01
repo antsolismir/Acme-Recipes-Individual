@@ -8,3 +8,6 @@
 	<acme:list-column code="epicure.memorandum.list.label.sequenceNumber" path="sequenceNumber" width="20%"/>
 	<acme:list-column code="epicure.memorandum.list.label.instantiationMoment" path="instantiationMoment" width="10%"/>
 </acme:list>
+<c:if test="${masterId != null}">
+	<acme:button test="${showCreate}" code="epicure.memorandum.list.button.create" action="/epicure/memorandum/create?masterId=${masterId}"/>
+</c:if>

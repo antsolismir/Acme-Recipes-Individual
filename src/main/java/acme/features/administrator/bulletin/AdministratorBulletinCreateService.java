@@ -5,7 +5,10 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import acme.components.SpamDetector;
+
+
 import acme.entities.bulletin.Bulletin;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -75,6 +78,7 @@ public class AdministratorBulletinCreateService implements AbstractCreateService
 			assert entity != null;
 			assert errors != null;
 
+
 			if(!errors.hasErrors("info")) {
 				final boolean isInfo;
 				if(!entity.getInfo().isEmpty()) {
@@ -92,6 +96,7 @@ public class AdministratorBulletinCreateService implements AbstractCreateService
 				final boolean isHeadingSpam = SpamDetector.isSpam(entity.getHeading(), this.repository.getSystemConfiguration());
 				errors.state(request, !isHeadingSpam, "heading", "Heading contains spam");
 			}			
+
 			boolean confirmation;
 
 			confirmation = request.getModel().getBoolean("confirmation");
