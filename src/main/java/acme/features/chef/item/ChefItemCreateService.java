@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import acme.components.SpamDetector;
 import acme.entities.item.Item;
-import acme.features.authenticated.systemConfiguration.AdministratorSystemConfigurationRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -24,8 +23,6 @@ public class ChefItemCreateService implements AbstractCreateService<Chef, Item> 
 	@Autowired
 	protected ChefItemRepository repository;
 	
-	@Autowired
-	AdministratorSystemConfigurationRepository confgRepository;
 
 	@Override
 	public boolean authorise(final Request<Item> request) {
