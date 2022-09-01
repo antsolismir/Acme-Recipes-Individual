@@ -5,6 +5,10 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+import acme.components.SpamDetector;
+
+
 import acme.entities.bulletin.Bulletin;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -73,31 +77,26 @@ public class AdministratorBulletinCreateService implements AbstractCreateService
 			assert request != null;
 			assert entity != null;
 			assert errors != null;
-			/*SpamDetector spamDetector;
-			String strongSpamTerms;
-			String weakSpamTerms;
-			double strongSpamThreshold;
-			double weakSpamThreshold;
 
-			/*spamDetector = new SpamDetector();
-			final SystemConfiguration configuration = this.repository.findConfig();
-			strongSpamTerms = configuration.getStrongSpamTerm();
-			weakSpamTerms = configuration.getWeakSpamTerm();
-			strongSpamThreshold = configuration.getStrongSpamThreshold();
-			weakSpamThreshold = configuration.getWeakSpamThreshold();
 
-			if(!errors.hasErrors("heading")) {
-				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getTitle())
-					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getTitle()),
-					"heading", "administrator.bulletin.form.error.spam");
+			if(!errors.hasErrors("info")) {
+				final boolean isInfo;
+				if(!entity.getInfo().isEmpty()) {
+					isInfo = (entity.getInfo().startsWith("http") || entity.getInfo().startsWith("www")) && entity.getInfo().contains(".");
+					errors.state(request, isInfo, "info", "chef.recipe.form.error.info");
+				}
 			}
 
 			if(!errors.hasErrors("text")) {
-				errors.state(request, !spamDetector.containsSpam(weakSpamTerms.split(","), weakSpamThreshold, entity.getBody())
-					&& !spamDetector.containsSpam(strongSpamTerms.split(","), strongSpamThreshold, entity.getBody()),
-					"text", "administrator.bulletin.form.error.spam");
+				final boolean isTextSpam = SpamDetector.isSpam(entity.getText(), this.repository.getSystemConfiguration());
+				errors.state(request, !isTextSpam, "text", "Text contains spam");
 			}
-*/
+			
+			if(!errors.hasErrors("heading")) {
+				final boolean isHeadingSpam = SpamDetector.isSpam(entity.getHeading(), this.repository.getSystemConfiguration());
+				errors.state(request, !isHeadingSpam, "heading", "Heading contains spam");
+			}			
+
 			boolean confirmation;
 
 			confirmation = request.getModel().getBoolean("confirmation");

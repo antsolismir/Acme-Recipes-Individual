@@ -21,5 +21,6 @@ public interface AdministratorBulletinRepository extends AbstractRepository{
 	Collection<Bulletin> findRecentBulletins(Date deadline);
 	
 	@Query("select c from SystemConfiguration c")
-	SystemConfiguration findConfig();
+	SystemConfiguration getSystemConfiguration();
+
 }
