@@ -33,7 +33,6 @@ public class ChefItemUpdateTest extends TestHarness {
 		super.checkFormExists();
 		
 		super.fillInputBoxIn("name", name);
-		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("retailPrice", retailPrice);
 		super.fillInputBoxIn("link", link);
@@ -57,7 +56,6 @@ public class ChefItemUpdateTest extends TestHarness {
 		super.checkFormExists();
 		
 		super.fillInputBoxIn("name", name);
-		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("retailPrice", retailPrice);
 		super.fillInputBoxIn("link", link);
