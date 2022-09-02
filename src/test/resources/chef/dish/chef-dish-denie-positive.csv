@@ -1,0 +1,4 @@
+recordIndex,code,request,budget,initialPeriodDate,finalPeriodDate,link
+0,ZZZ-999,Esto es una descripcion de prueba para comprobar el test de accept,"GBP 200.00",2023/01/02 00:56,2023/02/03 00:56,https://google.com
+1,ZZZ-998,"Se firme con tu propósito, firme como una piedra","EUR 2,123.00",2023/01/02 00:56,2023/02/03 00:56,https://google.com
+2,ZZZ-997,"Hoy no es el día de mi muerte, soldado",USD 250.00,2023/01/02 00:56,2023/02/03 00:56,https://google.com

@@ -1,0 +1,6 @@
+recordIndex,status,code,request,budget,creationDate,initialPeriodDate,finalPeriodDate,link,epicure,chef
+0,ACCEPTED,AAA-001,Esto es una descripcion de prueba,GBP 200.00,2022/01/01 10:11,2023/01/02 00:56,2023/02/03 00:56,https://google.com,epicure-01,chef-01
+1,PROPOSED,AAA-005,"El hombre débil se vuelve fuerte cuando no tiene nada, porque sólo entonces puede sentir la locura de la desesperación","EUR 20,450.00",2022/01/01 10:11,2023/01/02 00:56,2023/02/03 00:56,https://google.com,epicure-01,chef-02
+2,PROPOSED,ABC-777,Si buscas la perfección nunca estarás contento,GBP 320.00,2022/01/01 10:11,2023/01/02 00:56,2023/02/03 00:56,https://google.com,epicure-01,chef-01
+3,PROPOSED,AHR-125,"Mientras el corazón late, mientras el cuerpo y alma siguen juntos, no puedo admitir que cualquier criatura dotada de voluntad tiene necesidad de perder la esperanza en la vida",EUR 200.00,2022/01/01 10:11,2023/01/02 00:56,2023/02/03 00:56,https://google.com,epicure-01,chef-02
+4,ACCEPTED,PDD-129,"El sol es débil cuando se eleva primero, y cobra fuerza y coraje a medida que avanza el día","USD 1,000,000.00",2022/01/01 10:11,2023/01/02 00:56,2023/02/03 00:56,https://google.com,epicure-01,chef-02
