@@ -7,12 +7,12 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class ChefRecipeCreateAndPublishTest extends TestHarness {
+public class ChefRecipeCreateTest extends TestHarness {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/chef/recipe/recipe-create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveChefIngredientCreateTest(final int recordIndex, final String code, final String heading, final String description,
+	public void positiveChefRecipeCreateTest(final int recordIndex, final String code, final String heading, final String description,
 		final String preparationNotes, final String info) {
 		super.signIn("chef3", "chef3");
 
@@ -45,26 +45,26 @@ public class ChefRecipeCreateAndPublishTest extends TestHarness {
 		super.signOut();
 	}
 	
+
+	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/chef/recipe/recipe-create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/chef/recipe/recipe-create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void negativeChefIngredientCreateTest(final int recordIndex, final String key, final String itemType, final String name, final String code, final String description, final String retailPrice,final String link) {
+	public void negativeChefRecipeCreateTest(final int recordIndex, final String code, final String heading, final String description,
+		final String preparationNotes, final String info) {
 		super.signIn("chef3", "chef3");
 
 		super.clickOnMenu("Chef", "List my recipes");
-		super.clickOnSubmit("Create");
-		
-		super.checkFormExists();
-		super.fillInputBoxIn("name", name);
+		super.clickOnButton("Create");
+
+		super.fillInputBoxIn("heading", heading);
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("description", description);
-		super.fillInputBoxIn("retailPrice", retailPrice);
-		super.fillInputBoxIn("link", link);
-		super.fillInputBoxIn("itemType", itemType);
+		super.fillInputBoxIn("info", info);
+		super.fillInputBoxIn("preparationNotes", preparationNotes);
 		super.clickOnSubmit("Create");
 		
 		super.checkErrorsExist();
-		super.signOut();
 	}
 
 	@Test

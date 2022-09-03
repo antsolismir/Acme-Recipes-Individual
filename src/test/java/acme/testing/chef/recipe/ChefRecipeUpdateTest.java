@@ -38,10 +38,42 @@ public class ChefRecipeUpdateTest extends TestHarness {
 		super.fillInputBoxIn("info", info);
 		super.clickOnSubmit("Update");
 		
-		super.checkListingExists();
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.checkInputBoxHasValue("heading", heading);
+		super.checkInputBoxHasValue("description", description);
+		super.checkInputBoxHasValue("preparationNotes", preparationNotes);
+		super.checkInputBoxHasValue("info", info);
+		
 		super.signOut();
 	}
 
+	@ParameterizedTest
+	@CsvFileSource(resources = "/chef/recipe/recipe-publish.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(30)
+	public void positivePublishTest(final int recordIndex, final String heading, final String description, final String preparationNotes, final String info) {
+		super.signIn("chef1", "chef1");
+
+		super.clickOnMenu("Chef", "List my recipes");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		
+		super.checkInputBoxHasValue("heading", heading);
+		super.checkInputBoxHasValue("description", description);
+		super.checkInputBoxHasValue("preparationNotes", preparationNotes);
+		super.checkInputBoxHasValue("info", info);
+		
+		super.clickOnSubmit("Publish");
+		
+		super.checkListingExists();
+		super.checkColumnHasValue(recordIndex, 3, "true");
+		
+		super.checkListingExists();
+		super.signOut();
+	}
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/chef/recipe/recipe-update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
