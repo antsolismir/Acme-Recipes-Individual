@@ -44,6 +44,10 @@ public class ChefItemCreateAndPublishTest extends TestHarness {
 		
 		super.clickOnSubmit("Publish");
 		
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.checkInputBoxHasValue("published", "true");
+		
 		super.signOut();
 	}
 	

@@ -10,3 +10,5 @@
 
 authenticated.systemConfiguration.form.label.defaultCurrency = Moneda por defecto
 authenticated.systemConfiguration.form.label.acceptedCurrencies = Moneda aceptada
+
+authenticated.systemConfiguration.form.label.moneyExchange = Información sobre cómo llevamos a cabo el cambio de divisas

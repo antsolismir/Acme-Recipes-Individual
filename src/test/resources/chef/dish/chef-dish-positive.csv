@@ -1,0 +1,4 @@
+recordIndex,status,code,request,budget,creationDate,initialPeriodDate,finalPeriodDate,link
+0,ACCEPTED,AAA-001,Esto es una descripcion de prueba,GBP 200.00,2022/01/01 10:11,2023/01/02 00:56,2023/02/03 00:56,https://google.com
+1,PROPOSED,AEC-005,Sea un hombre o sea más que un hombre. Sea firme con su propósito y firme como una piedra,EUR 2123.00,2022/01/01 10:11,2023/01/02 00:56,2023/02/03 00:56,https://google.com
+2,PROPOSED,JJK-155,"No puedo morir aún doctor. Todavía no. Tengo cosas que hacer. Después de todo, tendré una vida entera en la que morir",USD 250.00,2022/01/01 10:11,2023/01/02 00:56,2023/02/03 00:56,https://google.com

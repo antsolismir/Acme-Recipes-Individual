@@ -33,11 +33,10 @@ public class EpicureDishCreateTest extends TestHarness {
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(recordIndex, 0, status);
 		super.checkColumnHasValue(recordIndex, 1, code);
-		super.checkColumnHasValue(recordIndex, 3, "false");
+		super.checkColumnHasValue(recordIndex, 5, "false");
 		super.clickOnListingRecord(recordIndex);
 		
 		super.checkFormExists();
-		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("request", request);
 		super.checkInputBoxHasValue("budget", budget);
 		super.checkInputBoxHasValue("initialPeriodDate", initialPeriodDate);

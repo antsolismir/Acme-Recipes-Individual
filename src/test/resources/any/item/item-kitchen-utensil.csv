@@ -6,7 +6,7 @@ record-index,key,item-type,name,code,description,retail-price,link,key:chef
 4,item-25,KITCHEN_UTENSIL,utensilio05,AA:AAA-025,Pellentesque euismod scelerisque magna tincidunt.,EUR 0.99,https://google.com,chef-01
 5,item-26,KITCHEN_UTENSIL,utensilio06,AA:AAA-026,Lorem ipsum dolor sit amet egestas.,EUR 100.00,https://google.com,chef-02
 6,item-32,KITCHEN_UTENSIL,utensilio09,AA:AAA-032,Tortor.,EUR 1.99,https://google.com,chef-02
-7,item-33,KITCHEN_UTENSIL,utensilio10,AA:AAA-033,"Vestibulum at nunc sit amet tellus porttitor sodales sed vel lorem. Cras ullamcorper tortor libero, eget ornare ex laoreet fermentum. Morbi cursus varius enim, at porttitor lorem. In leo ipsum, egestas nunc.",EUR 17.99,https://google.com,chef-03
+7,item-33,KITCHEN_UTENSIL,utensilio10,AA:AAA-033,"Vestibulum at nunc sit amet tellus porttitor sodales sed vel lorem. Cras ullamcorper tortor libero, eget ornare ex laoreet fermentum. Morbi cursus varius enim, at porttitor lorem. In leo ipsum, egestas nunc.",GBP 17.99,https://google.com,chef-03
 8,item-34,KITCHEN_UTENSIL,utensilio11,AA:AAA-034,"Vivamus convallis laoreet vehicula. Sed a sem et ipsum rhoncus congue. Vestibulum ipsum erat, egestas at suscipit id, ullamcorper id urna. In venenatis eros.",EUR 20.99,https://google.com,chef-01
 9,item-35,KITCHEN_UTENSIL,utensilio12,AA:AAA-035,Pellentesque euismod scelerisque magna tincidunt.,EUR 2.99,https://google.com,chef-02
 10,item-36,KITCHEN_UTENSIL,utensilio13,AA:AAA-036,Lorem ipsum dolor sit amet egestas.,EUR 10.00,https://google.com,chef-03

@@ -39,7 +39,7 @@ public class EpicureGroupMemorandumListService implements AbstractListService<Ep
 		result = dish != null;
 		
 		if(result) {
-			result = request.getPrincipal().getActiveRoleId() == dish.getEpicure().getId();
+			result = (request.getPrincipal().getActiveRoleId() == dish.getEpicure().getId()) && dish.getPublished();
 		}
 
 		return result;

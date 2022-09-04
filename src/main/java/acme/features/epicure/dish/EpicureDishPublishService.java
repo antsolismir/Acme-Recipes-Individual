@@ -53,7 +53,7 @@ public class EpicureDishPublishService implements AbstractUpdateService<Epicure,
 		entity.setChef(this.repository.findChefById(Integer.valueOf(request.getModel().getAttribute("chefId").toString())).orElse(null));
 
 
-		request.bind(entity, errors, "published");//"code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link");
+		request.bind(entity, errors, "published");
 	}
 
 	@Override
@@ -70,11 +70,11 @@ public class EpicureDishPublishService implements AbstractUpdateService<Epicure,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "published");//"code", "request", "budget", "initialPeriodDate", "finalPeriodDate","link");
+		request.unbind(entity, model, "published");
 		model.setAttribute("chefs", this.repository.findAllChefs());
 		model.setAttribute("chefId", entity.getChef().getId());
 		model.setAttribute("status", entity.getStatus().toString());
-		//model.setAttribute("published", entity.getPublished());
+		
 	}
 
 	@Override

@@ -38,7 +38,7 @@ public class ChefItemQuantityCreateService implements AbstractCreateService<Chef
 			Recipe recipe;
 			recipe = this.repository.findRecipeById(id);
 
-			result = request.isPrincipal(recipe.getChef());
+			result = request.isPrincipal(recipe.getChef()) && !recipe.isPublished();
 
 			return result;
 		}

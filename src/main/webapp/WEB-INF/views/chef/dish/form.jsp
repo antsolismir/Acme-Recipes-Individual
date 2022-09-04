@@ -14,8 +14,11 @@
 				code="chef.dish.form.label.request" path="request" />
 			<acme:input-money readonly="true"
 				code="chef.dish.form.label.budget" path="budget" />
-			<acme:input-money readonly="true"
-				code="chef.dish.form.label.money" path="money"/>
+			<jstl:choose>
+				<jstl:when test="${command =='show'}">
+					<acme:input-money readonly="true" code="epicure.dish.form.label.money" path="money" />
+				</jstl:when>
+			</jstl:choose>
 			<acme:input-moment readonly="true"
 				code="chef.dish.form.label.creationDate"
 				path="creationDate" />

@@ -29,7 +29,7 @@ public class ChefDishShowService implements AbstractShowService<Chef,Dish> {
 
 		dishId = request.getModel().getInteger("id");
 		dish = this.repository.findDishById(dishId);
-		result = request.getPrincipal().getActiveRoleId() == dish.getChef().getId();
+		result = (request.getPrincipal().getActiveRoleId() == dish.getChef().getId()) && dish.getPublished();
 
 		return result;
 	}

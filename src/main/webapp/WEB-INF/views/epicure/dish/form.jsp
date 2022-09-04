@@ -4,33 +4,32 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 		<acme:form>
-
-			<acme:input-textbox readonly="true"
-				code="epicure.dish.form.label.status" path="status" />
-			<acme:input-textbox readonly="true"
-				code="epicure.dish.form.label.code" path="code" />
-			<acme:input-textarea readonly="true"
-				code="epicure.dish.form.label.request" path="request" />
-			<acme:input-money readonly="true"
-				code="epicure.dish.form.label.budget" path="budget" />
-			<acme:input-money readonly="true"
-				code="epicure.dish.form.label.money" path="money" />			
-
 			<jstl:choose>
 				<jstl:when test="${command =='show'}">
 					<acme:input-textbox code="epicure.dish.form.label.status" readonly="true" path="status"/>
 				</jstl:when>
 			</jstl:choose>
 			
-			<acme:input-textbox code="epicure.dish.form.label.code" path="code" />
+			<jstl:choose>
+				<jstl:when test="${command == 'create'}">	
+    				<acme:input-textbox code="epicure.dish.form.label.code" path="code" />
+    			</jstl:when>
+				<jstl:when test="${acme:anyOf(command, 'show, update, delete, publish')}">
+					<acme:input-textbox readonly="true" code="epicure.dish.form.label.code" path="code" />
+				</jstl:when>
+			</jstl:choose>
+			
 			<acme:input-textarea code="epicure.dish.form.label.request" path="request" />
 			<acme:input-money code="epicure.dish.form.label.budget" path="budget" />
+			
+			<jstl:choose>
+				<jstl:when test="${command =='show'}">
+					<acme:input-money readonly="true" code="epicure.dish.form.label.money" path="money" />
+				</jstl:when>
+			</jstl:choose>
+			
 			<acme:input-url code="epicure.dish.form.label.link" path="link" />
-			
-			<jstl:if test="${convert!=null}">
-				<acme:input-textbox code="epicure.dish.form.label.convert" path="convert" />
-			</jstl:if>
-			
+						
 			<jstl:choose>
 				<jstl:when test="${published==true}">
 					<acme:input-moment code="epicure.dish.form.label.creationDate" path="creationDate"/>
@@ -75,6 +74,13 @@
 					<acme:submit code="epicure.dish.form.button.create" action="/epicure/dish/create"/>
 				</jstl:when>
 				
+			</jstl:choose>
+			
+			<jstl:choose>
+				<jstl:when test="${command == 'show' && published == true}">
+					<acme:button code="chef.dish.form.button.memorandum"
+						action="/epicure/memorandum/list-group?masterId=${id}" />
+				</jstl:when>
 			</jstl:choose>
 		</acme:form>
 

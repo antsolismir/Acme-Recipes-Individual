@@ -6,13 +6,13 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class EpicureDishPositiveTest extends TestHarness{
+public class EpicureDishListAndShowTest extends TestHarness{
 	@ParameterizedTest
-    @CsvFileSource(resources = "/epicure/dish/epicure-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/epicure/dish/epicure-dish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
     @Order(10)
-    public void positiveInventorPatronageTest(final int recordIndex, final String status, final String code, final String request, final String budget, final String creationDate, final String initialPeriodDate, final String finalPeriodDate, final String link, final String epicure, final String chef) {
+    public void positiveEpicurePositiveTest(final int recordIndex, final String status, final String code, final String request, final String budget, final String creationDate, final String initialPeriodDate, final String finalPeriodDate, final String link, final String epicure, final String chef) {
 
-        super.signIn("epicure2", "epicure2");
+        super.signIn("epicure1", "epicure1");
 
         super.clickOnMenu("Epicure", "List my dishes");
         super.checkListingExists();

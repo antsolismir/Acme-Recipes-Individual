@@ -33,14 +33,21 @@ public class ChefItemUpdateTest extends TestHarness {
 		super.checkFormExists();
 		
 		super.fillInputBoxIn("name", name);
-		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("retailPrice", retailPrice);
 		super.fillInputBoxIn("link", link);
 		super.fillInputBoxIn("itemType", itemType);
 		super.clickOnSubmit("Update");
 		
-		super.checkListingExists();
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.checkInputBoxHasValue("name", name);
+		super.checkInputBoxHasValue("code", code);
+		super.checkInputBoxHasValue("description", description);
+		super.checkInputBoxHasValue("retailPrice", retailPrice);
+		super.checkInputBoxHasValue("itemType", itemType);
+		super.checkInputBoxHasValue("link", link);
+		
 		super.signOut();
 	}
 
@@ -57,11 +64,9 @@ public class ChefItemUpdateTest extends TestHarness {
 		super.checkFormExists();
 		
 		super.fillInputBoxIn("name", name);
-		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("description", description);
 		super.fillInputBoxIn("retailPrice", retailPrice);
 		super.fillInputBoxIn("link", link);
-		super.fillInputBoxIn("itemType", itemType);
 		super.clickOnSubmit("Update");
 		
 		super.checkErrorsExist();

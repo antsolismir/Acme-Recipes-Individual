@@ -1,0 +1,7 @@
+recordIndex,code,request,budget,initialPeriodDate,finalPeriodDate,link,dish
+0,AAA-001:0001,2022/01/01 10:11,Plato creado con extracto de vainilla y toque de limón ahumado y pasado por agua,http://chicote.es,AAA-001
+1,AAA-001:0002,2022/01/01 10:11,Plato de surtido de marisco,http://chicote.es,AAA-001
+2,AAA-001:0003,2022/01/01 10:11,Plato de tortilla patatas,http://chicote.es,AAA-001
+3,AAA-001:0004,2022/01/01 10:11,Plato de frijoles,http://chicote.es,AAA-001
+4,AAA-004:0001,2022/01/01 10:11,Plato de atún,http://chicote.es,AEC-005
+5,AAA-008:0001,2022/01/01 10:11,Plato de verduras asadas,http://chicote.es,JJK-155

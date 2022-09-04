@@ -1,0 +1,8 @@
+record-index,key,code,heading,description,preparation-notes,info,totalPrice,publised
+4,recipe-01,FF:DNJ-804,Pollo con arroz,Echamos el pollo y despues el arroz,Just follow the recipe,http://ev.us.es,EUR 46.99,false
+6,recipe-02,JR:DPH-021,Tortilla de patatas,Pochamos la cebolla a continuacion las patatas y despues lo mezclamos con huevo y la echamos en la sarten,Just follow the recipe,http://ev.us.es,EUR 39.96,true
+0,recipe-05,JR:DPH-024,Agua,La recogemos del rio o del grifo,Just follow the recipe,http://ev.us.es,EUR 55.94,true
+1,recipe-06,XIM-147,Fresas,Las recolectamos y le echamos leche condensada para que esten mas ricas,Just follow the recipe,http://ev.us.es,EUR 70.99,true
+5,recipe-08,XIM-149,Tacos,Pues parecido a las fajitas,Just follow the recipe,http://ev.us.es,EUR 99.90,true
+2,recipe-09,XIM-144,Hamburguesa,Compramos la carne y la hacemos a la parrilla,Just follow the recipe,http://ev.us.es,EUR 30.96,false
+3,recipe-10,XIM-142,Pizza,Hacemos la masa y le echamos por encima el queso tomate y el resto de ingredientes,Just follow the recipe,http://ev.us.es,EUR 70.99,true

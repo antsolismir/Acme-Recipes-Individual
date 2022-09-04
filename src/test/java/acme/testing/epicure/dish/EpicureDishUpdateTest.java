@@ -33,11 +33,10 @@ public class EpicureDishUpdateTest extends TestHarness{
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(recordIndex, 0, status);
 		super.checkColumnHasValue(recordIndex, 1, "ZZZ-999");
-		super.checkColumnHasValue(recordIndex, 3, "false");
+		super.checkColumnHasValue(recordIndex, 5, "false");
 		super.clickOnListingRecord(recordIndex);
 		
 		super.checkFormExists();
-		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("request", request);
 		super.fillInputBoxIn("budget", budget);
 		super.fillInputBoxIn("initialPeriodDate", initialPeriodDate);
@@ -73,12 +72,11 @@ public class EpicureDishUpdateTest extends TestHarness{
 		
 		super.sortListing(0, "asc");
 		super.checkColumnHasValue(0, 0, status);
-		super.checkColumnHasValue(0, 1, "ZZZ-100");
-		super.checkColumnHasValue(0, 3, "false");
+		super.checkColumnHasValue(0, 1, "ZZZ-999");
+		super.checkColumnHasValue(0, 5, "false");
 		super.clickOnListingRecord(0);
 		
 		super.checkFormExists();
-		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("request", request);
 		super.fillInputBoxIn("budget", budget);
 		super.fillInputBoxIn("initialPeriodDate", initialPeriodDate);

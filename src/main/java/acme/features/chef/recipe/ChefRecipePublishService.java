@@ -43,7 +43,7 @@ public class ChefRecipePublishService  implements AbstractUpdateService<Chef, Re
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "code", "heading", "description", "preparationNotes", "info");
+		request.bind(entity, errors);
 	}
 
 	@Override
@@ -76,13 +76,8 @@ public class ChefRecipePublishService  implements AbstractUpdateService<Chef, Re
 		assert errors != null;
 		Collection<Item> items;
 		items = this.repository.findManyItemByRecipeId(entity.getId());
-		if(!errors.hasErrors("code")) {
-			Recipe existing;
-			
-			existing = this.repository.findRecipeByCode(entity.getCode());
-			errors.state(request, existing == null|| existing.getId() == entity.getId(), "code", "chef.recipe.form.error.duplicated");
-		}
-			errors.state(request, !items.isEmpty(), "*", "chef.recipe.form.error.noItem");
+		
+		errors.state(request, !items.isEmpty(), "*", "chef.recipe.form.error.noItem");
 	}
 
 	@Override

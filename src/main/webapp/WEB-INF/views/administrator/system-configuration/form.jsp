@@ -22,6 +22,7 @@
 	<acme:input-textbox code="administrator.configuration.form.label.spamTermsEn" path="spamTermsEn"/>
 	<acme:input-textbox code="administrator.configuration.form.label.spamTermsEs" path="spamTermsEs"/>
 	<acme:input-textbox code="administrator.configuration.form.label.spamThreshold" path="spamThreshold"/>
+	<acme:input-textarea code="administrator.configuration.form.label.moneyExchange" path="moneyExchangeInformation" readonly="true"/>
 
 	<jstl:choose>
     <jstl:when test="${acme:anyOf(command,'show, update')}">

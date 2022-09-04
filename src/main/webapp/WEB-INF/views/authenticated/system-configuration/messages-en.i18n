@@ -10,3 +10,5 @@
 
 authenticated.systemConfiguration.form.label.defaultCurrency = Default Currency
 authenticated.systemConfiguration.form.label.acceptedCurrencies = Accepted Currencies
+
+authenticated.systemConfiguration.form.label.moneyExchange = Information about how we perform the money exchanges
