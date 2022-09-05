@@ -51,7 +51,6 @@ public class EpicureDishListService implements AbstractListService<Epicure,Dish>
 		assert entity != null;
 		assert model != null;
 
-
 		 final String systemCurrency= this.repository.getDefaultCurrency();
 		 MoneyExchange priceExchanged = null;
 	     Integer i=0;
@@ -63,7 +62,7 @@ public class EpicureDishListService implements AbstractListService<Epicure,Dish>
 	        try {
 				model.setAttribute("money", priceExchanged.getTarget());
 			} catch (final Exception e) {
-				model.setAttribute("money", "La API ha fallado");
+				model.setAttribute("money", "API unavailable at the moment");
 			}
 
 		request.unbind(entity, model, "status", "code", "budget", "creationDate", "published");
