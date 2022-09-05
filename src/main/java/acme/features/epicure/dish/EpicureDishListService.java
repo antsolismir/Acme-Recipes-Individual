@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.dish.Dish;
+import acme.forms.MoneyExchange;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.datatypes.Money;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 import acme.roles.Epicure;
@@ -53,9 +53,18 @@ public class EpicureDishListService implements AbstractListService<Epicure,Dish>
 
 
 		 final String systemCurrency= this.repository.getDefaultCurrency();
-			final Money priceExchanged=this.epicureDishMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency).getTarget();
-			model.setAttribute("money", priceExchanged);
-		
+		 MoneyExchange priceExchanged = null;
+	     Integer i=0;
+	        while (priceExchanged == null && i<=50) {
+	        	priceExchanged=this.epicureDishMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency);
+				i++;
+	        	System.out.println(i);
+			}
+	        try {
+				model.setAttribute("money", priceExchanged.getTarget());
+			} catch (final Exception e) {
+				model.setAttribute("money", "La API ha fallado");
+			}
 
 		request.unbind(entity, model, "status", "code", "budget", "creationDate", "published");
 
