@@ -1,0 +1,6 @@
+record-index,key,item-type,published,name,code,description,retail-price,link,key:chef
+0,item-22,KITCHEN_UTENSIL,true,utensilio02,AA:AAA-022,Tortor.,EUR 6.99,https://google.com,chef-01
+1,item-25,KITCHEN_UTENSIL,true,utensilio05,AA:AAA-025,Pellentesque euismod scelerisque magna tincidunt.,EUR 0.99,https://google.com,chef-01
+2,item-31,KITCHEN_UTENSIL,false,utensilio08,AA:AAA-031,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 10.99,https://google.com,chef-01
+3,item-34,KITCHEN_UTENSIL,true,utensilio11,AA:AAA-034,"Vivamus convallis laoreet vehicula. Sed a sem et ipsum rhoncus congue. Vestibulum ipsum erat, egestas at suscipit id, ullamcorper id urna. In venenatis eros.",EUR 20.99,https://google.com,chef-01
+4,item-40,KITCHEN_UTENSIL,false,utensilio15,AA:AAA-040,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque, neque nec convallis finibus, dui augue tempus ante, eu aliquet felis velit id felis. Mauris porta commodo est at hendrerit. Aliquam eros nibh, sollicitudin venenatis congue",EUR 59.99,https://google.com,chef-01

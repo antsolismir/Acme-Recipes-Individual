@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.item.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
 
@@ -16,6 +17,8 @@ public class AnyItemShowService implements AbstractShowService<Any, Item>{
 	@Autowired
 	protected AnyItemRepository repository;
 
+	@Autowired
+	protected AnyItemMoneyExchange anyItemMoneyExchange;
 
 	@Override
 	public boolean authorise(final Request<Item> request) {
@@ -50,6 +53,10 @@ public class AnyItemShowService implements AbstractShowService<Any, Item>{
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		final String systemCurrency= this.repository.getDefaultCurrency();
+		final Money priceExchanged=this.anyItemMoneyExchange.computeMoneyExchange(entity.getRetailPrice(), systemCurrency).getTarget();
+		model.setAttribute("money", priceExchanged);
 
 		request.unbind(entity, model, "name", "code", "description", "retailPrice", "itemType", "published", "link");
 	

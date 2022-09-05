@@ -14,3 +14,7 @@ administrator.configuration.form.label.spamTermsEn = English Spam Terms
 administrator.configuration.form.label.spamTermsEs = Spanish Spam Terms
 administrator.configuration.form.label.spamThreshold = Spam Threshold
 
+administrator.configuration.form.button.update = Update
+administrator.configuration.form.error.non-accepted-currency= This is not an accepted currency
+
+administrator.configuration.form.label.moneyExchange = Information about how we perform the money exchanges

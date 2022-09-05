@@ -6,3 +6,7 @@ epicure.memorandum.form.label.dish.code = Dish code
 
 epicure.memorandum.list.label.sequenceNumber = Sequence number
 epicure.memorandum.list.label.instantiationMoment = Instantiation moment
+
+epicure.memorandum.form.button.create = Create
+epicure.memorandum.list.button.create = Create
+epicure.memorandum.form.label.confirmation = If you confirm you will not be able to update or delete, do you want to confirm?

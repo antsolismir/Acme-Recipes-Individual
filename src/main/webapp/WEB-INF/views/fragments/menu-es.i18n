@@ -46,6 +46,8 @@ master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 
+master.menu.administrator.bulletin = Crear un boletín
+
 master.menu.administrator.dashboard = Panel del Administrador
 
 master.menu.administrator.configuration.show = Ver configuración del sistema
@@ -71,6 +73,8 @@ master.menu.user-account.chef.item.list.kitchenUtensils = Lista de mis utensilio
 master.menu.user-account.chef.item.list.recipe = Lista de mis recetas
 
 master.menu.chef.memorandum-list = Lista de mis memorandums
+
+master.menu.chef.item.create = Crear artículo
 
 
 # master.menu.user-account ####################################################

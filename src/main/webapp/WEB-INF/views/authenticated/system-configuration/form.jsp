@@ -18,4 +18,5 @@
 <acme:form readonly="true">
 	<acme:input-textbox code="authenticated.systemConfiguration.form.label.defaultCurrency" path="defaultCurrency"/>
 	<acme:input-textbox code="authenticated.systemConfiguration.form.label.acceptedCurrencies" path="acceptedCurrencies"/>
+	<acme:input-textarea code="authenticated.systemConfiguration.form.label.moneyExchange" path="moneyExchangeInformation" readonly="true"/>	
 </acme:form>

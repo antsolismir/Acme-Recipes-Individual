@@ -1,6 +1,18 @@
-chef.itemQuantity.form.label.item.name = Item's Name
-chef.itemQuantity.form.label.item.type = Item's Type
-chef.itemQuantity.form.label.item.code = Item's Code
+chef.itemQuantity.form.label.item.name = Item's name
+chef.itemQuantity.form.label.item.type = Item's type
+chef.itemQuantity.form.label.item.code = Item's code
 chef.itemQuantity.form.label.amount = Amount
 chef.itemQuantity.list.label.amount = Amount
-chef.itemQuantity.list.label.item.name = Item's Name
+chef.itemQuantity.list.label.item.name = Item's name
+chef.itemQuantity.list.button.addItems = Add items
+
+chef.itemQuantity.form.button.update = Update
+chef.itemQuantity.form.button.create = Create
+chef.itemQuantity.form.button.delete = Remove item from recipe
+chef.itemQuantity.form.label.items = Items
+chef.itemQuantity.form.button.create = Add item
+chef.itemQuantity.list.label.amount = Amount
+chef.itemQuantity.list.label.item.name = Item's name
+chef.itemQuantity.form.error.invalidAmount = Its not allowed to use more than one of the same kitchen utensil
+chef.itemQuantity.form.label.noItems = There are no items available
+chef.itemQuantity.list.button.itemsCreate = Add item

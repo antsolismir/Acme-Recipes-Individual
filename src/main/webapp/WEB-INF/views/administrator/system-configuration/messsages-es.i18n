@@ -13,3 +13,8 @@ administrator.configuration.form.label.acceptedCurrencies = Divisas aceptadas
 administrator.configuration.form.label.spamTermsEn = Términos spam en ingés
 administrator.configuration.form.label.spamTermsEs = Términos spam en español
 administrator.configuration.form.label.spamThreshold = Umbral de spam
+
+administrator.configuration.form.button.update = Actualizar
+administrator.configuration.form.error.non-accepted-currency= Esta no es una moneda aceptada
+
+administrator.configuration.form.label.moneyExchange = Información sobre cómo llevamos a cabo el cambio de divisas

@@ -2,7 +2,7 @@ epicure.dish.form.label.status = Status
 epicure.dish.form.label.code = Code
 epicure.dish.form.label.request = Request
 epicure.dish.form.label.budget = Budget
-epicure.dish.form.label.convert = Convert Currency
+epicure.dish.form.label.money = Budget on system currency
 epicure.dish.form.label.creationDate = Creation Date
 epicure.dish.form.label.initialPeriodDate = Initial Period Date
 epicure.dish.form.label.finalPeriodDate = Final Period Date
@@ -10,8 +10,41 @@ epicure.dish.form.label.link = Link
 epicure.dish.form.label.epicure.organisation = Organisation
 epicure.dish.form.label.epicure.assertion = Assertion
 epicure.dish.form.label.epicure.username = Username
+epicure.dish.form.label.epicure.published = Published
 epicure.dish.form.button.report = Report
 
 epicure.dish.list.label.status = Status
 epicure.dish.list.label.code = Code
 epicure.dish.list.label.creationDate = Creation Date
+
+epicure.dish.list.label.money = Budget on system currency
+epicure.dish.list.label.budget = Budget
+
+
+
+epicure.dish.list.label.published = Published
+
+epicure.dish.form.label.chef = Chef
+
+epicure.dish.list.button.create = Create
+
+epicure.dish.form.button.create = Create
+epicure.dish.form.button.update = Update
+epicure.dish.form.button.delete = Delete
+epicure.dish.form.button.publish = Publish
+
+epicure.dish.form.error.duplicated = Duplicated code
+epicure.dish.form.error.too-close-start-date = Must start at least one month after the fine dish is instantiated
+epicure.dish.form.error.one-month = At least one month long
+epicure.dish.form.error.complete = Enter the dates correctly
+epicure.dish.form.error.negative-budget = Must be positive
+epicure.dish.form.error.non-accepted-currency = Currency not accepted, see them in system settings
+epicure.dish.form.error.spam = The text contains spam, try again without it
+message.error.null.date = The date must not be null
+
+PROPOSED = Propesed
+DENIED = Denied
+ACCEPTED = Accepted
+
+epicure.dish.form.button.memorandum = Memorandums
+

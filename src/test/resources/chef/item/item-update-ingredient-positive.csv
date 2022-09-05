@@ -1,0 +1,3 @@
+record-index,key,item-type,name,code,description,retail-price,link,key:chef
+1,item-04,INGREDIENT,ingrediente04-update,AA:AAA-004,C,EUR 19.99,https://acme.com,chef-01
+6,item-19,INGREDIENT,ingrediente19-i19,AA:AAA-019,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 1.00,,chef-01

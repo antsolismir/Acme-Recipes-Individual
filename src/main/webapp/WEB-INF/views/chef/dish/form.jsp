@@ -14,21 +14,11 @@
 				code="chef.dish.form.label.request" path="request" />
 			<acme:input-money readonly="true"
 				code="chef.dish.form.label.budget" path="budget" />
-			
-			
-			
-			
-			
-			<jstl:if test="${convert!=null}">
-				<acme:input-textbox readonly="true"
-					code="chef.dish.form.label.convert"
-					path="convert" />
-			</jstl:if>
-			
-			
-			
-			
-			
+			<jstl:choose>
+				<jstl:when test="${command =='show'}">
+					<acme:input-money readonly="true" code="epicure.dish.form.label.money" path="money" />
+				</jstl:when>
+			</jstl:choose>
 			<acme:input-moment readonly="true"
 				code="chef.dish.form.label.creationDate"
 				path="creationDate" />
@@ -49,7 +39,30 @@
 			<acme:input-textbox readonly="true"
 				code="chef.dish.form.label.epicure.username"
 				path="epicure.userAccount.username" />
+		
+			<jstl:choose>
+				<jstl:when test="${status == 'PROPOSED'}">
+					<acme:submit code="chef.dish.form.label.patron.accept"
+						action="/chef/dish/accept" />
+					<acme:submit code="chef.dish.form.label.patron.denie"
+						action="/chef/dish/denie" />
+				</jstl:when>
+			</jstl:choose>
 			
+			
+			
+			
+			
+			
+			
+			
+			
+			<jstl:choose>
+				<jstl:when test="${command == 'show'}">
+					<acme:button code="chef.dish.form.button.memorandum"
+						action="/chef/memorandum/list-group?masterId=${id}" />
+				</jstl:when>
+			</jstl:choose>
 		</acme:form>
 	</jstl:when>
 </jstl:choose>

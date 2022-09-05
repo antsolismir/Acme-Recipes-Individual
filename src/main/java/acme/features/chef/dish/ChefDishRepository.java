@@ -16,5 +16,7 @@ public interface ChefDishRepository extends AbstractRepository{
 
 	@Query("select dish from Dish dish where dish.id = :id")
 	Dish findDishById(int id);
-
+	
+	@Query("select c.defaultCurrency from SystemConfiguration c")
+	String getDefaultCurrency();
 }

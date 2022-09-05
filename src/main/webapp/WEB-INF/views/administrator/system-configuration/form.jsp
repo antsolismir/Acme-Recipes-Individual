@@ -15,12 +15,20 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:form readonly="true">
+<acme:form readonly="false">
 
 	<acme:input-textbox code="administrator.configuration.form.label.systemCurrency" path="defaultCurrency"/>
 	<acme:input-textbox code="administrator.configuration.form.label.acceptedCurrencies" path="acceptedCurrencies"/>
 	<acme:input-textbox code="administrator.configuration.form.label.spamTermsEn" path="spamTermsEn"/>
 	<acme:input-textbox code="administrator.configuration.form.label.spamTermsEs" path="spamTermsEs"/>
 	<acme:input-textbox code="administrator.configuration.form.label.spamThreshold" path="spamThreshold"/>
+	<acme:input-textarea code="administrator.configuration.form.label.moneyExchange" path="moneyExchangeInformation" readonly="true"/>
+
+	<jstl:choose>
+    <jstl:when test="${acme:anyOf(command,'show, update')}">
+		<acme:submit code="administrator.configuration.form.button.update" action="/administrator/system-configuration/update"/>
+	</jstl:when>
+	
+</jstl:choose>
 
 </acme:form>

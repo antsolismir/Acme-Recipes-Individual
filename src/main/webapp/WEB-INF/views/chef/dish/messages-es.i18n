@@ -2,7 +2,7 @@ chef.dish.form.label.status = Estado
 chef.dish.form.label.code = Código
 chef.dish.form.label.request = Petición
 chef.dish.form.label.budget = Presupuesto
-chef.dish.form.label.convert = Presupuesto convertido
+chef.dish.form.label.money = Presupuesto en moneda del sistema
 chef.dish.form.label.creationDate = Fecha de creación
 chef.dish.form.label.initialPeriodDate = Periodo inicial
 chef.dish.form.label.finalPeriodDate = Periodo final
@@ -15,3 +15,15 @@ chef.dish.form.button.report = Reporte
 chef.dish.list.label.status = Estado
 chef.dish.list.label.code = Código
 chef.dish.list.label.creationDate = Fecha de creación
+
+chef.dish.list.label.money = Presupuesto en moneda del sistema
+chef.dish.list.label.budget = Presupuesto
+
+
+
+chef.dish.form.button.memorandum = Memorandums
+
+chef.dish.form.label.patron.accept = Aceptar
+chef.dish.form.label.patron.denie = Denegar
+
+

@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.item.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
 
@@ -28,6 +29,9 @@ public class AnyItemServiceKitchenUtensilsList implements AbstractListService<An
 
 	@Autowired
 	protected AnyItemRepository anyKitchenUtensilsRepository;
+	
+	@Autowired
+	protected AnyItemMoneyExchange anyItemMoneyExchange;
 
 	@Override
 	public boolean authorise(final Request<Item> request) {
@@ -50,6 +54,10 @@ public class AnyItemServiceKitchenUtensilsList implements AbstractListService<An
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		final String systemCurrency= this.anyKitchenUtensilsRepository.getDefaultCurrency();
+		final Money priceExchanged=this.anyItemMoneyExchange.computeMoneyExchange(entity.getRetailPrice(), systemCurrency).getTarget();
+		model.setAttribute("money", priceExchanged);
 
 		request.unbind(entity, model, "name", "retailPrice");
 	}

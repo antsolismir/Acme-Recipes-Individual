@@ -51,7 +51,9 @@ public class ChefItemQuantityShowService implements AbstractShowService<Chef, It
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model, "amount","item.name","item.itemType","item.code");	
+        request.unbind(entity, model, "amount","item.name","item.itemType","item.code");
+        model.setAttribute("published", entity.getRecipe().isPublished());
+
 	}
 
 }

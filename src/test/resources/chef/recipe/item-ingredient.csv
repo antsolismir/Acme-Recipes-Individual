@@ -1,0 +1,10 @@
+record-index,key,item-type,published,name,code,description,retail-price,link,key:chef
+0,item-01,INGREDIENT,true,ingrediente01,AA:AAA-001,d,EUR 10.00,https://google.com,chef-01
+1,item-04,INGREDIENT,false,ingrediente04,AA:AAA-004,"Curabitur viverra dolor ac vestibulum sagittis. Aliquam varius porttitor nunc, in molestie tortor maximus in. Fusce interdum purus quis lacus varius finibus at at ligula. Fusce eget purus vel quam posuere viverra ac non ante nec.",EUR 10.99,https://google.com,chef-01
+2,item-06,INGREDIENT,true,ingrediente06,AA:AAA-006,Suspendisse nam.,EUR 10.99,https://google.com,chef-01
+3,item-10,INGREDIENT,true,ingrediente10,AA:AAA-010,d,EUR 7.00,https://google.com,chef-01
+4,item-13,INGREDIENT,true,ingrediente13,AA:AAA-013,Curabitur viverra dolor ac vestibulum. Fusce interdum purus quis lacus varius finibus at at ligula. Fusce eget purus vel quam posuere viverra ac non ante nec.,EUR 10.99,https://google.com,chef-01
+5,item-16,INGREDIENT,true,ingrediente16,AA:AAA-016,"Lobortis pellentesque massa nec, fringilla placerat enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec bibendum nisl sit amet magna lobortis dictum tortor.",EUR 7.99,https://google.com,chef-01
+6,item-19,INGREDIENT,false,ingrediente19,AA:AAA-019,"Velit dictum, at pharetra nulla.",EUR 200.00,https://google.com,chef-01
+7,item-28,INGREDIENT,true,ingrediente22,AA:AAA-028,"Lorem ipsum dolor sit amet, consectetuer adipiscing eli",EUR 5.90,https://google.com,chef-01
+8,item-37,INGREDIENT,true,ingrediente24,AA:AAA-037,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit",EUR 10.99,https://google.com,chef-01

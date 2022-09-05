@@ -10,12 +10,12 @@
 
 ####List
 authenticated.bulletin.list.label.heading = Heading
-authenticated.bulletin.list.label.instantiationMoment = Creation Moment
+authenticated.bulletin.list.label.instantiationMoment = Instantiation Moment
 authenticated.bulletin.list.label.critical = Critical
 
 ####Form
-authenticated.bulletin.form.label.heading = Title:
-authenticated.bulletin.form.label.instantiationMoment = Creation Moment:
+authenticated.bulletin.form.label.heading = Heading:
+authenticated.bulletin.form.label.instantiationMoment = Instantiation Moment:
 authenticated.bulletin.form.label.text = Text:
 authenticated.bulletin.form.label.critical = Critical:
 authenticated.bulletin.form.label.info = Info:

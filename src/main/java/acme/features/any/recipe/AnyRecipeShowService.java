@@ -22,6 +22,9 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
 	@Autowired
 	protected AnyRecipeRepository repository;
 	
+	@Autowired
+	protected AnyRecipeMoneyExchange anyRecipeMoneyExchange;
+
 	// AbstractShowService<Authenticated, Recipe> interface ----------------------------
 
 	@Override
@@ -55,8 +58,10 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
 		final Collection<ItemQuantity> itemQuantitys = this.repository.findItemQuantityByRecipe(entity.getId());
 		
 		for(final ItemQuantity a :itemQuantitys) {
-		final Money itemPrice=a.getItem().getRetailPrice();
-			price += a.getAmount()*itemPrice.getAmount();
+			final Money itemPrice=a.getItem().getRetailPrice();
+			
+			final Money priceExchanged=this.anyRecipeMoneyExchange.computeMoneyExchange(itemPrice, systemCurrency).getTarget();
+			price += a.getAmount()*priceExchanged.getAmount();
 		}
 		
 		moneyInternational=new Money();

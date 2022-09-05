@@ -1,0 +1,11 @@
+record-index,key,item-type,name,code,description,retail-price,link,key:chef
+0,item-56,INGREDIENT,ingrediente005,AFG-367,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",,https://google.com,chef-01
+1,item-57,INGREDIENT,ingrediente006,AA:AAA-001,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 10.99,https://google.com,chef-01
+2,item-55,INGREDIENT,ingrediente004,AFG-368,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc. Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 10.50,https://google.com,chef-01
+3,item-54,INGREDIENT,ingrediente008,AFG-369,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",GBP 30.99,hola,chef-01
+4,item-53,INGREDIENT,ingrediente003,AFG-370,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",,https://google.com,chef-01
+5,item-52,INGREDIENT,ingrediente009,AFG-370,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",MONEDA 100.99,https://google.com,chef-01
+6,item-58,INGREDIENT,ingrediente007,,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",USD 100.99,,chef-01
+7,item-51,INGREDIENT,,AFG-373,"Ut vitae ornare elit. Donec ut euismod lectus. Nunc quis sapien hendrerit, aliquet nunc.",EUR 100.99,https://google.com,chef-01
+8,item-50,INGREDIENT,ingrediente001,AFG-374,,USD 100.99,https://google.com,chef-01
+9,item-59,INGREDIENT,,,,,,
