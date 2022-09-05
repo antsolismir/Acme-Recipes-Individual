@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
+import acme.forms.MoneyExchange;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.datatypes.Money;
 import acme.framework.roles.Any;
 import acme.framework.services.AbstractShowService;
 
@@ -55,9 +55,18 @@ public class AnyItemShowService implements AbstractShowService<Any, Item>{
 		assert model != null;
 		
 		final String systemCurrency= this.repository.getDefaultCurrency();
-		final Money priceExchanged=this.anyItemMoneyExchange.computeMoneyExchange(entity.getRetailPrice(), systemCurrency).getTarget();
-		model.setAttribute("money", priceExchanged);
-
+		MoneyExchange priceExchanged = null;
+	    Integer i=0;
+	        while (priceExchanged == null && i<=50) {
+	        	priceExchanged=this.anyItemMoneyExchange.computeMoneyExchange(entity.getRetailPrice(), systemCurrency);
+				i++;
+			}
+	        try {
+				model.setAttribute("money", priceExchanged.getTarget());
+			} catch (final Exception e) {
+				model.setAttribute("money", "API unavailable at the moment");
+			}
+		
 		request.unbind(entity, model, "name", "code", "description", "retailPrice", "itemType", "published", "link");
 	
 		
