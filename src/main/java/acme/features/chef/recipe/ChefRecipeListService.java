@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.recipe.ItemQuantity;
 import acme.entities.recipe.Recipe;
+import acme.forms.MoneyExchange;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
@@ -43,23 +44,30 @@ public class ChefRecipeListService implements AbstractListService<Chef,Recipe> {
         assert entity != null;
         assert model != null;
         
-        final String systemCurrency= this.repo.getDefaultCurrency();
+		final String systemCurrency= this.repo.getDefaultCurrency();
 		double price=0.;
 		Money moneyInternational;
 		final Collection<ItemQuantity> itemQuantitys = this.repo.findManyItemQuantityByRecipeId(entity.getId());
-		
-		for(final ItemQuantity a :itemQuantitys) {
-			final Money itemPrice=a.getItem().getRetailPrice();
-			
-			final Money priceExchanged=this.chefRecipeMoneyExchange.computeMoneyExchange(itemPrice, systemCurrency).getTarget();
-			price += a.getAmount()*priceExchanged.getAmount();
+        try {		
+			for(final ItemQuantity a :itemQuantitys) {
+				final Money itemPrice=a.getItem().getRetailPrice();
+				
+				MoneyExchange priceExchanged = null;
+			    Integer i=0;
+		        while (priceExchanged == null && i<=50) {
+		        	priceExchanged=this.chefRecipeMoneyExchange.computeMoneyExchange(itemPrice, systemCurrency);
+		        	i++;
+				}
+				price += a.getAmount()*priceExchanged.getTarget().getAmount();
+			}
+	    	moneyInternational=new Money();
+	    	moneyInternational.setAmount(price);
+	    	moneyInternational.setCurrency(systemCurrency);
+	    	model.setAttribute("money", moneyInternational);			
+	    } catch (final Exception e) {
+			model.setAttribute("money", "API unavailable at the moment");
 		}
-		
-		moneyInternational=new Money();
-		moneyInternational.setAmount(price);
-		moneyInternational.setCurrency(systemCurrency);
-		
-		model.setAttribute("money", moneyInternational);
+
         request.unbind(entity, model, "heading", "code", "description", "published");
     }
 }
