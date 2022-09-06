@@ -57,7 +57,6 @@ public class EpicureDishListService implements AbstractListService<Epicure,Dish>
 	        while (priceExchanged == null && i<=50) {
 	        	priceExchanged=this.epicureDishMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency);
 				i++;
-	        	System.out.println(i);
 			}
 	        try {
 				model.setAttribute("money", priceExchanged.getTarget());
