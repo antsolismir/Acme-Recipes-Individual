@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.dish.Dish;
+import acme.forms.MoneyExchange;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Epicure;
 
@@ -53,11 +53,18 @@ public class EpicureDishShowService implements AbstractShowService<Epicure,Dish>
 		assert entity != null;
 		assert model != null;
 
-
-		final String systemCurrency= this.repository.getDefaultCurrency();
-		final Money priceExchanged=this.epicureDishMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency).getTarget();
-		model.setAttribute("money", priceExchanged);
-
+		 final String systemCurrency= this.repository.getDefaultCurrency();
+		 MoneyExchange priceExchanged = null;
+	     Integer i=0;
+	        while (priceExchanged == null && i<=50) {
+	        	priceExchanged=this.epicureDishMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency);
+				i++;
+			}
+	        try {
+				model.setAttribute("money", priceExchanged.getTarget());
+			} catch (final Exception e) {
+				model.setAttribute("money", "API unavailable at the moment");
+			}
 		
 		model.setAttribute("chefs", this.repository.findAllChefs());
 		model.setAttribute("chefId", entity.getChef().getId());

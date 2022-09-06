@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.recipe.ItemQuantity;
 import acme.entities.recipe.Recipe;
+import acme.forms.MoneyExchange;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.datatypes.Money;
@@ -52,23 +53,31 @@ public class AnyRecipeShowService implements AbstractShowService<Any, Recipe>{
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+
 		final String systemCurrency= this.repository.getDefaultCurrency();
 		double price=0.;
 		Money moneyInternational;
 		final Collection<ItemQuantity> itemQuantitys = this.repository.findItemQuantityByRecipe(entity.getId());
-		
-		for(final ItemQuantity a :itemQuantitys) {
-			final Money itemPrice=a.getItem().getRetailPrice();
-			
-			final Money priceExchanged=this.anyRecipeMoneyExchange.computeMoneyExchange(itemPrice, systemCurrency).getTarget();
-			price += a.getAmount()*priceExchanged.getAmount();
+        try {		
+			for(final ItemQuantity a :itemQuantitys) {
+				final Money itemPrice=a.getItem().getRetailPrice();
+				
+				MoneyExchange priceExchanged = null;
+			    Integer i=0;
+		        while (priceExchanged == null && i<=50) {
+		        	priceExchanged=this.anyRecipeMoneyExchange.computeMoneyExchange(itemPrice, systemCurrency);
+		        	i++;
+				}
+				price += a.getAmount()*priceExchanged.getTarget().getAmount();
+			}
+	    	moneyInternational=new Money();
+	    	moneyInternational.setAmount(price);
+	    	moneyInternational.setCurrency(systemCurrency);
+	    	model.setAttribute("money", moneyInternational);			
+	    } catch (final Exception e) {
+			model.setAttribute("money", "API unavailable at the moment");
 		}
 		
-		moneyInternational=new Money();
-		moneyInternational.setAmount(price);
-		moneyInternational.setCurrency(systemCurrency);
-		
-		model.setAttribute("money", moneyInternational);
 		request.unbind(entity, model,"code", "heading", "description", "preparationNotes", "info","id");
 		
 	}
