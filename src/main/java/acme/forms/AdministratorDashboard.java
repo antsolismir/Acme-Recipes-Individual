@@ -8,7 +8,7 @@ import javax.validation.constraints.Min;
 import lombok.Getter;
 import lombok.Setter;
 
-
+//examen
 @Getter
 @Setter
 public class AdministratorDashboard implements Serializable{
@@ -34,6 +34,13 @@ public class AdministratorDashboard implements Serializable{
 	Map<String,Double> deviationRetailPriceOfKitchenUtensilsGroupedByCurrency;
 	Map<String,Double> minimunRetailPriceOfKitchenUtensilsGroupedByCurrency;
 	Map<String,Double> maximunRetailPriceOfKitchenUtensilsGroupedByCurrency;
+	
+	@Min(0)
+	Integer totalNumberOfPimpams;
+	Map<String,Double> averageRetailPriceOfPimpamsGroupedByCurrency;
+	Map<String,Double> deviationRetailPriceOfPimpamsGroupedByCurrency;
+	Map<String,Double> minimunRetailPriceOfPimpamsGroupedByCurrency;
+	Map<String,Double> maximunRetailPriceOfPimpamsGroupedByCurrency;
 
 	// FineDishes
 	@Min(0)

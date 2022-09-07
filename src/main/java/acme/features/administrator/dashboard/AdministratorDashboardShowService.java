@@ -13,7 +13,7 @@ import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Administrator;
 import acme.framework.services.AbstractShowService;
-
+//examen
 @Service
 public class AdministratorDashboardShowService implements AbstractShowService<Administrator, AdministratorDashboard> {
 
@@ -79,6 +79,30 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			minimumRetailPriceOfIngredientsByCurrency.put(currency, min);
 			maximumRetailPriceOfIngredientsByCurrency.put(currency, max);
 		}
+		
+		Integer totalNumberOfPimpams;
+		totalNumberOfPimpams = this.repository.totalNumberOfPimpams();
+		
+		final Map<String, Double> averageRetailPriceOfPimpamsByCurrency = new HashMap<>();
+		final Map<String, Double> deviationRetailPriceOfPimpamsByCurrency = new HashMap<>();
+		final Map<String, Double> minimumRetailPriceOfPimpamsByCurrency = new HashMap<>();
+		final Map<String, Double> maximumRetailPriceOfPimpamsByCurrency = new HashMap<>();
+		
+		final List<Object[]> metricsPimpamsByCurrency = this.repository.findMetricsPimpamsByCurrency();
+
+		for (final Object[] fila : metricsPimpamsByCurrency) {
+			final String currency = (String) fila[0];
+			final Double avg = (Double) fila[1];
+			final Double stdev = (Double) fila[2];
+			final Double min = (Double) fila[3];
+			final Double max = (Double) fila[4];
+
+			averageRetailPriceOfPimpamsByCurrency.put(currency, avg);
+			deviationRetailPriceOfPimpamsByCurrency.put(currency, stdev);
+			minimumRetailPriceOfPimpamsByCurrency.put(currency, min);
+			maximumRetailPriceOfPimpamsByCurrency.put(currency, max);
+		}
+		
 		Integer totalNumberOfProposedDish;
 		Double averageBudgetOfProposedDish;
 		Double deviationBudgetOfProposedDish;
@@ -128,6 +152,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationRetailPriceOfIngredientsGroupedByCurrency(deviationRetailPriceOfIngredientsByCurrency);
 		result.setMinimunRetailPriceOfIngredientsGroupedByCurrency(minimumRetailPriceOfIngredientsByCurrency);
 		result.setMaximunRetailPriceOfIngredientsGroupedByCurrency(maximumRetailPriceOfIngredientsByCurrency);
+		
+		result.setTotalNumberOfPimpams(totalNumberOfPimpams);
+		result.setAverageRetailPriceOfPimpamsGroupedByCurrency(averageRetailPriceOfPimpamsByCurrency);
+		result.setDeviationRetailPriceOfPimpamsGroupedByCurrency(deviationRetailPriceOfPimpamsByCurrency);
+		result.setMinimunRetailPriceOfPimpamsGroupedByCurrency(minimumRetailPriceOfPimpamsByCurrency);
+		result.setMaximunRetailPriceOfPimpamsGroupedByCurrency(maximumRetailPriceOfPimpamsByCurrency);
 
 		result.setTotalNumberOfProposedFineDishes(totalNumberOfProposedDish);
 		result.setAverageBudgetOfFineDishesProposed(averageBudgetOfProposedDish);
@@ -162,6 +192,11 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 				"deviationRetailPriceOfIngredientsGroupedByCurrency",
 				"minimunRetailPriceOfIngredientsGroupedByCurrency",
 				"maximunRetailPriceOfIngredientsGroupedByCurrency",
+				"totalNumberOfPimpams",
+				"averageRetailPriceOfPimpamsGroupedByCurrency",
+				"deviationRetailPriceOfPimpamsGroupedByCurrency",
+				"minimunRetailPriceOfPimpamsGroupedByCurrency",
+				"maximunRetailPriceOfPimpamsGroupedByCurrency",
 				"totalNumberOfKitchenUtensils",
 				"averageRetailPriceOfKitchenUtensilsGroupedByCurrency",
 				"deviationRetailPriceOfKitchenUtensilsGroupedByCurrency",

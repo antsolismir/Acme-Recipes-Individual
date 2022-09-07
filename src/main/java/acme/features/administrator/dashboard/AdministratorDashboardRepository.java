@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.framework.repositories.AbstractRepository;
-
+//examen
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
 	
@@ -18,6 +18,8 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT i.retailPrice.currency ,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i WHERE i.itemType = acme.entities.item.ItemType.INGREDIENT GROUP BY i.retailPrice.currency")
 	List<Object[]> findMetricsIngredientsByCurrency();
 	
+	@Query("SELECT i.budget.currency ,avg(i.budget.amount),stddev(i.budget.amount),min(i.budget.amount),max(i.budget.amount) FROM Pimpam i GROUP BY i.budget.currency")
+	List<Object[]> findMetricsPimpamsByCurrency();
 	
 	
 	
@@ -28,6 +30,10 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select count(i) from Item i where i.itemType = 1")
 	//Integer totalNumberOfTools();
 	Integer totalNumberOfIngredients();
+	
+	@Query("select count(i) from Item i where i.id IN (Select p.item.id from Pimpam p)")
+	//Integer totalNumberOfTools();
+	Integer totalNumberOfPimpams();
 	
 	
 	
