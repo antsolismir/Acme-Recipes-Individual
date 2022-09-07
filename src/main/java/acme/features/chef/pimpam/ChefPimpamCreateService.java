@@ -1,5 +1,6 @@
 package acme.features.chef.pimpam;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.apache.commons.lang3.time.DateUtils;
@@ -56,8 +57,8 @@ public class ChefPimpamCreateService  implements AbstractCreateService<Chef, Pim
 		Date moment;
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setInstantiationMoment(moment);
-		entity.setItem(this.repository.findItemById(Integer.valueOf(request.getModel().getAttribute("itemId").toString())));
 		
+		entity.setItem(this.repository.findItemById(Integer.valueOf(request.getModel().getAttribute("itemId").toString())));
 		request.bind(entity, errors, "code", "title", "description", "initialPeriodDate", "finalPeriodDate", "budget", "link");
 	}
 	
@@ -67,11 +68,24 @@ public class ChefPimpamCreateService  implements AbstractCreateService<Chef, Pim
 		assert entity != null;
 		assert errors != null;
 		
+		//examen
 		if (!errors.hasErrors("code")) {
 			Pimpam existing;
 
 			existing = this.repository.findPimpamByCode(entity.getCode());
 			errors.state(request, existing == null, "code", "chef.pimpam.form.error.duplicated");
+			
+			final String codeP = entity.getCode();
+			final Integer year = Integer.parseInt("20"+codeP.charAt(2)+""+codeP.charAt(3));
+			final Integer month = Integer.parseInt(codeP.charAt(4)+""+codeP.charAt(5));
+			final Integer day =  Integer.parseInt(codeP.charAt(6)+""+codeP.charAt(7));
+			
+			final LocalDate dateCode = LocalDate.of(year,month,day);
+			
+			final LocalDate dateCorrect = LocalDate.now();
+			
+			errors.state(request,dateCode.equals(dateCorrect), "code", "chef.pimpam.form.error.bad-code");
+			
 		}
 		
 		
@@ -114,7 +128,7 @@ public class ChefPimpamCreateService  implements AbstractCreateService<Chef, Pim
 		assert model != null;
 
 		model.setAttribute("items", this.repository.findItems(request.getPrincipal().getActiveRoleId()));
-
+		
 		request.unbind(entity, model, "code", "title", "description", "initialPeriodDate", "finalPeriodDate","link","budget");
 	}
 	

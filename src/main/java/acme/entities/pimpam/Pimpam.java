@@ -31,7 +31,7 @@ public class Pimpam extends AbstractEntity{ //examen
 	protected static final long serialVersionUID = 1L;
 	
 	@NotBlank
-	@Pattern(regexp="[0-9]{2}-[0-1][0-9]-[0-3][0-9]$", message="Incorrect format, follow the example JE:DBV-201")
+	@Pattern(regexp="^[a-zA-Z_0-9]{2}[0-9][0-9][0-1][0-9][0-3][0-9][a-zA-Z_0-9]{2}$", message="Incorrect format, follow the example WWyymmddWW, where “yy”, “mm”, and “dd” refer to the year, month, and day when is created AND W is an uppercase, lowercase or digit.")
 	@Column(unique=true)
 	protected String code;
 	

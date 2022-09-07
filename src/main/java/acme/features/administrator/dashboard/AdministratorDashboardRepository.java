@@ -16,7 +16,6 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	SystemConfiguration findSystemConfiguration();
 	
 	@Query("SELECT i.retailPrice.currency ,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i WHERE i.itemType = acme.entities.item.ItemType.KITCHEN_UTENSIL GROUP BY  i.retailPrice.currency")
-	//List<Object[]> findMetricsComponentsByTechnologyCurrency();
 	List<Object[]> findMetricsUtensilByCurrency();
 	
 	@Query("SELECT i.retailPrice.currency ,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i WHERE i.itemType = acme.entities.item.ItemType.INGREDIENT GROUP BY i.retailPrice.currency")
@@ -28,15 +27,12 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	
 	
 	@Query("select count(i) from Item i where i.itemType = 0")
-	//Integer totalNumberOfComponents();
 	Integer totalNumberOfUtensil();
 
 	@Query("select count(i) from Item i where i.itemType = 1")
-	//Integer totalNumberOfTools();
 	Integer totalNumberOfIngredients();
 	
 	@Query("select count(i) from Item i where i.id IN (Select p.item.id from Pimpam p)")
-	//Integer totalNumberOfTools();
 	Integer totalNumberOfPimpams();
 	
 	

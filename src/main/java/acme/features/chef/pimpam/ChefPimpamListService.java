@@ -47,18 +47,6 @@ public class ChefPimpamListService implements AbstractListService<Chef,Pimpam>{
 		assert entity != null;
 		assert model != null;
 
-//		final String systemCurrency= this.repository.getDefaultCurrency();
-//		 MoneyExchange priceExchanged = null;
-//	     Integer i=0;
-//	        while (priceExchanged == null && i<=50) {
-//	        	priceExchanged=this.chefDishMoneyExchange.computeMoneyExchange(entity.getBudget(), systemCurrency);
-//				i++;
-//			}
-//	        try {
-//				model.setAttribute("money", priceExchanged.getTarget());
-//			} catch (final Exception e) {
-//				model.setAttribute("money", "API unavailable at the moment");
-//			}
 		model.setAttribute("money", "API unavailable at the moment");
 		request.unbind(entity, model, "code", "instantiationMoment", "title", "budget");
 	}
