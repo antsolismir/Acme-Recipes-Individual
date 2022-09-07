@@ -6,10 +6,14 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.repositories.AbstractRepository;
 //examen
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
+	
+	@Query("SELECT sc from SystemConfiguration sc")
+	SystemConfiguration findSystemConfiguration();
 	
 	@Query("SELECT i.retailPrice.currency ,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i WHERE i.itemType = acme.entities.item.ItemType.KITCHEN_UTENSIL GROUP BY  i.retailPrice.currency")
 	//List<Object[]> findMetricsComponentsByTechnologyCurrency();

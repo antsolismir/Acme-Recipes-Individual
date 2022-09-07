@@ -4,12 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
+import acme.entities.pimpam.Pimpam;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractDeleteService;
 import acme.roles.Chef;
-
+//examen
 @Service
 public class ChefItemDeleteService implements AbstractDeleteService<Chef, Item>{
 	
@@ -76,7 +77,10 @@ public class ChefItemDeleteService implements AbstractDeleteService<Chef, Item>{
 	public void delete(final Request<Item> request, final Item entity) {
 		assert request != null;
 		assert entity != null;
-
+		
+		//examen
+		final Pimpam pimpam = this.repository.findPimpamByItemId(entity.getId());
+		if(pimpam != null) this.repository.delete(pimpam);
 		this.repository.delete(entity);
 	}
 

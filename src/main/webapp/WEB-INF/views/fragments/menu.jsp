@@ -17,6 +17,7 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:menu-bar code="master.menu.home">
+	<%-- examen --%>
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">	
 			<acme:menu-suboption code="master.menu.any.item.ingredient" action="/any/item/list-ingredients"/>
@@ -68,7 +69,8 @@
 			<acme:menu-suboption code="master.menu.user-account.chef.item.list.kitchenUtensils" action="/chef/item/list-kitchen_utensils"/>
 			<acme:menu-suboption code="master.menu.user-account.chef.item.list.recipe" action="/chef/recipe/list"/>
 			<acme:menu-suboption code="master.menu.chef.memorandum-list" action="/chef/memorandum/list-all"/> 
-			
+			<acme:menu-suboption code="PimPam List" action="/chef/pimpam/list"/>
+			<acme:menu-suboption code="PimPam Create" action="/chef/pimpam/create"/>
 		</acme:menu-option>
 		
 	</acme:menu-left>
