@@ -35,7 +35,7 @@ item-33,KITCHEN_UTENSIL,true,utensilio10,AA:AAA-033,"Vestibulum at nunc sit amet
 item-34,KITCHEN_UTENSIL,true,utensilio11,AA:AAA-034,"Vivamus convallis laoreet vehicula. Sed a sem et ipsum rhoncus congue. Vestibulum ipsum erat, egestas at suscipit id, ullamcorper id urna. In venenatis eros.",EUR 20.99,https://google.com,chef-01
 item-35,KITCHEN_UTENSIL,true,utensilio12,AA:AAA-035,Pellentesque euismod scelerisque magna tincidunt.,EUR 2.99,https://google.com,chef-02
 item-36,KITCHEN_UTENSIL,true,utensilio13,AA:AAA-036,Lorem ipsum dolor sit amet egestas.,EUR 10.00,https://google.com,chef-03
-item-37,INGREDIENT,true,ingrediente24,AA:AAA-037,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit",EUR 10.99,https://google.com,chef-01
+item-37,INGREDIENT,false,ingrediente24,AA:AAA-037,"Lorem ipsum dolor sit amet, consectetuer adipiscing elit",EUR 10.99,https://google.com,chef-01
 item-38,KITCHEN_UTENSIL,false,utensilio14,AA:AAA-038,"Lorem ipsum dolor sit amet, consectetuer adipiscing eli",EUR 2.90,https://google.com,chef-02
 item-39,INGREDIENT,true,ingrediente25,AA:AAA-039,"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volupta",EUR 42.99,https://google.com,chef-03
 item-40,KITCHEN_UTENSIL,false,utensilio15,AA:AAA-040,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque, neque nec convallis finibus, dui augue tempus ante, eu aliquet felis velit id felis. Mauris porta commodo est at hendrerit. Aliquam eros nibh, sollicitudin venenatis congue",EUR 59.99,https://google.com,chef-01

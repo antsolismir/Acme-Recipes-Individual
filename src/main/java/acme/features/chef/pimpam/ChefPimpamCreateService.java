@@ -89,16 +89,24 @@ public class ChefPimpamCreateService  implements AbstractCreateService<Chef, Pim
 		}
 		
 		
-		if(!errors.hasErrors("initialPeriodDate")) {
-			final Date minInitialDate=DateUtils.addMonths(entity.getInstantiationMoment(), 1);
-
-			errors.state(request,entity.getInitialPeriodDate().after(minInitialDate), "initialPeriodDate", "chef.pimpam.form.error.too-close-start-date");
+		if(entity.getInitialPeriodDate()==null || entity.getFinalPeriodDate() == null) {
+			errors.state(request, entity.getInitialPeriodDate()!=null, "initialPeriodDate", "message.error.null.date");
+			errors.state(request, entity.getFinalPeriodDate()!=null, "finalPeriodDate", "message.error.null.date");
+		} else {
+		
+			if(!errors.hasErrors("initialPeriodDate")) {
+				final Date minStartDate=DateUtils.addMonths(entity.getInstantiationMoment(), 1);
+				errors.state(request, entity.getInitialPeriodDate().after(minStartDate), "initialPeriodDate", "chef.pimpam.form.error.too-close-start-date");
+			}
+			if(!errors.hasErrors("finalPeriodDate") && !errors.hasErrors("initialPeriodDate")) {
+				final Date minFinishDate=DateUtils.addWeeks(entity.getInitialPeriodDate(), 1);
+				errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "chef.pimpam.form.error.complete");
+			}
+			if(!errors.hasErrors("finalPeriodDate")) {
+				final Date minFinishDate=DateUtils.addWeeks(entity.getInitialPeriodDate(), 1);
+				errors.state(request, entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "chef.pimpam.form.error.one-month");
+			}
 			
-		}
-		if(!errors.hasErrors("finalPeriodDate") && !errors.hasErrors("initialPeriodDate")) {
-			final Date minFinishDate=DateUtils.addMonths(entity.getInitialPeriodDate(), 1);
-			
-			errors.state(request,entity.getFinalPeriodDate().after(minFinishDate), "finalPeriodDate", "chef.pimpam.form.error.one-month");
 		}
 		
 		

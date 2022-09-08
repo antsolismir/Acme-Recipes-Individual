@@ -1,0 +1,8 @@
+recordIndex,title,description,initialPeriodDate,finalPeriodDate,budget,link
+0,,Descripcion de actualizacion,2023/02/03 00:56,2024/02/03 00:56,GBP 100.00,http://duckduckgo.com
+1,Test prueba,,2050/02/03 00:56,2056/02/12 00:56,GBP 100.00,
+2,Titulo 1,Descripcion 1,,2022/11/09 00:56,EUR 100.00,http://google.com
+3,Titulo 1,Descripcion 1,2022/10/09 00:56,,EUR 100.00,http://google.com
+4,Titulo 1,Descripcion 1,2022/10/09 00:56,2022/11/09 00:56,,http://google.com
+5,Titulo 1,Descripcion 1,2022/10/09 00:56,2022/11/09 00:56,EUR -100.00,http://google.com
+6,sex,Descripcion 1,2022/10/09 00:56,2022/11/09 00:56,EUR -100.00,fallo

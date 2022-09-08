@@ -1,0 +1,4 @@
+recordIndex,code,title,description,initialPeriodDate,finalPeriodDate,budget,link,itemCode,itemName
+0,9922090801,Titulo 1,Descripcion 1,2023/02/03 00:56,2024/02/03 00:56,GBP 100.00,http://duckduckgo.com,AA:AAA-019,ingrediente19
+1,9922090804,Test prueba,Descripcion 1,2023/02/03 00:56,2023/02/12 00:56,USD 100.00,,AA:AAA-040,utensilio15
+2,9922090806,Titulo Molón,Descripcion 1,2022/11/01 00:56,2022/11/09 00:56,EUR 100.00,,AA:AAA-031,utensilio08

@@ -94,3 +94,9 @@ master.menu.authenticated.bulletin = Lista de boletines
 
 master.menu.authenticated.systemConfiguration.show = Moneda por defecto
 
+
+master.menu.chef.pimpam-list = Listar mis pimpams
+master.menu.chef.pimpam-create = Crear un pimpam
+
+examen
+
