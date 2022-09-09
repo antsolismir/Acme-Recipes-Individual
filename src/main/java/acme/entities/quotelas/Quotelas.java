@@ -1,4 +1,4 @@
-package acme.entities.pimpam;
+package acme.entities.quotelas;
 
 import java.util.Date;
 
@@ -26,12 +26,12 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Pimpam extends AbstractEntity{ //examen
+public class Quotelas extends AbstractEntity{ //examen
 	
 	protected static final long serialVersionUID = 1L;
 	
 	@NotBlank
-	@Pattern(regexp="^[a-zA-Z_0-9]{2}[0-9][0-9][0-1][0-9][0-3][0-9][a-zA-Z_0-9]{2}$", message="Incorrect format, follow the example WWyymmddWW, where “yy”, “mm”, and “dd” refer to the year, month, and day when is created AND W is an uppercase, lowercase or digit.")
+	@Pattern(regexp="^[a-zA-Z_0-9]{2}[0-9]{2}-[0-1][0-9][0-3][0-9][0-9][0-9]$", message="Incorrect format, WWDD-mmddyy, where “yy”, “mm”, and “dd” refer to the year, month, and day when is created AND W is an uppercase, lowercase or digit AND D is a digit.")
 	@Column(unique=true)
 	protected String code;
 	
@@ -42,26 +42,26 @@ public class Pimpam extends AbstractEntity{ //examen
 	
 	@NotBlank
 	@Size(max=100)
-	protected String title;
+	protected String name;
 	
 	@NotBlank
 	@Length(max=255)
-	protected String description;
+	protected String explanation;
 	
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date initialPeriodDate;
+	protected Date initialInterval;
 	
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date finalPeriodDate;
+	protected Date finalInterval;
 	
 	@NotNull
 	@Valid
-	protected Money budget;
+	protected Money share;
 	
 	@URL
-	protected String link;
+	protected String additionalInfo;
 	
 	@NotNull
 	@Valid

@@ -9,8 +9,8 @@
 
 <h2>
 	<acme:message
-		code="Total de Pimpams" />
-	<acme:print value="${ totalNumberOfPimpams }" />
+		code="administrator.Quotelas" />
+	<acme:print value="${ totalNumberOfQuotelas }" />
 </h2>
 
 <table class="table table-sm">
@@ -19,7 +19,7 @@
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
-				value="${ averageRetailPriceOfPimpamsGroupedByCurrency.entrySet().stream().filter(e -> e.getKey().equals(currency)).iterator() }"
+				value="${ averageRetailPriceOfQuotelasGroupedByCurrency.entrySet().stream().filter(e -> e.getKey().equals(currency)).iterator() }"
 				var="entrySet" />
 			<jstl:if test="${ entrySet.hasNext() }">
 				<jstl:forEach items="${ entrySet }" var="entry">
@@ -36,7 +36,7 @@
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
-				value="${ deviationRetailPriceOfPimpamsGroupedByCurrency.entrySet().stream().filter(e -> e.getKey().equals(currency)).iterator() }"
+				value="${ deviationRetailPriceOfQuotelasGroupedByCurrency.entrySet().stream().filter(e -> e.getKey().equals(currency)).iterator() }"
 				var="entrySet" />
 			<jstl:if test="${ entrySet.hasNext() }">
 				<jstl:forEach items="${ entrySet }" var="entry">
@@ -53,7 +53,7 @@
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
-				value="${ minimunRetailPriceOfPimpamsGroupedByCurrency.entrySet().stream().filter(e -> e.getKey().equals(currency)).iterator() }"
+				value="${ minimunRetailPriceOfQuotelasGroupedByCurrency.entrySet().stream().filter(e -> e.getKey().equals(currency)).iterator() }"
 				var="entrySet" />
 			<jstl:if test="${ entrySet.hasNext() }">
 				<jstl:forEach items="${ entrySet }" var="entry">
@@ -70,7 +70,7 @@
 		<tr>
 			<th scope="row"><acme:print value="${ currency }" /></th>
 			<jstl:set
-				value="${ maximunRetailPriceOfPimpamsGroupedByCurrency.entrySet().stream().filter(e -> e.getKey().equals(currency)).iterator() }"
+				value="${ maximunRetailPriceOfQuotelasGroupedByCurrency.entrySet().stream().filter(e -> e.getKey().equals(currency)).iterator() }"
 				var="entrySet" />
 			<jstl:if test="${ entrySet.hasNext() }">
 				<jstl:forEach items="${ entrySet }" var="entry">

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
-import acme.entities.pimpam.Pimpam;
+import acme.entities.quotelas.Quotelas;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -79,8 +79,8 @@ public class ChefItemDeleteService implements AbstractDeleteService<Chef, Item>{
 		assert entity != null;
 		
 		//examen
-		final Pimpam pimpam = this.repository.findPimpamByItemId(entity.getId());
-		if(pimpam != null) this.repository.delete(pimpam);
+		final Quotelas quotela = this.repository.findQuotelaByItemId(entity.getId());
+		if(quotela != null) this.repository.delete(quotela);
 		this.repository.delete(entity);
 	}
 

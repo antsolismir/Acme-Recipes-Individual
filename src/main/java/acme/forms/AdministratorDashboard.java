@@ -35,12 +35,13 @@ public class AdministratorDashboard implements Serializable{
 	Map<String,Double> minimunRetailPriceOfKitchenUtensilsGroupedByCurrency;
 	Map<String,Double> maximunRetailPriceOfKitchenUtensilsGroupedByCurrency;
 	
+	//examen
 	@Min(0)
-	Integer totalNumberOfPimpams;
-	Map<String,Double> averageRetailPriceOfPimpamsGroupedByCurrency;
-	Map<String,Double> deviationRetailPriceOfPimpamsGroupedByCurrency;
-	Map<String,Double> minimunRetailPriceOfPimpamsGroupedByCurrency;
-	Map<String,Double> maximunRetailPriceOfPimpamsGroupedByCurrency;
+	Integer totalNumberOfQuotelas;
+	Map<String,Double> averageRetailPriceOfQuotelasGroupedByCurrency;
+	Map<String,Double> deviationRetailPriceOfQuotelasGroupedByCurrency;
+	Map<String,Double> minimunRetailPriceOfQuotelasGroupedByCurrency;
+	Map<String,Double> maximunRetailPriceOfQuotelasGroupedByCurrency;
 
 	// FineDishes
 	@Min(0)

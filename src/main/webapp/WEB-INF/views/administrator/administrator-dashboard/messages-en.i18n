@@ -31,3 +31,5 @@ administrator.dashboard.form.label.minimunBudgetOfFineDishesDenied = Minimun bud
 administrator.dashboard.form.label.maximunBudgetOfFineDishesDenied = Maximun budget of denied dishes
 
 administrator.dashboard.form.title.dish-by-status = Dishes by status
+
+administrator.Quotelas =  Total number of Quotelas

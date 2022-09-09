@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.item.Item;
-import acme.entities.pimpam.Pimpam;
+import acme.entities.quotelas.Quotelas;
 import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Chef;
@@ -39,8 +39,8 @@ public interface ChefItemRepository extends AbstractRepository {
 	@Query("select c.defaultCurrency  from SystemConfiguration c")
 	String getDefaultCurrency();
 	
-	@Query("select p from Pimpam p where p.item.id = :id")
-	Pimpam findPimpamByItemId(int id);
+	@Query("select p from Quotelas p where p.item.id = :id")
+	Quotelas findQuotelaByItemId(int id);
 	
 }
 

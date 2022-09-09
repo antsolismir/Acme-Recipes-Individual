@@ -31,3 +31,5 @@ administrator.dashboard.form.label.minimunBudgetOfFineDishesDenied = Presupuesto
 administrator.dashboard.form.label.maximunBudgetOfFineDishesDenied = Presupuesto máximo de platos denegados
 
 administrator.dashboard.form.title.dish-by-status = Platos por estado
+
+administrator.Quotelas =  Total de Quotelas

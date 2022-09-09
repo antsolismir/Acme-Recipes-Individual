@@ -8,32 +8,32 @@
 	<%-- examen --%>
 	<jstl:choose>
 		<jstl:when test="${command == 'create'}">	
-    		<acme:input-textbox code="chef.pimpam.form.code" path="code" />
+    		<acme:input-textbox code="chef.quotela.form.code" path="code" />
     	</jstl:when>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete')}">
-			<acme:input-textbox readonly="true" code="chef.pimpam.form.code" path="code" />
+			<acme:input-textbox readonly="true" code="chef.quotela.form.code" path="code" />
 		</jstl:when>
 	</jstl:choose>
 	
 	<jstl:choose>
 		<jstl:when test="${command == 'show'}">
-			<acme:input-textbox readonly="true" code="chef.pimpam.form.instantiationMoment" path="instantiationMoment"/>
+			<acme:input-textbox readonly="true" code="chef.quotela.form.instantiationMoment" path="instantiationMoment"/>
 		</jstl:when>
 	</jstl:choose>
 	
-	<acme:input-textbox code="chef.pimpam.form.title" path="title"/>
+	<acme:input-textbox code="chef.quotela.form.title" path="name"/>
 	
-	<acme:input-textarea code="chef.pimpam.form.description" path="description"/>
+	<acme:input-textarea code="chef.quotela.form.description" path="explanation"/>
 	
-	<acme:input-textbox code="chef.pimpam.form.initialPeriodDate" path="initialPeriodDate"/>
-	<acme:input-textbox code="chef.pimpam.form.finalPeriodDate" path="finalPeriodDate"/>
-	<acme:input-textbox code="chef.pimpam.form.budget" path="budget"/>
-	<acme:input-textbox code="chef.pimpam.form.link" path="link"/>
+	<acme:input-textbox code="chef.quotela.form.initialPeriodDate" path="initialInterval"/>
+	<acme:input-textbox code="chef.quotela.form.finalPeriodDate" path="finalInterval"/>
+	<acme:input-textbox code="chef.quotela.form.budget" path="share"/>
+	<acme:input-textbox code="chef.quotela.form.link" path="additionalInfo"/>
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(command, 'show, update')}">
-			<acme:input-textbox readonly="true" code="chef.pimpam.form.item.code" path="item.code"/>
-			<acme:input-textbox readonly="true" code="chef.pimpam.form.item.name" path="item.name"/>
+			<acme:input-textbox readonly="true" code="chef.quotela.form.item.code" path="item.code"/>
+			<acme:input-textbox readonly="true" code="chef.quotela.form.item.name" path="item.name"/>
 		</jstl:when>
 	</jstl:choose>
 	
@@ -53,16 +53,16 @@
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(command,'show, update, delete') && published==false}">
-			<acme:submit code="chef.pimpam.form.update" action="/chef/pimpam/update"/>
-			<acme:submit code="chef.pimpam.form.delete" action="/chef/pimpam/delete"/>
+			<acme:submit code="chef.quotela.form.update" action="/chef/quotelas/update"/>
+			<acme:submit code="chef.quotela.form.delete" action="/chef/quotelas/delete"/>
 		</jstl:when>
 		<jstl:when test="${command=='create' && items.isEmpty()==false}">
-			<acme:submit code="chef.pimpam.form.create" action="/chef/pimpam/create"/>
+			<acme:submit code="chef.quotela.form.create" action="/chef/quotelas/create"/>
 		</jstl:when>
 	</jstl:choose>
 </acme:form>
 </jstl:if>
 <jstl:if test="${items.isEmpty()==true && !acme:anyOf(command, 'show, update, delete')}">
 	<h3 style="color: red"><acme:message code="error.create.item"/></h3>
-	<acme:button code="chef.pimpam.list.create-item" action="/chef/item/create"/>
+	<acme:button code="chef.quotela.list.create-item" action="/chef/item/create"/>
 </jstl:if>

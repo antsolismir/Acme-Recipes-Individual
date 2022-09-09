@@ -21,8 +21,8 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT i.retailPrice.currency ,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i WHERE i.itemType = acme.entities.item.ItemType.INGREDIENT GROUP BY i.retailPrice.currency")
 	List<Object[]> findMetricsIngredientsByCurrency();
 	
-	@Query("SELECT i.budget.currency ,avg(i.budget.amount),stddev(i.budget.amount),min(i.budget.amount),max(i.budget.amount) FROM Pimpam i GROUP BY i.budget.currency")
-	List<Object[]> findMetricsPimpamsByCurrency();
+	@Query("SELECT i.share.currency ,avg(i.share.amount),stddev(i.share.amount),min(i.share.amount),max(i.share.amount) FROM Quotelas i GROUP BY i.share.currency")
+	List<Object[]> findMetricsQuotelasByCurrency();
 	
 	
 	
@@ -32,8 +32,8 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select count(i) from Item i where i.itemType = 1")
 	Integer totalNumberOfIngredients();
 	
-	@Query("select count(i) from Item i where i.id IN (Select p.item.id from Pimpam p)")
-	Integer totalNumberOfPimpams();
+	@Query("select count(i) from Item i where i.id IN (Select p.item.id from Quotelas p)")
+	Integer totalNumberOfQuotelas();
 	
 	
 	

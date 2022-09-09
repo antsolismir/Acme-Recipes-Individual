@@ -1,0 +1,34 @@
+chef.quotela.form.code = Código
+chef.quotela.form.instantiationMoment = Fecha de creación
+chef.quotela.form.title = Nombre
+chef.quotela.form.description = Explicacion
+chef.quotela.form.initialPeriodDate = Fecha de periodo incial
+chef.quotela.form.finalPeriodDate = Fecha de periodo final
+chef.quotela.form.budget = Presupuesto
+chef.quotela.form.link = Link
+chef.quotela.form.item.code = Código
+chef.quotela.form.item.name = Nombre
+
+chef.quotela.form.update = Actualizar
+chef.quotela.form.delete = Borrar
+chef.quotela.form.create = Crear
+
+chef.quotela.list.code = Código
+chef.quotela.list.instantiationMoment = Fecha de creación
+chef.quotela.list.title = Nombre
+chef.quotela.list.budget = Presupuesto
+
+chef.quotela.form.error.duplicated = Código duplicado
+chef.quotela.form.error.too-close-start-date = Tiene que comenzar al menos un mes después de que se cree
+chef.quotela.form.error.one-month = Tiene que durar al menos una semana
+chef.quotela.form.error.negative-budget = Tiene que ser positivo
+chef.quotela.form.error.complete = Introduce correctamente las fechas
+chef.quotela.form.error.non-accepted-currency = Moneda no acpetada, consulte la configuración del sistema
+chef.quotela.form.error.spam = El texto contiene spam, pruebe de nuevo sin el
+message.error.null.date = La fecha no puede ser nula
+chef.quotela.form.error.bad-code = El patrón debe coincidir con la fecha actual
+
+chef.quotela.list.create = Crear
+error.create.item = No hay items disponibles, por favor crea uno
+chef.quotela.list.create-item = Crear un item
+examen

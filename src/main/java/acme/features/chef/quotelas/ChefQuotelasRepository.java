@@ -1,4 +1,4 @@
-package acme.features.chef.pimpam;
+package acme.features.chef.quotelas;
 
 import java.util.Collection;
 
@@ -6,18 +6,18 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.item.Item;
-import acme.entities.pimpam.Pimpam;
+import acme.entities.quotelas.Quotelas;
 import acme.entities.systemConfiguration.SystemConfiguration;
 import acme.framework.repositories.AbstractRepository;
 //examen
 @Repository
-public interface ChefPimpamRepository extends AbstractRepository {
+public interface ChefQuotelasRepository extends AbstractRepository {
 	
-	@Query("select p from Pimpam p where p.item.chef.id = :id")
-	Collection<Pimpam> findPimpamByChefId(int id);
+	@Query("select p from Quotelas p where p.item.chef.id = :id")
+	Collection<Quotelas> findQuotelasByChefId(int id);
 
-	@Query("select p from Pimpam p where p.id = :id")
-	Pimpam findPimpamById(int id);
+	@Query("select p from Quotelas p where p.id = :id")
+	Quotelas findQuotelasById(int id);
 	
 	@Query("select i from Item i where i.id = :id")
 	Item findItemById(int id);
@@ -25,13 +25,13 @@ public interface ChefPimpamRepository extends AbstractRepository {
 	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String getDefaultCurrency();
 	
-	@Query("select p from Pimpam p where p.code = :code")
-	Pimpam findPimpamByCode(String code);
+	@Query("select p from Quotelas p where p.code = :code")
+	Quotelas findQuotelasByCode(String code);
 	
 	@Query("SELECT sc from SystemConfiguration sc")
 	SystemConfiguration findSystemConfiguration();
 	
-	@Query("SELECT i from Item i where i.chef.id = :id and i.id NOT IN (SELECT p.item.id from Pimpam p) and i.published = false")
+	@Query("SELECT i from Item i where i.chef.id = :id and i.id NOT IN (SELECT p.item.id from Quotelas p) and i.published = false and i.itemType = 1")
 	Collection<Item> findItems(int id);
 	//examen
 	//Cuidado aqui, tienes que filtrar tambien por Ingrdient o Kitchen utensil, dependiendo de lo que venga en el examen

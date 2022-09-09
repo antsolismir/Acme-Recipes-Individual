@@ -69,8 +69,8 @@
 			<acme:menu-suboption code="master.menu.user-account.chef.item.list.kitchenUtensils" action="/chef/item/list-kitchen_utensils"/>
 			<acme:menu-suboption code="master.menu.user-account.chef.item.list.recipe" action="/chef/recipe/list"/>
 			<acme:menu-suboption code="master.menu.chef.memorandum-list" action="/chef/memorandum/list-all"/> 
-			<acme:menu-suboption code="master.menu.chef.pimpam-list" action="/chef/pimpam/list"/>
-			<acme:menu-suboption code="master.menu.chef.pimpam-create" action="/chef/pimpam/create"/>
+			<acme:menu-suboption code="master.menu.chef.pimpam-list" action="/chef/quotelas/list"/>
+			<acme:menu-suboption code="master.menu.chef.pimpam-create" action="/chef/quotelas/create"/>
 		</acme:menu-option>
 		
 	</acme:menu-left>

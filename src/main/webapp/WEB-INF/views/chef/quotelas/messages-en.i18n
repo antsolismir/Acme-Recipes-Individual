@@ -1,0 +1,34 @@
+chef.quotela.form.code = Code
+chef.quotela.form.instantiationMoment = Instantiation moment
+chef.quotela.form.title = Name
+chef.quotela.form.description = Explanation
+chef.quotela.form.initialPeriodDate = Initial period date
+chef.quotela.form.finalPeriodDate = Final period date
+chef.quotela.form.budget = Share
+chef.quotela.form.link = Additional information
+chef.quotela.form.item.code = Code
+chef.quotela.form.item.name = Name
+
+chef.quotela.form.update = Update
+chef.quotela.form.delete = Delete
+chef.quotela.form.create = Create
+
+chef.quotela.list.code = Code
+chef.quotela.list.instantiationMoment = Instant moment
+chef.quotela.list.title = Name
+chef.quotela.list.budget = Share
+
+chef.quotela.form.error.duplicated = Duplicated code
+chef.quotela.form.error.too-close-start-date = Must start at least one month after instantiated
+chef.quotela.form.error.one-month = At least one week long
+chef.quotela.form.error.negative-budget = Must be positive
+chef.quotela.form.error.complete = Enter the dates correctly
+chef.quotela.form.error.non-accepted-currency = Currency not accepted, see them in system settings
+chef.quotela.form.error.spam = The text contains spam, try again without it
+message.error.null.date = The date must not be null
+chef.quotela.form.error.bad-code = The pattern must match with the actual date
+
+chef.quotela.list.create = Create
+error.create.item = No item avalibable, please create one
+chef.quotela.list.create-item = Create an item
+examen

@@ -1,4 +1,4 @@
-package acme.testing.chef.pimpam;
+package acme.testing.chef.quotelas;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
